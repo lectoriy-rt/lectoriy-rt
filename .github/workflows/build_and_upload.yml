@@ -1,0 +1,63 @@
+name: Build and upload to Yandex Disk
+on:
+  push:
+    paths:
+      "**/*.tex"
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - name: Install TexLive
+        run: |
+          sudo apt update
+          sudo apt install -y texlive texlive-latex-extra texlive-lang-cyrillic
+      - name: Compile and upload changed files
+        run: |
+          for FILE in $(git show --name-only --oneline --format="" \
+              --diff-filter=d ${{ github.sha }});
+          do
+            if [ "$(basename $FILE)" != "main.tex" ]; then
+              continue
+            fi
+
+            DIR=$(dirname $FILE)
+            cd $DIR
+
+            pdflatex main.tex
+            pdflatex main.tex
+
+            CURRENT_PATH="Приложения/Лекторий ФРКТ"
+            for PART in $(echo $DIR | tr '/' '\n' | head -n -1); do
+                CURRENT_PATH="${CURRENT_PATH}/${PART}"
+                curl \
+                  --no-progress-meter \
+                  -o /dev/null \
+                  -X PUT \
+                  --url-query "path=$CURRENT_PATH" \
+                  --header 'Authorization: ${{ secrets.YANDEX_OAUTH_TOKEN }}' \
+                  https://cloud-api.yandex.net/v1/disk/resources \
+                && echo "Created directory \"$CURRENT_PATH\""
+            done
+
+            FILENAME=$(basename $DIR).pdf
+
+            URL=$(curl \
+              --no-progress-meter \
+              --url-query "path=${CURRENT_PATH}/$FILENAME" \
+              --url-query 'overwrite=true' \
+              --header 'Authorization: ${{ secrets.YANDEX_OAUTH_TOKEN }}' \
+              'https://cloud-api.yandex.net/v1/disk/resources/upload' \
+              | jq -r '.["href"]')
+
+            curl \
+              --no-progress-meter \
+              -o /dev/null \
+              -X PUT \
+              --data-binary '@main.pdf' \
+              --header 'Authorization: ${{ secrets.YANDEX_OAUTH_TOKEN }}' \
+              $URL \
+            && echo "Uploaded \"$FILENAME\""
+
+            cd ${{ github.workspace }}
+          done
