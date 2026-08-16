@@ -2,7 +2,8 @@ name: Build and upload to Yandex Disk
 on:
   push:
     paths:
-      "**/*.tex"
+      - "**/*.tex"
+      - "!Template"
 jobs:
   main:
     runs-on: ubuntu-latest
