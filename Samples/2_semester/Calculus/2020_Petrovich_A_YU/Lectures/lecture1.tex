@@ -3,9 +3,8 @@
 \Subsection{Метрические пространства и сходимость метрических пространств}
 
 \begin{definition}
-Непустое множество~\(M\) называется \textit{метрическим пространством}, если
-\(\forall x, y \in M\) определено число~\(\rho(x, y) \in \R\) такое, что
-выполнены аксиомы:
+Непустое множество~\(M\) называется \textit{метрическим пространством}, если \(\forall x, y \in M\)
+определено число~\(\rho(x, y) \in \R\) такое, что выполнены аксиомы:
 \begin{enumerate}
 \item \(\rho(x, y) \geq 0; \; \rho(x, y) = 0 \Longleftrightarrow x = y\).
 \item \(\rho(x, y) = \rho(y, x) \quad \forall x, y \in M\).
@@ -14,8 +13,8 @@
 \end{definition}
 
 \begin{note}
-Расстояние (или метрика) может определяться разными способами. Любое множество
-можно превратить в метрическое пространство с тривиальной метрикой:
+Расстояние (или метрика) может определяться разными способами. Любое множество можно превратить в
+метрическое пространство с тривиальной метрикой:
 \[
     \rho(x, y) = \left\{
         \begin{aligned}
@@ -26,14 +25,13 @@
 \end{note}
 
 \begin{definition}
-\textit{Точечное \(n\)-мерное евклидово пространство~\(\R^n\)}~--- множество
-упорядоченных наборов \(x = (\alpha_1, \alpha_2, \dots, \alpha_n), \; \alpha_i
-\in \R\).
+\textit{Точечное \(n\)-мерное евклидово пространство~\(\R^n\)}~--- множество упорядоченных наборов
+\(x = (\alpha_1, \alpha_2, \dots, \alpha_n), \; \alpha_i \in \R\).
 \end{definition}
 
 \begin{definition}
-Если \(x = \alpha_1, \dots, \alpha_n\), \(y = \beta_1, \dots, \beta_n\), то
-\textit{расстоянием в~\(\R^n\)} будет величина:
+Если \(x = \alpha_1, \dots, \alpha_n\), \(y = \beta_1, \dots, \beta_n\), то \textit{расстоянием
+в~\(\R^n\)} будет величина:
 \[
     \rho(x, y) = \sqrt{\sum_{i=1}^n (\alpha_i - \beta_i)^2.}
 \]
@@ -48,38 +46,34 @@
 \begin{proof}
 Аксиомы 1 и 2 выполняются очевидно.
 
-3. Пусть \(x = (\alpha_1, \dots, \alpha_n)\), \(y = (\beta_1, \dots, \beta_n)\),
-\(z \hm = (\gamma_1, \dots, \gamma_n)\). Требуется доказать, что:
+3. Пусть \(x = (\alpha_1, \dots, \alpha_n), \; y = (\beta_1, \dots, \beta_n), \; z \hm = (\gamma_1,
+\dots, \gamma_n)\). Требуется доказать, что:
 \[
-    \sqrt{\sum_{i=1}^n (\alpha_i - \beta_i)^2} + \sqrt{\sum_{i=1}^n (\beta_i -
-        \gamma_i)^2} \geq \sqrt{\sum_{i=1}^n (\alpha_i - \gamma_i)^2}.
+    \sqrt{\sum_{i=1}^n (\alpha_i - \beta_i)^2} + \sqrt{\sum_{i=1}^n (\beta_i - \gamma_i)^2} \geq
+        \sqrt{\sum_{i=1}^n (\alpha_i - \gamma_i)^2}.
 \]
 
-Введём следующие обозначения: \(p_i = \alpha_i - \beta_i\), \(q_i = \beta_i -
-\gamma_i\). Тогда \(p_i + q_i = \alpha_i - \gamma_i\), и полученное раннее
-неравенство можно переписать следующим образом:
+Введём следующие обозначения: \(p_i = \alpha_i - \beta_i, \; q_i = \beta_i - \gamma_i\). Тогда \(p_i
++ q_i = \alpha_i - \gamma_i\), и полученное раннее неравенство можно переписать следующим образом:
 \[
-    \sqrt{\sum_{i=1}^n p_i^2} + \sqrt{\sum_{i=1}^n q_i^2} \geq
-        \sqrt{\sum_{i=1}^n (p_i + q_i)^2}
+    \sqrt{\sum_{i=1}^n p_i^2} + \sqrt{\sum_{i=1}^n q_i^2} \geq \sqrt{\sum_{i=1}^n (p_i + q_i)^2}
 \]
 поскольку все числа неотрицательны, можно возвести неравенство в квадрат:
 \[
-    \sum_{i=1}^n p_i^2 + \sum_{i=1}^n q_i^2 + 2\sqrt{\sum_{i=1}^n p_i^2 \cdot
-        \sum_{i=1}^n q_i^2} \geq \sum_{i=1}^n (p_i + q_i)^2
+    \sum_{i=1}^n p_i^2 + \sum_{i=1}^n q_i^2 + 2\sqrt{\sum_{i=1}^n p_i^2 \cdot \sum_{i=1}^n q_i^2}
+        \geq \sum_{i=1}^n (p_i + q_i)^2
 \]
 раскрыв сумму в правой части, получим:
 \[
-    \sum_{i=1}^n p_i^2 + \sum_{i=1}^n q_i^2 + 2\sqrt{\sum_{i=1}^n p_i^2 \cdot
-        \sum_{i=1}^n q_i^2} \geq \sum_{i=1}^n p_i^2 + \sum_{i=1}^n q_i^2 +
-        2\sum_{i=1}^n p_i q_i
+    \sum_{i=1}^n p_i^2 + \sum_{i=1}^n q_i^2 + 2\sqrt{\sum_{i=1}^n p_i^2 \cdot \sum_{i=1}^n q_i^2}
+        \geq \sum_{i=1}^n p_i^2 + \sum_{i=1}^n q_i^2 + 2\sum_{i=1}^n p_i q_i
 \]
 \[
     \sqrt{\sum_{i=1}^n p_i^2 \cdot \sum_{i=1}^n q_i^2} \geq \sum_{i=1}^n p_i q_i
 \]
 последнее неравенство заведомо верно, если:
 \[
-    \sum_{i=1}^n p_i^2 \cdot \sum_{i=1}^n q_i^2 \geq \left(\sum_{i=1}^n p_i
-        q_i\right)^2.
+    \sum_{i=1}^n p_i^2 \cdot \sum_{i=1}^n q_i^2 \geq \left(\sum_{i=1}^n p_i q_i\right)^2.
 \]
 
 Рассмотрим следующую функцию одной переменной:
@@ -92,27 +86,25 @@
 \]
 поскольку этот квадратный трёхчлен всегда неотрицателен, то:
 \[
-    D = \left(\sum_{i = 1}^n p_i q_i\right)^2 - \sum_{i=1}^n q_i^2 \cdot
-        \sum_{i=1}^n p_i^2 \leq 0.
+    D = \left(\sum_{i = 1}^n p_i q_i\right)^2 - \sum_{i=1}^n q_i^2 \cdot \sum_{i=1}^n p_i^2 \leq 0.
 \]
 Откуда следует доказываемое неравенство.
 \end{proof}
 
 \begin{note}
-В точечных пространствах нет понятия сложения точек и умножения точки на число.
-Однако, удобно ввести ноль \(0 = (0, 0, \dots, 0)\). Если \(x = (\alpha_1, \dots,
-\alpha_n)\), \(y = (\alpha_1, \dots, \alpha_n)\), то удобно считать, что:
+В точечных пространствах нет понятия сложения точек и умножения точки на число. Однако, удобно
+ввести ноль \(0 = (0, 0, \dots, 0)\). Если \(x = (\alpha_1, \dots, \alpha_n), \; y = (\alpha_1,
+\dots, \alpha_n)\), то удобно считать, что:
 \[
-    x \pm y = (\alpha_1 \pm \beta_1, \dots, \alpha_n \pm \alpha_n), \;
-        x = \sqrt{\alpha_1^2 + \dots + \alpha_n^2} = \rho(x, 0)
+    x \pm y = (\alpha_1 \pm \beta_1, \dots, \alpha_n \pm \alpha_n), \; x = \sqrt{\alpha_1^2 + \dots
+        + \alpha_n^2} = \rho(x, 0)
 \]
 тогда неравенство треугольника перепишется в виде:
 \[
     |x - y| + |y - z| \geq |x - z|.
 \]
 
-Если \(x - y = p\), \(y - z = q\), то \(x - z = p + q\), и неравенство
-перепишется в следующем виде:
+Если \(x - y = p, \; y - z = q\), то \(x - z = p + q\), и неравенство перепишется в следующем виде:
 \[
     |p| + |q| \geq |p + q|.
 \]
@@ -123,8 +115,10 @@
 \end{note}
 
 \begin{definition}
-\textit{\(\epsilon\)-окрестность точки в метрическом пространстве} (\(\epsilon
-\geq 0\)). \[U_\epsilon(x_0) = \{x \in M \colon \rho(x, x_0) < \epsilon\}.\]
+\textit{\(\epsilon\)-окрестность точки в метрическом пространстве} (\(\epsilon \geq 0\)).
+\[
+    U_\epsilon(x_0) = \{x \in M \colon \rho(x, x_0) < \epsilon\}.
+\]
 \end{definition}
 
 \begin{note}
@@ -132,23 +126,22 @@
 \end{note}
 
 \begin{note}
-В пространстве с тривиальной метрикой при \(\epsilon \leq 1 \; U_\epsilon(x_0)
-= \{x_0\}.\). При \(\epsilon > 1 \; U_\epsilon(x_0) = M\).
+В пространстве с тривиальной метрикой при \(\epsilon \leq 1 \; U_\epsilon(x_0) = \{x_0\}.\). При
+\(\epsilon > 1 \; U_\epsilon(x_0) = M\).
 \end{note}
 
 \begin{definition}
-Говорят, что последовательность точек~\(x_n\) метрического пространства~\(M\)
-\textit{сходится к точке \(x_0 \in M\)}, если
+Говорят, что последовательность точек~\(x_n\) метрического пространства~\(M\) \textit{сходится к
+точке \(x_0 \in M\)}, если
 \[
-    \lim_{n \rightarrow \infty} \rho(x, x_0) = 0, \; \text{т.\,e.} \; \forall
-    \epsilon > 0 \; \exists n_0 \; \forall n \geq n_0 \rightarrow
-    \rho(x_n, x_0) < \epsilon.
+    \lim_{n \rightarrow \infty} \rho(x, x_0) = 0, \; \text{т.\,e.} \; \forall \epsilon > 0 \;
+        \exists n_0 \; \forall n \geq n_0 \rightarrow \rho(x_n, x_0) < \epsilon.
 \]
 \end{definition}
 
-В пространстве с тривиальной метрикой \(\ds\lim_{n \rightarrow \infty} x_n = x_0
-\Longleftrightarrow \exists n_0 \; \forall n \geq n_0 \rightarrow x_n = x_0\)
-(последовательность \textit{стабилизируется}).
+В пространстве с тривиальной метрикой \(\ds\lim_{n \rightarrow \infty} x_n = x_0 \Longleftrightarrow
+\exists n_0 \; \forall n \geq n_0 \rightarrow x_n = x_0\) (последовательность
+\textit{стабилизируется}).
 
 \begin{note}
 Сохраняются свойства пределов, основанные только на понятии расстояния.
@@ -159,26 +152,22 @@
 \end{statement}
 
 \begin{proof}
-Пусть \(\ds \lim_{n \rightarrow \infty} x_n = x_0\) и \(\ds \lim_{n \rightarrow
-\infty} x_n = y_0\). Тогда:
+Пусть \(\ds \lim_{n \rightarrow \infty} x_n = x_0\) и \(\ds \lim_{n \rightarrow \infty} x_n = y_0\).
+Тогда:
 \begin{gather}
-    \forall \epsilon > 0 \; \exists n_1 \rightarrow \rho(x_n, x_0) <
-        \epsilon / 2,\\
-    \forall \epsilon > 0 \; \exists n_2 \rightarrow \rho(x_n, y_0) <
-        \epsilon / 2.
+    \forall \epsilon > 0 \; \exists n_1 \rightarrow \rho(x_n, x_0) < \epsilon / 2,\\
+    \forall \epsilon > 0 \; \exists n_2 \rightarrow \rho(x_n, y_0) < \epsilon / 2.
 \end{gather}
 Пусть \(n_0 = \max(n_1, n_2)\). Тогда:
 \[
-    \forall n \geq n_0 \; \rho(x_0, y_0) \leq \rho(x_0, x_n) + \rho(x_n, y_0) <
-    \epsilon.
+    \forall n \geq n_0 \; \rho(x_0, y_0) \leq \rho(x_0, x_n) + \rho(x_n, y_0) < \epsilon.
 \]
-Поскольку \(\epsilon > 0\)~--- любое, то \(\rho(x_0, y_0) = 0 \Rightarrow x_0 =
-y_0\).
+Поскольку \(\epsilon > 0\)~--- любое, то \(\rho(x_0, y_0) = 0 \Rightarrow x_0 = y_0\).
 \end{proof}
 
 \begin{definition}
-Пусть \(X\)~--- непустое множество в метрическом пространстве~\(M\). Тогда
-\textit{диаметром}~\(X\) называется величина:
+Пусть \(X\)~--- непустое множество в метрическом пространстве~\(M\). Тогда \textit{диаметром}~\(X\)
+называется величина:
 \[
     \diam X = \sup \rho(x, y) \in [0, +\infty] \quad \forall x, y \in X.
 \]
@@ -189,13 +178,13 @@ y_0\).
 \end{definition}
 
 \begin{statement}
-Множество~\(X \subset \R^n\) ограничено \(\Longleftrightarrow \exists C > 0
-\colon \forall x \in X \rightarrow |x| \leq C\).
+Множество~\(X \subset \R^n\) ограничено \(\Longleftrightarrow \exists C > 0 \colon \forall x \in X
+\rightarrow |x| \leq C\).
 \end{statement}
 
 \begin{proof}
-\Boxedrightarrow Пусть множество ограничено, т.\,e. \(\diam X = d < +\infty\).
-Поскольку множество непусто, рассмотрим фиксированное \(x_0 \in X\). Тогда:
+\Boxedrightarrow Пусть множество ограничено, т.\,e. \(\diam X = d < +\infty\). Поскольку множество
+непусто, рассмотрим фиксированное \(x_0 \in X\). Тогда:
 \[
     \forall x \in X \rightarrow |x| \leq |x - x_0| + |x_0| \leq d + |x_0|
 \]
@@ -203,132 +192,124 @@ y_0\).
 
 \Boxedleftarrow Пусть \(\forall x \in X \rightarrow |x| \leq C\). Тогда
 \[
-    \forall x, y \in X \rightarrow \rho(x, y) = |x - y| \leq |x| + |-y| = |x| +
-        |y| \leq 2C \Rightarrow \diam X \leq 2C.
+    \forall x, y \in X \rightarrow \rho(x, y) = |x - y| \leq |x| + |-y| = |x| + |y| \leq 2C
+        \Rightarrow \diam X \leq 2C.
 \]
 \end{proof}
 
 \begin{definition}
-Последовательность~\(x_n\) называется \textit{ограниченной}, если множество её
-значений ограничено.
+Последовательность~\(x_n\) называется \textit{ограниченной}, если множество её значений ограничено.
 \end{definition}
 
 \begin{statement}
-Если последовательность~\(x_n\) в метрическом пространстве сходится, то она
-ограничена.
+Если последовательность~\(x_n\) в метрическом пространстве сходится, то она ограничена.
 \end{statement}
 
 \begin{proof}
 Пусть \(\ds\lim_{n \Rightarrow \infty} x_n x_0\), т.\,e.
 \begin{align}
-    \forall \epsilon > 0 \;\exists n_0 \colon &\forall n \geq n_0 \rightarrow
-        \rho(x_n, x_0) < \epsilon / 2\\
+    \forall \epsilon > 0 \;\exists n_0 \colon &\forall n \geq n_0 \rightarrow \rho(x_n, x_0) <
+        \epsilon / 2\\
     &\forall m \geq n_0 \rightarrow \rho(x_m, x_0) < \epsilon / 2,
 \end{align}
 т.\,e.
 \[
-    \forall n, m \geq n_0 \rightarrow \rho(x_n, x_m) \leq \rho(x_n, x_0) +
-        \rho(x_0, x_m) \leq \epsilon.
+    \forall n, m \geq n_0 \rightarrow \rho(x_n, x_m) \leq \rho(x_n, x_0) + \rho(x_0, x_m) \leq
+        \epsilon.
 \]
-Пусть \(\ds C = \max_{n, m \leq n_0} \rho(x_n, x_m) < +\infty\) (конечное число
-расстояний). Рассмотрим случай, когда \(n \geq n_0\), а \(m \leq n_0\). Тогда
+Пусть \(\ds C = \max_{n, m \leq n_0} \rho(x_n, x_m) < +\infty\) (конечное число расстояний).
+Рассмотрим случай, когда \(n \geq n_0\), а \(m \leq n_0\). Тогда
 \[
-    \rho(x_n, x_m) \leq \underbrace{\rho(x_n, x_{n_0})}_{< \epsilon} +
-        \underbrace{\rho(x_{n_0}, x_m)}_{\leq C} < C + 1.
+    \rho(x_n, x_m) \leq \underbrace{\rho(x_n, x_{n_0})}_{< \epsilon} + \underbrace{\rho(x_{n_0},
+        x_m)}_{\leq C} < C + 1.
 \]
-Получили \(\forall n, m \rightarrow \rho(x_n, x_m) < C + 1\). Следовательно,
-последовательность ограничена.
+Получили \(\forall n, m \rightarrow \rho(x_n, x_m) < C + 1\). Следовательно, последовательность
+ограничена.
 \end{proof}
 
-Рассмотрим сходимость в \(\R^n\). Индекс последовательности обозначим за \(k\).
-Пусть \(k\)-й член последовательности это \(x_k = (\alpha_1^k, \dots,
-\alpha_n^k)\), \(x_0 = (\alpha_1^0, \dots \alpha_n^0)\)
+Рассмотрим сходимость в \(\R^n\). Индекс последовательности обозначим за \(k\). Пусть \(k\)-й член
+последовательности это \(x_k = (\alpha_1^k, \dots, \alpha_n^k)\), \(x_0 = (\alpha_1^0, \dots
+\alpha_n^0)\)
 
 \begin{statement}
 Сходимость в \(\R^n\) равносильна покоординатной сходимости. т.\,e.
 \[
-    x_k \rightarrow x_0 \; \text{в} \; \R^n \Longleftrightarrow \forall i = 1,
-        2, \dots, n \quad \alpha_i^{(k)} \rightarrow \alpha_i^{(0)}.
+    x_k \rightarrow x_0 \; \text{в} \; \R^n \Longleftrightarrow \forall i = 1, 2, \dots, n \quad
+        \alpha_i^{(k)} \rightarrow \alpha_i^{(0)}.
 \]
 \end{statement}
 
 \begin{proof}
-\Boxedrightarrow Пусть последовательность сходится покоординатно. Докажем, что
-имеет место сходимость в привычном смысле.
+\Boxedrightarrow Пусть последовательность сходится покоординатно. Докажем, что имеет место
+сходимость в привычном смысле.
 \[
-    \forall \epsilon > 0 \; \exists k_0 \; \forall k \geq k_0 \quad
-        \rho(x_k, x_0) < \epsilon \Longleftrightarrow  \forall \epsilon > 0 \;
-        \exists k_0 \; \forall k \geq k_0 \quad \sqrt{\sum_{i=1}^n\left(
-        x_i^{(k)} - x_i^{(0)}\right)^2}
+    \forall \epsilon > 0 \; \exists k_0 \; \forall k \geq k_0 \quad  \rho(x_k, x_0) < \epsilon
+        \Longleftrightarrow  \forall \epsilon > 0 \; \exists k_0 \; \forall k \geq k_0 \quad
+        \sqrt{\sum_{i=1}^n\left(x_i^{(k)} - x_i^{(0)}\right)^2}
 \]
 Ясно, что:
 \[
-    \forall i = 1 \dots n \quad |x_i^{(k)} - x_i^{(0)}| \leq \sqrt{\sum_{i=1}^n
-        \left(x_i^{(k)} - x_i^{(0)}\right)^2} < \epsilon
+    \forall i = 1 \dots n \quad |x_i^{(k)} - x_i^{(0)}| \leq \sqrt{\sum_{i=1}^n \left(x_i^{(k)} -
+        x_i^{(0)}\right)^2} < \epsilon
 \]
-Это значит, что \(\ds\forall i = 1 \dots n \rightarrow \lim_{k \rightarrow
-\infty} x_i^{(k)} = x_i^{(0)}\).
+Это значит, что \(\ds\forall i = 1 \dots n \rightarrow \lim_{k \rightarrow \infty} x_i^{(k)} =
+x_i^{(0)}\).
 
-\Boxedleftarrow Пусть \(\ds\forall i = 1 \dots n \rightarrow \lim_{k \rightarrow
-\infty} x_i^{(k)} = x_i^{(0)}\). Это значит, что:
+\Boxedleftarrow Пусть \(\ds\forall i = 1 \dots n \rightarrow \lim_{k \rightarrow \infty} x_i^{(k)} =
+x_i^{(0)}\). Это значит, что:
 \[
-    \forall \epsilon > 0 \; \forall i = 1 \dots n \; \exists k_i \colon \forall
-        k \geq k_i \rightarrow \left|x_i^{(k)} - x_i^{(0)}\right| <
-        \frac{\epsilon}{\sqrt{n}}.
+    \forall \epsilon > 0 \; \forall i = 1 \dots n \; \exists k_i \colon \forall k \geq k_i
+        \rightarrow \left|x_i^{(k)} - x_i^{(0)}\right| < \frac{\epsilon}{\sqrt{n}}.
 \]
 Возьмём \(k_0 = \max k_i, \; i = 1 \dots n\). Тогда:
 \[
-    \forall \epsilon > 0 \; \exists k_0 \colon \forall k \geq k_0 \rightarrow
-        \sqrt{\sum_{i=1}^n \left(x_i^{(k)} - x_i^{(0)}\right)^2} < \sqrt{
-        \sum_{i=1}^n\frac{\epsilon^2}{n} \cdot n} = \epsilon
+    \forall \epsilon > 0 \; \exists k_0 \colon \forall k \geq k_0 \rightarrow \sqrt{\sum_{i=1}^n
+        \left(x_i^{(k)} - x_i^{(0)}\right)^2} < \sqrt{\sum_{i=1}^n\frac{\epsilon^2}{n} \cdot n} =
+        \epsilon
 \]
 Это значит, что \(\ds\lim_{k \rightarrow \infty} x^{(k)} = x^{(0)}\).
 \end{proof}
 
 \begin{definition}
-Пусть \(k_m\)~--- последовательность индексов (\(m = 1, 2, \dots\)) такая, что
-\(k_m\) возрастает строго. Тогда последовательность \(x_{k_m}\) с индексом \(m\)
-называется \textit{подпоследовательностью} последовательности \(x_k\).
+Пусть \(k_m\)~--- последовательность индексов (\(m = 1, 2, \dots\)) такая, что \(k_m\) возрастает
+строго. Тогда последовательность \(x_{k_m}\) с индексом \(m\) называется
+\textit{подпоследовательностью} последовательности \(x_k\).
 \end{definition}
 
 \begin{theorem}[Больцано-Вейерштрасса]
-Ограниченная последовательность в \(\R^n\) имеет сходящуюся
-подпоследовательность.
+Ограниченная последовательность в \(\R^n\) имеет сходящуюся подпоследовательность.
 \end{theorem}
 
 \begin{proof}
-Доказательство для случая \(n = 2\). Пусть имеется последовательность \(x_i =
-(\alpha_k, \beta_k)\)~--- ограничена (\(|x_k| \leq C \; \forall k\)). Тогда
-также \(\forall k \rightarrow |\alpha_k| \leq C, \; |\beta_k| \leq C\). Применим
-к \(\alpha_k\) одномерную теорему Больцано-Вейерштрасса. Это значит, что
-\(\exists k_m \colon \alpha_{k_m} \rightarrow \alpha_0\) Последовательность
-\(\beta_{k_m}\) ограничена. Из неё выделяем сходящуюся подпоследовательность
-\(b_{k_{m_l}} \rightarrow \beta_0\). Тогда \(\alpha_{k_{m_l}} \rightarrow
-\alpha_0\) (подпоследовательность сходящейся последовательности имеет тот же
-предел). Тогда \((\alpha_{k_{m_l}}, \beta_{k_{m_l}}) \rightarrow
-(\alpha_0, \beta_0)\) (покоординатная сходимость равносильна сходимости точек).
-Тогда \(x_{k_{m_l}} \rightarrow x_0\).
+Доказательство для случая \(n = 2\). Пусть имеется последовательность \(x_i = (\alpha_k,
+\beta_k)\)~--- ограничена (\(|x_k| \leq C \; \forall k\)). Тогда также \(\forall k \rightarrow
+|\alpha_k| \leq C, \; |\beta_k| \leq C\). Применим к \(\alpha_k\) одномерную теорему
+Больцано-Вейерштрасса. Это значит, что \(\exists k_m \colon \alpha_{k_m} \rightarrow \alpha_0\)
+Последовательность \(\beta_{k_m}\) ограничена. Из неё выделяем сходящуюся подпоследовательность
+\(b_{k_{m_l}} \rightarrow \beta_0\). Тогда \(\alpha_{k_{m_l}} \rightarrow \alpha_0\)
+(подпоследовательность сходящейся последовательности имеет тот же предел). Тогда \((\alpha_{k_{m_l}},
+\beta_{k_{m_l}}) \rightarrow (\alpha_0, \beta_0)\) (покоординатная сходимость равносильна сходимости
+точек). Тогда \(x_{k_{m_l}} \rightarrow x_0\).
 
 При \(n > 2\) аналогично (просто получается больше индексов).
 \end{proof}
 
 В произвольном метрическом пространстве теорема Больцано-Вейерштрасса неверна.
+
 \begin{proof}
-Пусть \(M\)~--- простраснтво с тривиальной метрикой, содержащее счётное число
-элементов. Возьмём в качестве последовательности \(x_k\)~--- все элементы \(M\),
-как-то занумерованные. Очевидно, это ограниченная последовательность (\(\forall
-k, m \; \rho(x_k, x_m) = 1\), т.\,e. \(\diam \hm = 1\)). Но сходящуюся
-подпоследовательность выделить нельзя: любая подпоследовательность такова, что
-расстояние между элементами равно единице. Сходящаяся подпоследовательность
-стабилизируется, а здесь этого нет.
+Пусть \(M\)~--- простраснтво с тривиальной метрикой, содержащее счётное число элементов. Возьмём в
+качестве последовательности \(x_k\)~--- все элементы \(M\), как-то занумерованные. Очевидно, это
+ограниченная последовательность (\(\forall k, m \; \rho(x_k, x_m) = 1\), т.\,e. \(\diam \hm = 1\)).
+Но сходящуюся подпоследовательность выделить нельзя: любая подпоследовательность такова, что
+расстояние между элементами равно единице. Сходящаяся подпоследовательность стабилизируется, а здесь
+этого нет.
 \end{proof}
 
 \begin{definition}
-Последовательность~\(x_n\) метрического пространства~\(M\) называется
-\textit{фундаментальной}, если
+Последовательность~\(x_n\) метрического пространства~\(M\) называется \textit{фундаментальной}, если
 \[
-    \forall \epsilon > 0 \; \exists n_0 \; \forall n, m \geq n_0 \rightarrow
-        \rho(x_n, x_m) < \epsilon.
+    \forall \epsilon > 0 \; \exists n_0 \; \forall n, m \geq n_0 \rightarrow \rho(x_n, x_m) <
+        \epsilon.
 \]
 \end{definition}
 
@@ -339,33 +320,32 @@ k, m \; \rho(x_k, x_m) = 1\), т.\,e. \(\diam \hm = 1\)). Но сходящую�
 \begin{proof}
 Поскольку последовательность сходится, имеем:
 \begin{align}
-    \forall \epsilon > 0 \;\exists n_0 \colon &\forall n \geq n_0 \rightarrow
-        \rho(x_n, x_0) < \epsilon / 2\\
+    \forall \epsilon > 0 \;\exists n_0 \colon &\forall n \geq n_0 \rightarrow \rho(x_n, x_0) <
+        \epsilon / 2\\
     &\forall m \geq n_0 \rightarrow \rho(x_m, x_0) < \epsilon / 2,
 \end{align}
 т.\,e.
 \[
-    \forall n, m \geq n_0 \rightarrow \rho(x_n, x_m) \leq \rho(x_n, x_0) +
-        \rho(x_0, x_m) < \epsilon.
+    \forall n, m \geq n_0 \rightarrow \rho(x_n, x_m) \leq \rho(x_n, x_0) + \rho(x_0, x_m) <
+        \epsilon.
 \]
 \end{proof}
 
-Обратное, вообще говоря, неверно. Любое непустое подмножество метрического
-пространства можно рассматривать как метрическое пространство с той же метрикой.
+Обратное, вообще говоря, неверно. Любое непустое подмножество метрического пространства можно
+рассматривать как метрическое пространство с той же метрикой.
 \begin{example}
-Рассмотрим \(\Q \subset \R, \; \rho(x, y) = |x - y|\). В \(\Q\) можно найти
-фундаментальную последовательность, не являющуяся сходящейся.
+Рассмотрим \(\Q \subset \R, \; \rho(x, y) = |x - y|\). В \(\Q\) можно найти фундаментальную
+последовательность, не являющуяся сходящейся.
 
-Рассмотрим \(x_n\)~--- множество десятичных приближений \(\sqrt 2\). \(x_n\)~---
-фундаментальна, т.\,к. сходится в \(\R^n\). В \(\Q\) не является сходящейся. Если
-\(\ds\exists \lim_{n \rightarrow \infty} x_n = \alpha\) в \(\Q\), то это предел
-и в \(\R\). В силу единственности предела \(\alpha = \sqrt 2 \in \Q\)~---
-противоречие.
+Рассмотрим \(x_n\)~--- множество десятичных приближений \(\sqrt 2\). \(x_n\)~--- фундаментальна,
+т.\,к. сходится в \(\R^n\). В \(\Q\) не является сходящейся. Если \(\ds\exists \lim_{n \rightarrow
+\infty} x_n = \alpha\) в \(\Q\), то это предел и в \(\R\). В силу единственности предела \(\alpha =
+\sqrt 2 \in \Q\)~--- противоречие.
 \end{example}
 
 \begin{definition}
-Метрическое пространство, в котором любая фундаментальная последовательность
-сходится, называется \textit{полным}.
+Метрическое пространство, в котором любая фундаментальная последовательность сходится, называется
+\textit{полным}.
 \end{definition}
 
 \begin{example}
@@ -377,15 +357,13 @@ k, m \; \rho(x_k, x_m) = 1\), т.\,e. \(\diam \hm = 1\)). Но сходящую�
 \end{note}
 
 \begin{proof}
-Пусть в пространстве с тривиальной метрикой последовательность \(x_n\)
-фундаментальна, т.\,e.:
+Пусть в пространстве с тривиальной метрикой последовательность \(x_n\) фундаментальна, т.\,e.:
 \[
-    \forall \epsilon > 0 \; \exists n_0 \; \forall n, m \geq n_0 \rightarrow
-        \rho(x_n, x_m) < \epsilon.
+    \forall \epsilon > 0 \; \exists n_0 \; \forall n, m \geq n_0 \rightarrow \rho(x_n, x_m) <
+        \epsilon.
 \]
-Если взять \(\epsilon = 1\), то \(\forall n, m \geq n_0 \; x_n = x_m\). В
-пространстве с тривиальной метрикой последовательность стабилизируется,
-следовательно, сходится.
+Если взять \(\epsilon = 1\), то \(\forall n, m \geq n_0 \; x_n = x_m\). В пространстве с тривиальной
+метрикой последовательность стабилизируется, следовательно, сходится.
 \end{proof}
 
 \begin{theorem}
@@ -393,20 +371,18 @@ k, m \; \rho(x_k, x_m) = 1\), т.\,e. \(\diam \hm = 1\)). Но сходящую�
 \end{theorem}
 
 \begin{proof}
-Пусть последовательность \(x_k = (\alpha_1^{(k)}, \dots, \alpha_n^{(k)})\)~---
-фундаментальна. Это значит, что:
+Пусть последовательность \(x_k = (\alpha_1^{(k)}, \dots, \alpha_n^{(k)})\)~--- фундаментальна. Это
+значит, что:
 \begin{gather}
-    \forall \epsilon > 0 \; \exists k_0 \colon \forall k, m \geq k_0 \rightarrow
-        \rho(x_k, x_m) < \epsilon \Longleftrightarrow \sqrt{\sum_{i=1}^n
-        \left(x_i^{(k)} - x_i^{(m)}\right)^2} < \epsilon\\
-    \forall i = 1 \dots n \; \left|x_i^{(k)} - x_i^{(m)}\right| < \epsilon
-        \text{, т.\,e.} \; \forall i = 1 \dots n \rightarrow \exists \lim_{k
-        \rightarrow \infty} x_i^{(k)} = x_i^{(0)}
+    \forall \epsilon > 0 \; \exists k_0 \colon \forall k, m \geq k_0 \rightarrow \rho(x_k, x_m) <
+        \epsilon \Longleftrightarrow \sqrt{\sum_{i=1}^n \left(x_i^{(k)} - x_i^{(m)}\right)^2} <
+        \epsilon\\
+    \forall i = 1 \dots n \; \left|x_i^{(k)} - x_i^{(m)}\right| < \epsilon \text{, т.\,e.} \;
+        \forall i = 1 \dots n \rightarrow \exists \lim_{k \rightarrow \infty} x_i^{(k)} = x_i^{(0)}
 \end{gather}
 т.\,к. покоординатная сходимость равносильна сходимости в пространстве, то:
 \[
-    x_k = (x_1^{(k)}, \dots, x_n^{(k)}) \rightarrow (x_1^{(0)}, \dots,
-        x_n^{(0)}) \equiv x_0.
+    x_k = (x_1^{(k)}, \dots, x_n^{(k)}) \rightarrow (x_1^{(0)}, \dots, x_n^{(0)}) \equiv x_0.
 \]
 \end{proof}
 
@@ -414,21 +390,20 @@ k, m \; \rho(x_k, x_m) = 1\), т.\,e. \(\diam \hm = 1\)). Но сходящую�
 \Subsection{Различные типы множеств в метрических пространствах}
 
 \begin{definition}
-Точка~\(x_0\) в метрическом пространстве~\(M\) называется \textit{внутренней
-точкой} множества \(X \subset M\), если
+Точка~\(x_0\) в метрическом пространстве~\(M\) называется \textit{внутренней точкой} множества \(X
+\subset M\), если
 \[
     \exists \epsilon > 0 \colon U_\epsilon(x_0) \subset M.
 \]
 \end{definition}
 
 \begin{definition}
-Множество внутренних точек~\(X\) называется \textit{внутренностью}~\(X\)
-(\(\Int X\)).
+Множество внутренних точек~\(X\) называется \textit{внутренностью}~\(X \; (\Int X)\).
 \end{definition}
 
 \begin{definition}
-Множество~\(X \subset M\) называется \textit{открытым}, если \(\Int X = X\),
-т.\,e. любая точка \(X\) является внутренней.
+Множество~\(X \subset M\) называется \textit{открытым}, если \(\Int X = X\), т.\,e. любая точка
+\(X\) является внутренней.
 \end{definition}
 
 Ясно, что \(\Int X \subset X\), а совпадает для открытых множеств.
@@ -436,13 +411,13 @@ k, m \; \rho(x_k, x_m) = 1\), т.\,e. \(\diam \hm = 1\)). Но сходящую�
 \begin{examples}
 В \(\R^1\) открытыми множествами являются открытые промежутки.
 
-В пространстве с тривиальной метрикой для любого множества \(X\) любая точка
-является внутренней, т.\,к.
+В пространстве с тривиальной метрикой для любого множества \(X\) любая точка является внутренней,
+т.\,к.
 \[
     \forall x_0 \in X \rightarrow U_\epsilon (x_0) = \{x_0\} \subset X.
 \]
 \end{examples}
 
 \begin{note}
-Пустое множество тоже считается открытым в любом метрическом простраснтве.
+Пустое множество тоже считается открытым в любом метрическом пространстве.
 \end{note}
