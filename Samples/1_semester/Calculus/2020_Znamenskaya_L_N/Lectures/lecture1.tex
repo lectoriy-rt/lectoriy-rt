@@ -1,0 +1,215 @@
+\setcounter{section}{-1}
+\Section{Символика и примеры её использования}
+
+Множества обозначают заглавными латинскими буквами (\(A\), \(B\), \(C\),
+\(\dots\)), элементы множеств~--- \textit{прописными латинскими буквами} (\(a\),
+\(b\), \(c\), \(\dots\)).
+
+Иногда для обозначения числовых множеств будут использоваться прописные
+греческие буквы (\(\alpha\), \(\beta\), \(\gamma\), \(\dots\)).
+
+Приведём примеры некоторых обозначений.
+
+\vspace{-8pt}
+\begin{table}[H]
+\begin{tabular}{ll}
+\textit{Обозначение} & \textit{Смысл}\\
+\(a \in A\) & <<\(a\) является элементом множества \(A\)>> или <<\(a\)
+    принадлежит множеству \(A\)>>.\\
+\(a \notin A\) & <<\(a\) не является элементом множества \(A\)>> или
+    <<\(a\) не принадлежит множеству \(A\)>>\\
+\(A \subset B\) & <<\(A\) является подмножеством множества \(B\)>>\\
+\(A \not\subset B\) & <<\(A\) не является подмножеством множества \(B\)>>\\
+\(A \cup B\) & <<объединение \(A\) и \(B\)>>\\
+\(A \cap B\) & <<пересечение \(A\) и \(B\)>>\\
+\(A \setminus B\) & <<разность \(A\) и \(B\)>>\\
+\(\forall\) & квантор всеобщности (<<для любого>>, <<для всех>>)\\
+\(\exists\) & квантор существования (<<существует>>)\\
+\(\lor\) & дизъюнкция (<<или>>)\\
+\(\&\) & конъюнкция (<<и>>)\\
+\(\Rightarrow\) & импликация (<<следует>>, <<то>>, <<тогда>>)\\
+\(\Leftrightarrow\) & эквивалентность (<<тогда и только тогда>>,
+    <<необходимо и достаточно>>)\\
+\(\neg\) & отрицание (<<не>>)\\
+\(\mapsto\) & <<выполняется>>, <<имеет место>>\\
+\(\eqdef\) & равенство по определению (<<по определению>>)\\
+\(=\left\{x:\right\}\) & множество, которое описывается через элементы\\
+\(:\) & <<такой, что>>.
+\end{tabular}
+\end{table}
+\vspace{-14pt}
+
+\begin{example}
+Множество~\(A\) является \textit{подмножеством} множества~\(B\), если любой
+элемент множества~\(A\) является элементом множества~\(B\):
+\[
+    \left[A \subset B\right] \eqdef
+    \left[\forall a \in A \mapsto a \in B\right]
+\]
+\end{example}
+
+\begin{example}
+Множества~\(A\) и~\(B\) \textit{равны}, если \(A\) является подмножеством~\(B\)
+\textbf{и}~\(B\) является подмножеством~\(A\):
+\begin{gather}
+    \left[A = B\right] \eqdef \left[A \subset B\right] \& \left[B \subset
+        A\right]\\
+    \left[A = B\right]\eqdef \left[\forall a \in A \mapsto a \in B\right] \&
+        \left[\forall b \in B \mapsto b \in B\right]
+\end{gather}
+\end{example}
+
+\begin{example}
+\textit{Объединением множеств}~\(A\) и~\(B\) называется множество~\(A \cup B\),
+каждый элемент которого принадлежит~\(A\) \textbf{или}~\(B\):
+\begin{gather}
+    A \cup B = \left\{x: [x \in A] \lor [x \in B]\right\}\\
+    \left[x \in A \cup  B\right] = \left[x \in A\right] \lor \left[x \in
+        B\right]
+\end{gather}
+
+\end{example}
+
+\begin{example}
+\textit{Пересечнием множеств}~\(A\) и~\(B\) называется множество~\(A \cap B\),
+каждый элемент которого принадлежит~\(A\) \textbf{и}~\(B\):
+\begin{gather}
+    A \cap B = \left\{x: [x \in A] \& [x \in B]\right\}\\
+    \left[x \in A \cap  B\right] = \left[x \in A\right] \& \left[x \in
+        B\right]
+\end{gather}
+\end{example}
+
+\begin{example}
+\textit{Разностью множеств~\(A\) и~\(B\)} называется множество~\(A \setminus B\),
+каждый элемент которого принадлежит~\(A\) и не принадлежит~\(B\):
+\begin{gather}
+    A \setminus B = \left\{x: [x \in A] \lor [x \notin B]\right\}\\
+    \left[x \in A \cup  B\right] = \left[x \in A\right] \lor \left[x \notin
+        B\right]
+\end{gather} 
+\end{example}
+
+Теперь начнем формулировать отрицание высказываний.
+
+\begin{example}
+При отрицании, квантор всеобщности~\(\forall\) заменяется на квантор
+существования~\(\exists\). Так же после квантора всеобщности~\(\forall\)
+принято ставить~<<\(\mapsto\)>>, а после квантора существования~\(\exists\)~---
+<<:>> (это правило не является строгим, символы стоит использовать в зависимости
+от их произношения).
+
+Обозначим \(\mathfrak{A} = \left[A \subset B\right] \eqdef \left[\forall a \in A
+\mapsto a \in B\right] \), тогда:
+\[
+    \neg \mathfrak{A} \eqdef \left[A \not\subset B\right] \eqdef \left[\exists a
+        \in A: a \notin B\right]
+\]
+\end{example}
+
+\begin{example}
+При отрицании, все символы, которые находятся при кванторах~\(\forall\),
+\(\exists\) не меняются, а все остальные~--- \textit{заменяются на
+противоположные} (\(\in\)~--- на \(\notin\), \(>\)~--- на \(\leq\),
+\(\lor\)~--- на \(\&\) и~т.\,д.).
+
+Обозначим \(\mathfrak{B} = \left[\forall x \in X \mapsto \lvert x \rvert <
+\alpha \right]\), тогда:
+\[
+    \neg \mathfrak{B} = \left[\exists x \in X: \lvert x \rvert \ge \alpha
+        \right]
+\]
+\end{example}
+
+\begin{example}
+Теперь рассмотрим пример с несколькими кванторами
+
+Обозначим \(\mathfrak{C} = \left[\exists \alpha > 0: \forall x \in X \mapsto
+\lvert x \rvert < \alpha\right]\), тогда:
+\[
+    \neg \mathfrak{C} = \left[ \forall \alpha > 0 \; \exists x_\alpha \in X:
+        \lvert x_\alpha \rvert >= \alpha\right]
+\]
+
+Стоит обратить внимание на то, что при отрицании мы добавили к~\(x\)
+индекс~\(\alpha\). Это связано с тем, что для \textit{каждого~\(\alpha\) будет
+существовать свой~\(x_{\alpha}\)}, так что использование~\(x\) в данном случае
+является некорректным.
+\end{example}
+
+Стоит так же отметить тот факт, что запись через символы является довольно
+свободной, и у неё нет строгих правил записи.
+
+\Section{Теория действительного числа}
+\Subsection{Рациональные числа и их свойства}
+
+\begin{definition}
+\textit{Рациональным числом} называется дробь~\(\dfrac{p}{q}\), где \(q \in
+\N\), \(p \in \Z\).
+\end{definition}
+
+\begin{mtopic}{Упорядоченность \(\Q\)}
+Для любых рациональных чисел~\(a\) и~\(b\) имеет место только одно из
+соотношений: \(a = b\), \(a > b\), \(b > a\).
+\end{mtopic}
+
+Запишем основные свойства рациональных чисел:
+
+\begin{properties}
+\item Если \(a = b\) и \(b = c\), то \(a = c\),
+
+Если \(a > b\) и \(b > c\), то \(a > c\).
+
+(\textit{транзитивность <<\(=\)>> и <<\(>\)>>})
+\end{properties}
+
+\begin{mtopic}{Сложение рациональных чисел}
+
+\(a = \dfrac{p}{q}\) и \(b = \dfrac{r}{s}\).
+
+Сумма \(a + b = \dfrac{ps + rq}{qs}\).
+
+Операция нахождения суммы называется \textit{сложением}.
+\end{mtopic}
+
+\begin{properties}[resume]
+\item \(a + b = b + a\) (\textit{коммутативность сложения});
+\item \((a + b) + c = a + (b + c)\) (\textit{ассоциотивность сложения});
+\item Существует число~\(0\) такое, что для любого~\(a\) выполняется
+    \(a + 0 = a\) (\textit{особая роль нуля});
+\item Для любого числа~\(a\) найдется противоположное число~\(-a\) такое,
+    что \(a + (-a) = 0\) (\textit{существование противоположных чисел}).
+\end{properties}
+
+\begin{mtopic}{Умножение рациональных чисел}
+
+\(a = \dfrac{p}{q}\) и \(b = \dfrac{r}{s}\).
+
+Произведение \(a \cdot b = \dfrac{pr}{qs}\).
+
+Операция нахождения произведения называется \textit{умножением}.
+\end{mtopic}
+
+\begin{properties}[resume]
+\item \(a \cdot b = b \cdot a\) (\textit{коммутативность умножения});
+\item \((a \cdot b) \cdot c = a \cdot (b \cdot c)\) (\textit{ассоциативность
+    умножения});
+\item Существует число 1 такое, что для любого~\(a\) выполняется \(a \cdot 1 =
+    a\) (\textit{особая роль 1});
+\item Для любого~\(a \neq 0\) существует обратное число \(\dfrac{1}{a}\)
+    такое, что \(a \cdot \dfrac{1}{a} = 1\) (\textit{существование обратных
+    чисел});
+\item \((a + b) \cdot c = a \cdot c + b \cdot c\)
+    (\textit{дистрибутивность сложения относительно умножения});
+\item Если \(a > b\), то для любого~\(c\) выполняется \(a + c > b + c\);
+\item Если \(a > b\), то для любого~\(c > 0\) выполняется \(a \cdot c > b \cdot
+    c\);
+\item Для любого~\(a > 0\) найдется \(n \in \mathbb{N}\) такое, что
+    \(n > a\) (\textit{аксиома Архимеда}).
+\end{properties}
+
+\begin{mtopic}{Плотность рациональных чисел}
+Если \(a > b\), то найдется \(c \in \mathbb{Q}\) такое, что \(a > c > b\).
+
+Для доказательства этого утверждения достаточно взять \(c = \dfrac{a + b}{2}\).
+\end{mtopic}
