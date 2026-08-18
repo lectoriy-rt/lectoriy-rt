@@ -48,12 +48,11 @@
 \DeclareMathOperator{\diam}{diam}
 \DeclareMathOperator{\Int}{Int}
 
-
 % Стрелочки в рамочках для доказательств разных частей двусторонних утверждений
 \newcommand{\Boxedrightarrow}{\raisebox{0.3ex}{\(\boxed{\Rightarrow}\)}\;}
 \newcommand{\Boxedleftarrow}{\raisebox{0.3ex}{\(\boxed{\Leftarrow}\)}\;}
 
-\newtheoremstyle{mystyle}
+\newtheoremstyle{main}
     {4pt}                  % расстояние до
     {4pt}                  % расстояние после
     {}                     % шрифт тела
@@ -62,7 +61,7 @@
     {.}                    % пунктуация после заголовка
     {\the\fontdimen2\font} % отступ после шапки в ширину оступа между словами
     {}                     % настройки шапки теоремы
-\theoremstyle{mystyle}
+\theoremstyle{main}
 
 \newtheorem{definition}{Определение}[section]
 
@@ -88,16 +87,11 @@
     {\hbox{$\mathsurround=0pt #1$}}{}}
 
 \usepackage{enumitem}
-\newenvironment{Enum}{
-    \begin{enumerate}[leftmargin=1.75cm,topsep=5pt,parsep=0pt]{}
-}{
-    \end{enumerate}
-}
-\newenvironment{Itemize}{
-    \begin{itemize}[label={--},leftmargin=1.75cm,topsep=5pt,parsep=0pt]{}
-}{
-    \end{itemize}
-}
+
+% Стиль списка для математических свойств
+\newenvironment{properties}[1][]
+    {\begin{enumerate}[label=\arabic*\(^{\circ}\).,#1]}
+    {\end{enumerate}}
 
 \sloppy
 

@@ -3,8 +3,8 @@
 \Subsection{Метрические пространства и сходимость метрических пространств}
 
 \begin{definition}
-Непустое множество \(M\) называется \textit{метрическим пространством}, если
-\(\forall x, y \in M\) определено число \(\rho(x, y) \in \R\) такое, что
+Непустое множество~\(M\) называется \textit{метрическим пространством}, если
+\(\forall x, y \in M\) определено число~\(\rho(x, y) \in \R\) такое, что
 выполнены аксиомы:
 \begin{enumerate}
 \item \(\rho(x, y) \geq 0; \; \rho(x, y) = 0 \Longleftrightarrow x = y\).
@@ -26,7 +26,7 @@
 \end{note}
 
 \begin{definition}
-\textit{Точечное \(n\)-мерное евклидово простраснтво \(\R^n\)}~--- множество
+\textit{Точечное \(n\)-мерное евклидово пространство~\(\R^n\)}~--- множество
 упорядоченных наборов \(x = (\alpha_1, \alpha_2, \dots, \alpha_n), \; \alpha_i
 \in \R\).
 \end{definition}
@@ -119,7 +119,7 @@
 \end{note}
 
 \begin{note}
-Эти операции удобно делать только в \(\R^n\).
+Эти операции удобно делать только в~\(\R^n\).
 \end{note}
 
 \begin{definition}
@@ -137,17 +137,17 @@
 \end{note}
 
 \begin{definition}
-Говорят, что последовательность точек \(x_n\) метрического пространства \(M\)
+Говорят, что последовательность точек~\(x_n\) метрического пространства~\(M\)
 \textit{сходится к точке \(x_0 \in M\)}, если
 \[
-    \lim_{n \rightarrow \infty} \rho(x, x_0) = 0, \; \text{т.е.} \; \forall
+    \lim_{n \rightarrow \infty} \rho(x, x_0) = 0, \; \text{т.\,e.} \; \forall
     \epsilon > 0 \; \exists n_0 \; \forall n \geq n_0 \rightarrow
     \rho(x_n, x_0) < \epsilon.
 \]
 \end{definition}
 
 В пространстве с тривиальной метрикой \(\ds\lim_{n \rightarrow \infty} x_n = x_0
-\Longleftrightarrow \exists n_0 \; \forall n \geq n_0 x_n = x_0\)
+\Longleftrightarrow \exists n_0 \; \forall n \geq n_0 \rightarrow x_n = x_0\)
 (последовательность \textit{стабилизируется}).
 
 \begin{note}
@@ -163,7 +163,7 @@
 \infty} x_n = y_0\). Тогда:
 \begin{gather}
     \forall \epsilon > 0 \; \exists n_1 \rightarrow \rho(x_n, x_0) <
-        \epsilon / 2, \\
+        \epsilon / 2,\\
     \forall \epsilon > 0 \; \exists n_2 \rightarrow \rho(x_n, y_0) <
         \epsilon / 2.
 \end{gather}
@@ -177,24 +177,24 @@ y_0\).
 \end{proof}
 
 \begin{definition}
-Пусть \(X\)~--- непустое множество в метрическом пространстве \(M\). Тогда
-\textit{диаметром} \(X\) называется величина:
+Пусть \(X\)~--- непустое множество в метрическом пространстве~\(M\). Тогда
+\textit{диаметром}~\(X\) называется величина:
 \[
     \diam X = \sup \rho(x, y) \in [0, +\infty] \quad \forall x, y \in X.
 \]
 \end{definition}
 
 \begin{definition}
-Множество \(X\) называется \textit{ограниченным}, если его диаметр конечен.
+Множество~\(X\) называется \textit{ограниченным}, если его диаметр конечен.
 \end{definition}
 
 \begin{statement}
-Множество \(X \subset \R^n\) ограничено \(\Longleftrightarrow \exists C > 0
+Множество~\(X \subset \R^n\) ограничено \(\Longleftrightarrow \exists C > 0
 \colon \forall x \in X \rightarrow |x| \leq C\).
 \end{statement}
 
 \begin{proof}
-\Boxedrightarrow Пусть множество ограничено, т.е. \(\diam X = d < +\infty\).
+\Boxedrightarrow Пусть множество ограничено, т.\,e. \(\diam X = d < +\infty\).
 Поскольку множество непусто, рассмотрим фиксированное \(x_0 \in X\). Тогда:
 \[
     \forall x \in X \rightarrow |x| \leq |x - x_0| + |x_0| \leq d + |x_0|
@@ -209,23 +209,23 @@ y_0\).
 \end{proof}
 
 \begin{definition}
-Последовательность \(x_n\) называется \textit{ограниченной}, если множество её
+Последовательность~\(x_n\) называется \textit{ограниченной}, если множество её
 значений ограничено.
 \end{definition}
 
 \begin{statement}
-Если последовательность \(x_n\) в метрическом пространстве сходится, то она
+Если последовательность~\(x_n\) в метрическом пространстве сходится, то она
 ограничена.
 \end{statement}
 
 \begin{proof}
-Пусть \(\ds\lim_{n \Rightarrow \infty} x_n x_0\), т.е.
+Пусть \(\ds\lim_{n \Rightarrow \infty} x_n x_0\), т.\,e.
 \begin{align}
     \forall \epsilon > 0 \;\exists n_0 \colon &\forall n \geq n_0 \rightarrow
-        \rho(x_n, x_0) < \epsilon / 2 \\
+        \rho(x_n, x_0) < \epsilon / 2\\
     &\forall m \geq n_0 \rightarrow \rho(x_m, x_0) < \epsilon / 2,
 \end{align}
-т.е.
+т.\,e.
 \[
     \forall n, m \geq n_0 \rightarrow \rho(x_n, x_m) \leq \rho(x_n, x_0) +
         \rho(x_0, x_m) \leq \epsilon.
@@ -245,10 +245,10 @@ y_0\).
 \alpha_n^k)\), \(x_0 = (\alpha_1^0, \dots \alpha_n^0)\)
 
 \begin{statement}
-Сходимость в \(\R^n\) равносильна покоординатной сходимости. Т.е.
+Сходимость в \(\R^n\) равносильна покоординатной сходимости. т.\,e.
 \[
-    x_k \rightarrow x_0 \; \text{в} \; \R^n \Longleftrightarrow \forall i = 1, 2,
-        \dots, n \quad \alpha_i^{(k)} \rightarrow \alpha_i^{(0)}.
+    x_k \rightarrow x_0 \; \text{в} \; \R^n \Longleftrightarrow \forall i = 1,
+        2, \dots, n \quad \alpha_i^{(k)} \rightarrow \alpha_i^{(0)}.
 \]
 \end{statement}
 
@@ -317,14 +317,14 @@ y_0\).
 Пусть \(M\)~--- простраснтво с тривиальной метрикой, содержащее счётное число
 элементов. Возьмём в качестве последовательности \(x_k\)~--- все элементы \(M\),
 как-то занумерованные. Очевидно, это ограниченная последовательность (\(\forall
-k, m \; \rho(x_k, x_m) = 1\), т.е. \(\diam \hm = 1\)). Но сходящуюся
+k, m \; \rho(x_k, x_m) = 1\), т.\,e. \(\diam \hm = 1\)). Но сходящуюся
 подпоследовательность выделить нельзя: любая подпоследовательность такова, что
 расстояние между элементами равно единице. Сходящаяся подпоследовательность
 стабилизируется, а здесь этого нет.
 \end{proof}
 
 \begin{definition}
-Последовательность \(x_n\) метрического пространства \(M\) называется
+Последовательность~\(x_n\) метрического пространства~\(M\) называется
 \textit{фундаментальной}, если
 \[
     \forall \epsilon > 0 \; \exists n_0 \; \forall n, m \geq n_0 \rightarrow
@@ -340,10 +340,10 @@ k, m \; \rho(x_k, x_m) = 1\), т.е. \(\diam \hm = 1\)). Но сходящуюс
 Поскольку последовательность сходится, имеем:
 \begin{align}
     \forall \epsilon > 0 \;\exists n_0 \colon &\forall n \geq n_0 \rightarrow
-        \rho(x_n, x_0) < \epsilon / 2 \\
+        \rho(x_n, x_0) < \epsilon / 2\\
     &\forall m \geq n_0 \rightarrow \rho(x_m, x_0) < \epsilon / 2,
 \end{align}
-т.е.
+т.\,e.
 \[
     \forall n, m \geq n_0 \rightarrow \rho(x_n, x_m) \leq \rho(x_n, x_0) +
         \rho(x_0, x_m) < \epsilon.
@@ -357,7 +357,7 @@ k, m \; \rho(x_k, x_m) = 1\), т.е. \(\diam \hm = 1\)). Но сходящуюс
 фундаментальную последовательность, не являющуяся сходящейся.
 
 Рассмотрим \(x_n\)~--- множество десятичных приближений \(\sqrt 2\). \(x_n\)~---
-фундаментальна, т.к. сходится в \(\R^n\). В \(\Q\) не является сходящейся. Если
+фундаментальна, т.\,к. сходится в \(\R^n\). В \(\Q\) не является сходящейся. Если
 \(\ds\exists \lim_{n \rightarrow \infty} x_n = \alpha\) в \(\Q\), то это предел
 и в \(\R\). В силу единственности предела \(\alpha = \sqrt 2 \in \Q\)~---
 противоречие.
@@ -369,7 +369,7 @@ k, m \; \rho(x_k, x_m) = 1\), т.е. \(\diam \hm = 1\)). Но сходящуюс
 \end{definition}
 
 \begin{example}
-Пространство \(R\)~--- полно, а \(\Q\)~--- неполно (\(\rho(x, y) = |x - y|\)).
+Пространство~\(R\)~--- полно, а \(\Q\)~--- неполно (\(\rho(x, y) = |x - y|\)).
 \end{example}
 
 \begin{note}
@@ -378,7 +378,7 @@ k, m \; \rho(x_k, x_m) = 1\), т.е. \(\diam \hm = 1\)). Но сходящуюс
 
 \begin{proof}
 Пусть в пространстве с тривиальной метрикой последовательность \(x_n\)
-фундаментальна, т.е.:
+фундаментальна, т.\,e.:
 \[
     \forall \epsilon > 0 \; \exists n_0 \; \forall n, m \geq n_0 \rightarrow
         \rho(x_n, x_m) < \epsilon.
@@ -395,15 +395,15 @@ k, m \; \rho(x_k, x_m) = 1\), т.е. \(\diam \hm = 1\)). Но сходящуюс
 \begin{proof}
 Пусть последовательность \(x_k = (\alpha_1^{(k)}, \dots, \alpha_n^{(k)})\)~---
 фундаментальна. Это значит, что:
-\[
+\begin{gather}
     \forall \epsilon > 0 \; \exists k_0 \colon \forall k, m \geq k_0 \rightarrow
         \rho(x_k, x_m) < \epsilon \Longleftrightarrow \sqrt{\sum_{i=1}^n
-        \left(x_i^{(k)} - x_i^{(m)}\right)^2} < \epsilon
-\]
-\(\forall i = 1 \dots n \; \left|x_i^{(k)} - x_i^{(m)}\right| < \epsilon\), т.е.
-\(\ds\forall i = 1 \dots n \rightarrow \exists \lim_{k \rightarrow \infty}
-x_i^{(k)} = x_i^{(0)}\). Т.к. покоординатная сходимость равносильна сходимости в
-пространстве, то:
+        \left(x_i^{(k)} - x_i^{(m)}\right)^2} < \epsilon\\
+    \forall i = 1 \dots n \; \left|x_i^{(k)} - x_i^{(m)}\right| < \epsilon
+        \text{, т.\,e.} \; \forall i = 1 \dots n \rightarrow \exists \lim_{k
+        \rightarrow \infty} x_i^{(k)} = x_i^{(0)}
+\end{gather}
+т.\,к. покоординатная сходимость равносильна сходимости в пространстве, то:
 \[
     x_k = (x_1^{(k)}, \dots, x_n^{(k)}) \rightarrow (x_1^{(0)}, \dots,
         x_n^{(0)}) \equiv x_0.
@@ -414,7 +414,7 @@ x_i^{(k)} = x_i^{(0)}\). Т.к. покоординатная сходимост�
 \Subsection{Различные типы множеств в метрических пространствах}
 
 \begin{definition}
-Точка \(x_0\) в метрическом пространстве \(M\) называется \textit{внутренней
+Точка~\(x_0\) в метрическом пространстве~\(M\) называется \textit{внутренней
 точкой} множества \(X \subset M\), если
 \[
     \exists \epsilon > 0 \colon U_\epsilon(x_0) \subset M.
@@ -422,13 +422,13 @@ x_i^{(k)} = x_i^{(0)}\). Т.к. покоординатная сходимост�
 \end{definition}
 
 \begin{definition}
-Множество внутренних точек \(X\) называется \textit{внутренностью} \(X\)
+Множество внутренних точек~\(X\) называется \textit{внутренностью}~\(X\)
 (\(\Int X\)).
 \end{definition}
 
 \begin{definition}
-Множество \(X \subset M\) называется \textit{открытым}, если \(\Int X = X\), т.е.
-любая точка \(X\) является внутренней.
+Множество~\(X \subset M\) называется \textit{открытым}, если \(\Int X = X\),
+т.\,e. любая точка \(X\) является внутренней.
 \end{definition}
 
 Ясно, что \(\Int X \subset X\), а совпадает для открытых множеств.
@@ -437,7 +437,7 @@ x_i^{(k)} = x_i^{(0)}\). Т.к. покоординатная сходимост�
 В \(\R^1\) открытыми множествами являются открытые промежутки.
 
 В пространстве с тривиальной метрикой для любого множества \(X\) любая точка
-является внутренней, т.к.
+является внутренней, т.\,к.
 \[
     \forall x_0 \in X \rightarrow U_\epsilon (x_0) = \{x_0\} \subset X.
 \]
