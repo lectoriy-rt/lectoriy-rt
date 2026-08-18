@@ -4,8 +4,10 @@ on:
     branches:
       - main
     paths:
-      - "**/*.tex"
-      - "!Template"
+      - "Samples/**"
+      - "Lectures/**"
+      - "Seminars/**"
+      - "Exams/**"
 jobs:
   main:
     runs-on: ubuntu-latest
@@ -17,13 +19,7 @@ jobs:
           sudo apt install -y texlive texlive-latex-extra texlive-lang-cyrillic
       - name: Compile and upload changed files
         run: |
-          for FILE in $(git show --name-only --oneline --format="" \
-              --diff-filter=d ${{ github.sha }});
-          do
-            if [ "$(basename $FILE)" != "main.tex" ]; then
-              continue
-            fi
-
+          for FILE in $(find * -name 'main.tex' ! -path 'Template/*'); do
             DIR=$(dirname $FILE)
             cd $DIR
 
