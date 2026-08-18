@@ -56,16 +56,16 @@
 % micro topic
 \newenvironment{mtopic}[1]{\textbf{#1}\par\vspace{4pt}}{\par\vspace{4pt}}
 
-\newtheoremstyle{mystyle}
-    {4pt}                  % расстояние до
-    {4pt}                  % расстояние после
-    {}                     % шрифт тела
-    {\parindent}           % размер отступа красной строки
-    {\bfseries}            % шрифт шапки
-    {.}                    % пунктуация после заголовка
-    {\the\fontdimen2\font} % отступ после шапки в ширину оступа между словами
-    {}                     % настройки шапки теоремы
-\theoremstyle{mystyle}
+\newtheoremstyle{main}
+    {4pt}                                        % расстояние до
+    {4pt}                                        % расстояние после
+    {}                                           % шрифт тела
+    {\parindent}                                 % размер отступа красной строки
+    {\bfseries}                                  % шрифт шапки
+    {.}                                          % пунктуация после заголовка
+    { }                                          % пунктуация после шапки
+    {\thmname{#1}\thmnumber{ #2}\thmnote{ (#3)}} % параметры шапки
+\theoremstyle{main}
 
 \newtheorem{definition}{Определение}[section]
 
