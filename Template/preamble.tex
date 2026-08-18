@@ -89,9 +89,8 @@
 \usepackage{enumitem}
 
 % Стиль списка для математических свойств
-\newenvironment{properties}[1][]
-    {\begin{enumerate}[label=\arabic*\(^{\circ}\).,#1]}
-    {\end{enumerate}}
+\newlist{properties}{enumerate}{1}
+\setlist[properties]{label=\arabic*\(^{\circ}\).}
 
 \sloppy
 
