@@ -53,6 +53,9 @@
 \newcommand{\Boxedrightarrow}{\raisebox{0.3ex}{\(\boxed{\Rightarrow}\)}\;}
 \newcommand{\Boxedleftarrow}{\raisebox{0.3ex}{\(\boxed{\Leftarrow}\)}\;}
 
+% micro topic
+\newenvironment{mtopic}[1]{\textbf{#1}\par\vspace{4pt}}{\par\vspace{4pt}}
+
 \newtheoremstyle{mystyle}
     {4pt}                  % расстояние до
     {4pt}                  % расстояние после
@@ -79,8 +82,8 @@
 \newtheorem*{anote}{Замечание автора}
 \newtheorem*{notation}{Обозначение}
 \newtheorem*{reminder}{Напоминание}
-\newtheorem*{example}{Пример}
-\newtheorem*{examples}{Примеры}
+\newtheorem{example}{Пример}
+\newtheorem{examples}{Примеры}
 
 % Команда для переноса во встраиваемых в строку формулах. Взята из книги
 % «Набор и вёрстка в системе LaTeX» С.М. Львовского.
@@ -88,16 +91,11 @@
     {\hbox{$\mathsurround=0pt #1$}}{}}
 
 \usepackage{enumitem}
-\newenvironment{Enum}{
-    \begin{enumerate}[leftmargin=1.75cm,topsep=5pt,parsep=0pt]{}
-}{
-    \end{enumerate}
-}
-\newenvironment{Itemize}{
-    \begin{itemize}[label={--},leftmargin=1.75cm,topsep=5pt,parsep=0pt]{}
-}{
-    \end{itemize}
-}
+
+% Стиль списка для математических свойств
+\newenvironment{properties}[1][]
+    {\begin{enumerate}[label=\arabic*\(^{\circ}\).,#1]}
+    {\end{enumerate}}
 
 \sloppy
 
