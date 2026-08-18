@@ -33,7 +33,7 @@ x_0]\) и \([x_0, x_0 + \delta)\), \(\delta > 0\) выпуклость в раз
 \begin{proof}
 \begin{gather}
     f(x_0 + t) = f(x_0) + f'(x_0) \cdot t + \frac{f''(x_0)}{2} \cdot t^2 +
-        o(t^2), \; t \rightarrow 0 \\
+        o(t^2), \; t \rightarrow 0\\
     f(x_0 - t) = f(x_0) - f'(x_0) \cdot t + \frac{f''(x_0)}{2} \cdot t^2 +
         o(t^2)
 \end{gather}
@@ -65,12 +65,12 @@ x_0]\) и \([x_0, x_0 + \delta)\), \(\delta > 0\) выпуклость в раз
 Пусть \(x_0 \in I, \; x_1 = x_0 + t, \; x_2 = x_0 - t, \; x_1, x_2 \in I, \; t
 \neq 0\). Доказательство проведём для выпуклости вверх:
 \begin{gather}
-    f\left(\frac{x_1 + x_2}{2}\right) > \frac{f(x_1) + f(x_2)}{2} \\
-    f(x_0) > \frac{f(x_0 + t) + f(x_0 - t)}{2} \\
+    f\left(\frac{x_1 + x_2}{2}\right) > \frac{f(x_1) + f(x_2)}{2}\\
+    f(x_0) > \frac{f(x_0 + t) + f(x_0 - t)}{2}\\
     f(x_0 + t) + f(x_0 - t) - 2f(x_0) = f(x_1) + f(x_2) -
         2f\left(\frac{x_1 + x_2}{2}\right) < 0 \; (\text{при достаточно малых}
-        \; t) \\
-    \frac{f(x_0 + t) + f(x_0 - t) - 2f(x_0)}{t^2} < 0 \\
+        \; t)\\
+    \frac{f(x_0 + t) + f(x_0 - t) - 2f(x_0)}{t^2} < 0\\
     \lim_{t \rightarrow 0}{\frac{f(x_0 + t) + f(x_0 - t) - 2f(x_0)}{t^2}} \leq 0
         \Rightarrow f''(x_0) \leq 0
 \end{gather}
@@ -97,7 +97,7 @@ t = \frac{x_1-x_2}{2}\) \((x_1 > x_2)\). Тогда \(x_1 = x_0 + t\), \(x_2 = x
 t\). Получим:
 \begin{align}
     \frac{f(x_1) + f(x_2)}{2} - f\left(\frac{x_1 + x_2}{2}\right) &=
-        \frac{f(x_0 + t) + f(x_0 - t) - 2f(x_0)}{2} = \\
+        \frac{f(x_0 + t) + f(x_0 - t) - 2f(x_0)}{2} =\\
         &= \frac{\left(f(x_0 + t) - f(x_0)\right) - \left(f(x_0) - f(x_0 - t)
         \right)}{2}
 \end{align}
@@ -136,8 +136,8 @@ f(x)\).
 \begin{example}
 \(f(x) = (x + 1)^3e^{-3|x|}\).
 \begin{align}
-    x > 0&: \quad f''(x) = 3(x + 1)(3x^2 - 1)e^{-3x} \\
-    x < 0&: \quad f''(x) = 3(x + 1)(3x^2 + 12x + 11)e^{3x} \\
+    x > 0&: \quad f''(x) = 3(x + 1)(3x^2 - 1)e^{-3x}\\
+    x < 0&: \quad f''(x) = 3(x + 1)(3x^2 + 12x + 11)e^{3x}\\
 \end{align}
 
 \textbf{\textit{[тут должен быть график пу пу пу]}}
@@ -160,7 +160,7 @@ f(x)\).
 касательной.
 \begin{align}
     f''(x) > 0 \; \text{в} \; \overset{\circ}{U}_{\delta}(x_0) &\Rightarrow \;
-        \text{график выше касательной,} \\
+        \text{график выше касательной,}\\
     f''(x) < 0 \; \text{в} \; \overset{\circ}{U}_{\delta}(x_0) &\Rightarrow \;
         \text{ниже касательной.}
 \end{align}
