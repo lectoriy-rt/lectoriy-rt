@@ -1,0 +1,67 @@
+\setcounter{section}{15}
+\Section{Функциональные последовательности и ряды}
+\Subsection{Равномерная сходимость функциональных последовательностей}
+
+\begin{definition}
+Пусть есть некоторая последовательность функций \(f_n(x)\), где \(x \hm\in E \; (\subset \R, \;
+\R^m, \; \Cm)\). Далее, пусть
+\[
+    \forall x \in E \; \exists \lim_{n \rightarrow \infty} f_n(x) = f(x) \Longleftrightarrow \forall
+        x \in E \; \forall \epsilon > 0 \; \exists n_0 \colon \forall n \geq n_0 \rightarrow |f_n(x)
+        - f(x)| < \epsilon
+\]
+Тогда последовательность \(f_n(x)\) \textit{сходится поточечно}.
+\end{definition}
+
+\begin{definition}
+Говорят, что \(f_n(x)\) \textit{сходится равномерно} к \(f(x)\) на \(E \; (f_n(x) \hm{\rra E}
+f(x))\), если
+\[
+    \forall \epsilon > 0 \quad \exists n_0 \colon \forall n \geq n_0 \quad \forall x \in E
+        \rightarrow |f_n(x) - f(x)| < \epsilon.
+\]
+\end{definition}
+
+Рассмотрим \(\ds \rho_n = \sup_E |f_n(x) - f(x)|\) (\(\in \R\) или \(+\infty\))
+
+\begin{statement}
+\(f_n(x) \rra{E} f(x) \Longleftrightarrow \rho_n \rightarrow 0, \; n \rightarrow \infty.\)
+\end{statement}
+
+\begin{proof}
+\Boxedrightarrow
+\begin{gather}
+    \forall \epsilon > 0 \quad \exists n_0 \colon \forall n \geq n_0 \quad \underbrace{\forall x \in
+        E \rightarrow |f_n(x) - f(x)| < \epsilon}_{\ds \Rightarrow \rho_n \leq \epsilon}\\
+    \forall \epsilon > 0 \quad \exists n_0 \colon \forall n \geq n_0 \rightarrow \rho_n \leq \epsilon
+        \Rightarrow \rho_n \rightarrow 0.
+\end{gather}
+
+\Boxedleftarrow
+\[
+    \forall \epsilon > 0 \quad \exists n_0 \quad \forall n \geq n_0 \rightarrow \rho_n < \epsilon
+        \Rightarrow \forall x \in E \rightarrow |f_n(x) - f(x)| < \epsilon.
+\]
+\end{proof}
+
+\begin{statement}
+\(f_n(x) \rra E f(x) \Longleftrightarrow \forall x_n \in E \rightarrow |f_n(x_n) - f(x_n)|
+\rightarrow 0, \; n \rightarrow \infty.\)
+\end{statement}
+
+\begin{proof}
+\Boxedrightarrow
+\[
+    \forall x_n \quad |f_n(x_n) - f(x)| \leq \sup_{x \in E} |f_n(x) - f(x)| \rightarrow 0.
+\]
+
+\Boxedleftarrow Пусть \(\ds \rho_n = \sup_{x \in E} |f_n(x) - f(x)| \not\rightarrow 0\). Тогда 
+существует последовательность индексов \(n_k \colon \rho_{n_k} \geq C > 0\). Далее,
+\[
+    \forall k \quad \exists x_{n_k} \colon |f_{n_k}(x_{n_k}) - f{x_{n_k}}| \geq \frac{C}{2}
+\]
+\(x_n \in E\)~--- произвольная для остальных \(n\).
+\[
+    |f_n(x) - f(x)| \not\rightarrow 0.
+\]
+\end{proof}
