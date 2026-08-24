@@ -129,7 +129,30 @@
     x < 0&: \quad f''(x) = 3(x + 1)(3x^2 + 12x + 11)e^{3x}\\
 \end{align}
 
-\textbf{\textit{[тут должен быть график пу пу пу]}}
+\begin{center}
+\begin{tikzpicture}[scale=0.5,>=stealth]
+\coordinate (P) at (-3,-1);
+\draw[thick,->] (0,-5.5) -- (0,5.5) node[left] {\(y\)};
+\draw[thick,->] (-11.5,0) -- (11.5,0) node[below] {\(x\)};
+\coordinate (A) at (0,3);
+\coordinate (B) at (3,2);
+\coordinate (C) at (-2,0);
+\coordinate (D) at (-5,-2);
+\draw[thick,red] (A) to[out=0,in=140] (B);
+\draw[thick,red] (B) to[out=-40,in=180] (8,0.25);
+\draw[thick,red] (A) to[out=-100,in=0] (C);
+\draw[thick,red] (C) to[out=180,in=0] (D);
+\draw[thick,red] (D) to[out=180,in=0] (-8,0);
+\draw (-5,-0.15) -- (-5,0.15);
+\node[above] at (-5,0) {\(-2\)};
+\draw (-2,-0.15) -- (-2,0.15);
+\node[above] at (-2,0) {\(-1\)};
+\draw (3,-0.15) -- (3,0.15);
+\draw[dash pattern=on 4pt off 4pt] (3,0) -- (B);
+\draw[dash pattern=on 4pt off 4pt] (-5,0) -- (D);
+\node[below] at (3,0) {\(\dfrac{1}{\sqrt{3}}\)};
+\end{tikzpicture}
+\end{center}
 
 \(x_0 = 0\) не является перегибом, хотя выпуклость по разные стороны от точки разная (\(f'(0)\) не
 существует).
