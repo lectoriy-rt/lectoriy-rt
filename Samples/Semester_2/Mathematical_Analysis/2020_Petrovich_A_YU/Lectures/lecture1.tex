@@ -243,8 +243,8 @@
 \Boxedrightarrow Пусть последовательность сходится покоординатно. Докажем, что имеет место
 сходимость в привычном смысле.
 \[
-    \forall \epsilon > 0 \; \exists k_0 \; \forall k \geq k_0 \quad  \rho(x_k, x_0) < \epsilon
-        \Longleftrightarrow  \forall \epsilon > 0 \; \exists k_0 \; \forall k \geq k_0 \quad
+    \forall \epsilon > 0 \quad \exists k_0 \colon \forall k \geq k_0 \quad  \rho(x_k, x_0) < \epsilon
+        \Longleftrightarrow  \forall \epsilon > 0 \quad \exists k_0 \colon \forall k \geq k_0 \quad
         \sqrt{\sum_{i=1}^n\left(x_i^{(k)} - x_i^{(0)}\right)^2}
 \]
 Ясно, что:
@@ -258,12 +258,12 @@ x_i^{(0)}\).
 \Boxedleftarrow Пусть \(\ds\forall i = 1 \dots n \rightarrow \lim_{k \rightarrow \infty} x_i^{(k)} =
 x_i^{(0)}\). Это значит, что:
 \[
-    \forall \epsilon > 0 \; \forall i = 1 \dots n \; \exists k_i \colon \forall k \geq k_i
+    \forall \epsilon > 0 \quad \forall i = 1 \dots n \quad \exists k_i \colon \forall k \geq k_i
         \rightarrow \left|x_i^{(k)} - x_i^{(0)}\right| < \frac{\epsilon}{\sqrt{n}}.
 \]
 Возьмём \(k_0 = \max k_i, \; i = 1 \dots n\). Тогда:
 \[
-    \forall \epsilon > 0 \; \exists k_0 \colon \forall k \geq k_0 \rightarrow \sqrt{\sum_{i=1}^n
+    \forall \epsilon > 0 \quad \exists k_0 \colon \forall k \geq k_0 \rightarrow \sqrt{\sum_{i=1}^n
         \left(x_i^{(k)} - x_i^{(0)}\right)^2} < \sqrt{\sum_{i=1}^n\frac{\epsilon^2}{n} \cdot n} =
         \epsilon
 \]
@@ -308,7 +308,7 @@ x_i^{(0)}\). Это значит, что:
 \begin{definition}
 Последовательность~\(x_n\) метрического пространства~\(M\) называется \textit{фундаментальной}, если
 \[
-    \forall \epsilon > 0 \; \exists n_0 \; \forall n, m \geq n_0 \rightarrow \rho(x_n, x_m) <
+    \forall \epsilon > 0 \quad \exists n_0 \colon \forall n, m \geq n_0 \rightarrow \rho(x_n, x_m) <
         \epsilon.
 \]
 \end{definition}
@@ -320,7 +320,7 @@ x_i^{(0)}\). Это значит, что:
 \begin{proof}
 Поскольку последовательность сходится, имеем:
 \begin{align}
-    \forall \epsilon > 0 \;\exists n_0 \colon &\forall n \geq n_0 \rightarrow \rho(x_n, x_0) <
+    \forall \epsilon > 0 \quad \exists n_0 \colon &\forall n \geq n_0 \rightarrow \rho(x_n, x_0) <
         \epsilon / 2\\
     &\forall m \geq n_0 \rightarrow \rho(x_m, x_0) < \epsilon / 2,
 \end{align}
@@ -359,7 +359,7 @@ x_i^{(0)}\). Это значит, что:
 \begin{proof}
 Пусть в пространстве с тривиальной метрикой последовательность \(x_n\) фундаментальна, т.\,e.:
 \[
-    \forall \epsilon > 0 \; \exists n_0 \; \forall n, m \geq n_0 \rightarrow \rho(x_n, x_m) <
+    \forall \epsilon > 0 \quad \exists n_0 \colon \forall n, m \geq n_0 \rightarrow \rho(x_n, x_m) <
         \epsilon.
 \]
 Если взять \(\epsilon = 1\), то \(\forall n, m \geq n_0 \; x_n = x_m\). В пространстве с тривиальной
@@ -374,7 +374,7 @@ x_i^{(0)}\). Это значит, что:
 Пусть последовательность \(x_k = (\alpha_1^{(k)}, \dots, \alpha_n^{(k)})\)~--- фундаментальна. Это
 значит, что:
 \begin{gather}
-    \forall \epsilon > 0 \; \exists k_0 \colon \forall k, m \geq k_0 \rightarrow \rho(x_k, x_m) <
+    \forall \epsilon > 0 \quad \exists k_0 \colon \forall k, m \geq k_0 \rightarrow \rho(x_k, x_m) <;
         \epsilon \Longleftrightarrow \sqrt{\sum_{i=1}^n \left(x_i^{(k)} - x_i^{(m)}\right)^2} <
         \epsilon\\
     \forall i = 1 \dots n \; \left|x_i^{(k)} - x_i^{(m)}\right| < \epsilon \text{, т.\,e.} \;
