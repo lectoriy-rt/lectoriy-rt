@@ -1,0 +1,150 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\usepackage[russian]{babel}
+
+\usepackage[top=25mm,bottom=30mm,left=20mm,right=20mm]{geometry}
+
+% Красная строка для первого предложения в разделе
+\usepackage{indentfirst}
+
+% Равные промежутки между словами и предложениями
+\frenchspacing
+
+\usepackage{amsmath,amssymb,mathtools,amsthm}
+\usepackage{icomma}
+
+\usepackage{enumitem}
+
+% Стиль нумерации формул
+\renewcommand{\theequation}{\thesection.\arabic{equation}}
+
+% Отображать номера только тех формул, на которые есть ссылка
+\mathtoolsset{showonlyrefs=true}
+
+% Более привычные греческие буквы
+\renewcommand{\epsilon}{\varepsilon}
+\renewcommand{\phi}{\varphi}
+\renewcommand{\kappa}{\varkappa}
+
+% Знаки сравнения с наклонёнными чёрточками
+\renewcommand{\le}{\leqslant}
+\renewcommand{\leq}{\leqslant}
+\renewcommand{\ge}{\geqslant}
+\renewcommand{\geq}{\geqslant}
+
+\renewcommand{\emptyset}{\varnothing}
+
+\newcommand{\ds}{\displaystyle}
+
+% Обозначения числовых множеств
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\I}{\mathbb{I}}
+
+\newcommand{\eqdef}{\overset{\text{def}}{=}}
+
+\DeclareMathOperator{\im}{Im}
+\DeclareMathOperator{\re}{Re}
+
+% Стрелочки в рамочках для доказательств разных частей двусторонних утверждений
+\newcommand{\Boxedrightarrow}{\raisebox{0.3ex}{\(\boxed{\Rightarrow}\)}\;}
+\newcommand{\Boxedleftarrow}{\raisebox{0.3ex}{\(\boxed{\Leftarrow}\)}\;}
+
+% micro topic
+\newenvironment{mtopic}[1]{\textbf{#1}\par\vspace{4pt}}{\par\vspace{4pt}}
+
+\newtheoremstyle{main}
+    {4pt}                                        % расстояние до
+    {4pt}                                        % расстояние после
+    {}                                           % шрифт тела
+    {\parindent}                                 % размер отступа красной строки
+    {\bfseries}                                  % шрифт шапки
+    {.}                                          % пунктуация после заголовка
+    { }                                          % пунктуация после шапки
+    {\thmname{#1}\thmnumber{ #2}\thmnote{ (#3)}} % параметры шапки
+\theoremstyle{main}
+
+\newtheorem{definition}{Определение}[section]
+
+\newtheorem{theorem}{Теорема}[section]
+
+% Квадратики вокруг доказательства теоремы
+\AtBeginDocument{\renewcommand*{\proofname}{\(\square\)\nopunct}}
+\renewcommand{\qedsymbol}{\(\blacksquare\)}
+
+\newtheorem*{corollary}{Следствие}
+\newtheorem*{statement}{Утверждение}
+\newtheorem*{addition}{Дополнение}
+\newtheorem*{note}{Замечание}
+\newtheorem*{anote}{Замечание автора}
+\newtheorem*{notation}{Обозначение}
+\newtheorem*{reminder}{Напоминание}
+\newtheorem*{proposition}{Предложение}
+\newtheorem{example}{Пример}
+\newtheorem{examples}{Примеры}
+
+% Команда для переноса во встраиваемых в строку формулах. Взята из книги «Набор и вёрстка в системе
+% LaTeX» С.М. Львовского.
+\newcommand*{\hm}[1]{#1\nobreak\discretionary{}{\hbox{$\mathsurround=0pt #1$}}{}}
+
+\usepackage{enumitem}
+
+% Стиль списка для математических свойств
+\newlist{properties}{enumerate}{1}
+\setlist[properties]{label=\arabic*\(^{\circ}\).}
+
+\sloppy
+
+% Стили ссылок
+\usepackage{hyperref}
+\usepackage[usenames,dvipsnames,svgnames,table,rgb]{xcolor}
+\hypersetup{
+    unicode=true,
+    colorlinks=true,
+    linkcolor=black!15!blue,
+    citecolor=green,
+    filecolor=NavyBlue,
+    urlcolor=NavyBlue,
+}
+
+% Настройка колонтикулов
+\usepackage{titleps}
+
+\newpagestyle{toc}{
+    \setheadrule{0.4pt}
+    \sethead{Введение в математический анализ}{}{}
+    \setfoot{}{\thepage}{}
+}
+
+\newpagestyle{main}{
+    \setheadrule{0.4pt}
+    \sethead{Введение в математический анализ}{}{\hyperlink{toc}{\;Назад к содержанию}}
+    \setfoot{}{\thepage}{}
+}
+
+\pagestyle{main}
+
+\usepackage{tikz}
+\usetikzlibrary{decorations.pathreplacing}
+
+\newcommand\Section[1]{
+    \refstepcounter{section}
+    \section*{\raggedright
+        \arabic{section}. #1}
+    \addcontentsline{toc}{section}{
+        \arabic{section}. #1}
+}
+
+\newcommand\Subsection[1]{
+    \refstepcounter{subsection}
+    \subsection*{\raggedright
+        \S \arabic{subsection}. #1}
+    \addcontentsline{toc}{subsection}{
+        \S \arabic{subsection}. #1}
+}
+
+\usepackage{float}
