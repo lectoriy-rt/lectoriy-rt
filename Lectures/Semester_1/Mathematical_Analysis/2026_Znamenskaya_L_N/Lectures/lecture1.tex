@@ -1,0 +1,284 @@
+\setcounter{section}{-1}
+\Section{Символика}
+
+Применение символики \textit{не регулируется строго}, её можно писать и произносить
+по-разному.  
+
+Множества обозначают заглавными латинскими буквами (\(A\), \(B\), \(C\), \(\dots\), \(Z\)),
+элементы множеств~--- \textit{прописными латинскими буквами}
+(\(a\), \(b\), \(c\), \(\dots\), \(z\)).
+
+Иногда для обозначения числовых множеств будут использоваться прописные греческие
+буквы (\(\alpha\), \(\beta\), \(\gamma\), \(\dots\), \(\omega\)).
+
+Приведём примеры некоторых обозначений.
+
+\vspace{-8pt}
+\begin{table}[H]
+\begin{tabular}{ll}
+\textit{Обозначение} & \textit{Смысл}\\
+\(a \in A\) & <<\(a\) является элементом множества \(A\)>> или <<\(a\) принадлежит множеству
+    \(A\)>>.\\
+\(a \notin A\) & <<\(a\) не является элементом множества \(A\)>> или <<\(a\) не принадлежит
+    множеству \(A\)>>\\
+\(A \cup B\) & <<объединение \(A\) и \(B\)>>\\
+\(A \cap B\) & <<пересечение \(A\) и \(B\)>>\\
+\(A \setminus B\) & <<разность \(A\) и \(B\)>>\\
+\(A \subset B\) & <<\(A\) является подмножеством множества \(B\)>>\\
+\(A \not\subset B\) & <<\(A\) не является подмножеством множества \(B\)>>\\
+\(\forall\) & квантор всеобщности (<<для любого>>, <<для всех>>)\\
+\(\exists\) & квантор существования (<<существует>>)\\
+\(\Rightarrow\) & импликация (<<следует>>, <<то>>, <<тогда>>)\\
+\(\Leftrightarrow\) & эквивалентность (<<тогда и только тогда>>, <<необходимо и достаточно>>)\\
+\(\lor\) & дизъюнкция (<<или>>)\\
+\(\&\) & конъюнкция (<<и>>)\\
+\(\neg\) & отрицание (<<не>>)\\
+\(\N\), \(\Z\), \(\Q\), \(\R\) & числовые множества \\
+\(\eqdef\) & <<по определению>> \\
+\(\mapsto\) & <<выполняется>> \\
+\(\colon\) & <<такой, что>> \\
+\end{tabular}
+\end{table}
+\vspace{-14pt}
+
+\begin{example}
+Приведем пример использования символики:
+\[
+    \left[\N \in \Z\right] \& \left[\Z \in \Q\right] \Rightarrow \left[\N \in \Q\right]
+\]
+\end{example}
+
+\Subsection{Примеры, использование символики}
+
+\begin{example}
+<<множество \(A\) является подмножеством множества \(B\)>> по определению то же самое, что
+и <<для любого \(x\), принадлежащего множеству \(A\), выполняется, что \(x\) принадлежит
+множеству \(B\)>>:
+\[
+    \left[A \subset B\right] \eqdef \left[\forall x \in A \mapsto x \in B\right]   
+\]
+\end{example}
+
+\begin{example}
+<<множество \(A\) равняется множеству \(B\)>> по определению то же самое, что и
+<<множество \(A\) является подмножеством множества \(B\) \textbf{и}
+множество \(B\) является подмножеством множества \(A\)>>:
+\[
+    \left[A = B\right] \eqdef \left[A \subset B\right] \& \left[B \subset A\right]
+\]
+На практике, теоретико-множественные равенства доказываются обычно следующим образом:
+\[
+    \left[A = B\right] = \left[\forall x \in A \mapsto x \in B\right] \&
+    \left[\forall x \in B \mapsto x \in A\right]
+\]
+\end{example}
+
+\begin{example}
+<<Объединением можеств \(A\) и \(B\)>> называют множество, все элементы \(x\) которого
+принадлежат множеству \(A\) \textbf{или} множеству \(B\):
+\[
+    \left[A \cup B\right] = \left\{x \colon \left[x \in A\right] \lor \left[x \in B\right]\right\}
+\]
+\end{example}
+
+\begin{example}
+<<Пересечением можеств \(A\) и \(B\)>> называют множество, все элементы \(x\) которого
+принадлежат множеству \(A\) \textbf{и} множеству \(B\):
+\[
+    \left[A \cap B\right] = \left\{x \colon \left[x \in A\right] \& \left[x \in B\right]\right\}
+\]
+\end{example}
+
+\begin{example}
+<<Разностью можеств \(A\) и \(B\)>> называют множество, все элементы \(x\) которого
+принадлежат множеству \(A\) \textbf{и не} принадлежат множеству \(B\):
+\[
+    \left[A \setminus B\right] = \left\{x \colon \left[x \in A\right] \&
+    \left[x \not\in B\right]\right\}
+\]
+\end{example}
+
+\begin{example}
+При отрицании, квантор всеобщности~\(\forall\) заменяется на квантор существования~\(\exists\). Так
+же после квантора всеобщности~\(\forall\) принято ставить~<<\(\mapsto\)>>, а после квантора
+существования~\(\exists\)~--- <<\(\colon\)>> (это правило не является строгим, символы стоит использовать в
+зависимости от их произношения).
+
+Обозначим \(\mathfrak{A} = \left[A \subset B\right] = \left[\forall a \in A \mapsto a \in B
+\right]\), тогда:
+\[
+    \neg \mathfrak{A} = \left[A \not\subset B\right] =
+    \left[\exists a \in A\colon a \notin B\right]
+\]
+\end{example}
+
+\begin{example}
+При отрицании, все символы, которые находятся при кванторах~\(\forall\), \(\exists\) не меняются,
+а все остальные~--- \textit{заменяются на противоположные} (\(\in\)~--- на \(\notin\), \(>\)~--- на
+\(\leq\), \(\lor\)~--- на \(\&\) и~т.\,д.).
+
+Обозначим \(\mathfrak{B} = \left[\forall x \in X \mapsto \lvert x \rvert < \alpha \right]\), тогда:
+\[
+    \neg \mathfrak{B} = \left[\exists x \in X\colon \lvert x \rvert \ge \alpha\right]
+\]
+\end{example}
+
+\begin{example}
+Теперь рассмотрим пример с несколькими кванторами
+
+Обозначим \(\mathfrak{C} = \left[\exists \alpha > 0\colon \forall x \in X \mapsto \lvert x \rvert <
+\alpha\right]\), тогда:
+\[
+    \neg \mathfrak{C} = \left[ \forall \alpha > 0 \; \exists x_\alpha \in X\colon
+    \lvert x_\alpha \rvert \geq \alpha\right]
+\]
+
+Стоит обратить внимание на то, что при отрицании мы добавили к~\(x\) индекс~\(\alpha\). Это связано
+с тем, что для \textit{каждого~\(\alpha\) будет существовать свой~\(x_{\alpha}\)}, так что
+использование~\(x\) в данном случае является некорректным.
+\end{example}
+
+Стоит так же отметить тот факт, что запись через символы является довольно свободной, и у неё нет
+строгих правил записи.
+
+
+\Section{Теория действительного числа}
+\Subsection{Рациональные числа и их свойства}
+
+\begin{definition}
+\textit{Рациональным числом} называется дробь~\(\dfrac{p}{q}\), где \(q \in \N\), \(p \in \Z\).
+\end{definition}
+
+Запишем основные свойства рациональных чисел:
+
+\begin{properties}
+\item Если \(a = b\) и \(b = c\), то \(a = c\),
+
+Если \(a > b\) и \(b > c\), то \(a > c\).
+
+(\textit{транзитивность <<\(=\)>> и <<\(>\)>>})
+
+\item \(a + b = b + a\) (\textit{коммутативность сложения});
+\item \((a + b) + c = a + (b + c)\) (\textit{ассоциотивность сложения});
+\item Существует число~\(0\) такое, что для любого~\(a\) выполняется \(a + 0 = a\) (\textit{особая
+    роль нуля});
+\item Для любого числа~\(a\) найдется противоположное число~\(-a\) такое, что \(a + (-a) = 0\)
+    (\textit{существование противоположных чисел}).
+\item \(a \cdot b = b \cdot a\) (\textit{коммутативность умножения});
+\item \((a \cdot b) \cdot c = a \cdot (b \cdot c)\) (\textit{ассоциативность умножения});
+\item Существует число 1 такое, что для любого~\(a\) выполняется \(a \cdot 1 = a\) (\textit{особая
+    роль 1});
+\item Для любого~\(a \neq 0\) существует обратное число \(\dfrac{1}{a}\) такое, что \(a \cdot
+    \dfrac{1}{a} = 1\) (\textit{существование обратных чисел});
+\item \((a + b) \cdot c = a \cdot c + b \cdot c\) (\textit{дистрибутивность сложения относительно
+    умножения});
+\item Если \(a > b\), то для любого~\(c\) выполняется \(a + c > b + c\);
+\item Если \(a > b\), то для любого~\(c > 0\) выполняется \(a \cdot c > b \cdot c\);
+\item Для любого~\(a > 0\) найдется \(n \in \mathbb{N}\) такое, что \(n > a\) (\textit{аксиома
+    Архимеда}).
+\end{properties}
+
+\begin{mtopic}{Плотность множества рациональных чисел}
+Если \(a > b\), то найдется \(c \in \mathbb{Q}\) такое, что \(a > c > b\).
+
+Для доказательства этого утверждения достаточно взять \(c = \dfrac{a + b}{2}\).
+\end{mtopic}
+
+\Section{Сечения и иррациональные числа}
+
+\begin{definition}
+\textit{Сечением} множества \(\Q\) называется разбиение \(\Q\) на два непустых множества
+\(A^*\) и \(A_*\) таких, что:
+\begin{properties}
+\item \(A_* \cup A^* = \Q\)
+\item \(A_* \cap A^* = \emptyset\)
+\item \(\left[\forall x \in A_*\right] \& \left[\forall y \in A^*\right] \mapsto
+    y > x\)
+\end{properties}
+\end{definition}
+
+\begin{example} Приведем пример сечения:
+
+\(A_* =  \left\{a\colon \frac{1}{10^3} > a\right\}\),
+\(A^* = \left\{a\colon a \geq \frac{1}{10^3}\right\}\)
+\end{example}
+
+\textit{Сечение} обозначается как \(\left(A_*, A^*\right)\), где \(A_*\)~---
+\textit{нижний класс сечения}, а \(A^*\)~--- \textit{верхний класс сечения}.
+
+\begin{example}
+\(b, c \in \N\colon (b + 1)^2 > c > b^2\) (\(c\) не является квадратом какого-либо
+натурального числа):
+\begin{gather}
+A_* = \left\{a\colon \left[a \leq 0\right] \lor \left[c > a^2\right]\right\} \\
+A^* = \left\{a\colon \left[a > 0\right] \& \left[a^2 \geq c\right]\right\}
+\end{gather}
+\end{example}
+
+\begin{proposition}
+Сечение \(\left(A_*, A^*\right)\) примера 11 таково, что \textit{нижний} класс сечения
+не имеет \textit{наибольшего} числа, а \textit{верхний} класс сечения не
+имеет \textit{наибольшего} числа.
+\end{proposition}
+
+\begin{proposition}
+\textit{Не существует} \(\left(A_*, A^*\right)\) такого, что \(A_*\) имеет
+\textit{наибольшее} число, а \(A^*\) имеет \textit{наименьшее} число
+(так как нарушится или первое, или второе условие из определения сечения).
+\end{proposition}
+
+\textbf{Рассмотрим сечения множества рациональных чисел, которые существуют:}
+
+\begin{properties}
+\item В \(A_*\) \textbf{нет} наибольшего числа, в \(A^*\) \textbf{есть} наименьшее число
+\item В \(A_*\) \textbf{есть} наибольшее число, в \(A^*\) \textbf{нет} наименьшего числа
+\item В \(A_*\) \textbf{нет} наибольшего числа, в \(A^*\) \textbf{нет} наименьшего числа
+\end{properties}
+
+Так как сечения \(1^\circ\) и \(2^\circ\) определяются одним и тем же рациональным числом,
+то будем использовать сечение \(1^\circ\).
+
+\begin{definition}
+\textit{Иррациональным числом} назовем сечение вида \(3^\circ\).
+\end{definition}
+
+Множество иррациональных чисел обозначается как \(\J\),
+а рациональные числа будем записывать через греческие буквы \(\alpha = \left(A_*, A^*\right)\).
+
+\begin{definition}
+\textit{Действительным числом} называется любое сечение \(\Q\) вида \(1^\circ\) или~\(2^\circ\).
+\end{definition}
+
+Действительные числа будем обозначать греческими буквами \(\alpha =
+\left(A_*, A^*\right)\), \(\R = \Q \cup \J\)
+
+\textbf{Важно отметить}, что если известно \(A_*\), то известно и всё сечение
+\(\left(A_*, A^*\right)\) 
+
+Пусть \(\alpha = \left(A_*, A^*\right)\), \(\beta = \left(B_*, B^*\right)\).
+
+\begin{definition}
+\(
+    \left[\alpha = \beta\right] \eqdef \left[A_* = B_*\right]
+\)
+\end{definition}
+
+\begin{definition}
+\(
+    \left[\alpha \not = \beta\right] \eqdef \left[A_* \not = B_*\right]
+\)
+\end{definition}
+
+\begin{proposition}
+\(
+    \left[\alpha \not = \beta\right] \Rightarrow \left[A_* \subset B_*\right] \lor
+    \left[B_* \subset A_*\right]
+\)
+\end{proposition}
+
+\begin{definition}
+\(
+    \left[\alpha > \beta\right] \eqdef \left[B_* \subset A_*\right] \&
+    \left[B_* \not = A_*\right]
+\)
+\end{definition}
