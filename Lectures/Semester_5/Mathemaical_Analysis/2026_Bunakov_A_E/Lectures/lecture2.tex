@@ -1,0 +1,385 @@
+\Section{Множества и кривые в \(\Co\)}
+
+\begin{definition}
+    \textit{\(\epsilon\)-окрестностью точки \(z_0\)} будем называть множество
+    \(B_\epsilon(z_0) = \{z \in \Co \colon |z - z_0| < \epsilon\}\).
+\end{definition}
+
+\begin{definition}
+    \textit{Бесконечно удалённую точку на комплексной плоскости} будем обозначать знаком 
+    \(\infty\). \(\overline{\Co} = \Co \cup \{\infty\}\) - расширенная комплексная плоскость.
+\end{definition}
+
+В случае \(\epsilon\)-окрестности бесконечно удалённой точки имеем дело с множеством \(B_\epsilon
+(\infty) = \{z \in \Co \colon |z| > \epsilon\} \cup \{\infty\}\).
+
+\begin{definition}
+    \textit{Проколотой \(\epsilon\)-окрестностью точки \(z_0 \in \overline{\Co}\)} будем называть 
+    множество \(\mathring{B}_\epsilon(z_0) = B_\epsilon(z_0) \setminus \{z_0\}\).
+\end{definition}
+
+\begin{definition}
+    \textit{Множество \(D \subset \oCo\)} называется \textit{открытым}, если \(\forall z_0 \in D \ 
+    \exists \epsilon > 0 \colon B_\epsilon(z_0) \subset D\).
+\end{definition}
+
+\begin{definition}
+    \textit{Множество \(D \subset \oCo\)} называется \textit{ограниченным}, если \(\exists R > 0 
+    \colon D \subset B_R(0)\).
+\end{definition}
+
+\begin{definition}
+    \textit{Точка \(z_0 \in \oCo\)} называется \textit{предельной} для множества $E$, если \(\forall
+    \epsilon > 0\) \(E \cap B_\epsilon(z_0)\) содержат бесконечное число точек. Стоит отметить, что
+    граничные точки могут как принадлежать, так и не принадлежать множеству.
+\end{definition}
+
+\begin{definition}
+    \textit{Точка \(z_0 \in \oCo\)} называется \textit{граничной} для множества $D$, если \(\forall
+    \epsilon > 0\) \(B_\epsilon(z_0)\) содержат точки как из $D$, так и вне $D$.
+\end{definition}
+
+\begin{definition}
+    \textit{Границей множества \(D\)} будем называть множество \(\partial D\), состоящее из всех
+    граничных точек множества \(D\).
+\end{definition}
+
+\begin{definition}
+    \textit{Множество \(D \subset \oCo\)} называется \textit{замкнутым}, если оно содержит все свои
+    граничные точки.
+\end{definition}
+
+Перейдём к рассмотрению кривых на комплексной плоскости.
+
+\begin{definition}
+    \textit{Кривой \(\gamma\)} будем называть непрерывное отображение некоторого отрезка \([a, b]\)
+    в \(\Co\). Выражение \(z = z(t) = x(t) + iy(t)\), где $x, y$~--- непрерывные на \([a,b]\)
+    функции, будем называть \textit{параметрическим отображением \(\gamma\)}. Кривую, с ориентацией
+    обратной ориентации \(\gamma\) будем обозначать \(\gamma^{-1}\), ей характерна параметризация 
+    \(z = z(-t)\). Составную кривую $\gamma$, состоящую из кривых \(\gamma_1, \dots, \gamma_n\)
+    будем обозначать $\gamma = \gamma_1 \gamma_2 \dots \gamma_n$.
+\end{definition}
+
+\begin{definition}
+    \textit{Кривую \(\gamma\)} будем называть \textit{замкнутой} или \textit{контуром}, если 
+    \(z(a) = z(b)\). 
+\end{definition}
+
+\begin{definition}
+    \textit{Незамкнутую кривую \(\gamma\)} будем называть \textit{простой (жордановой)}, если 
+    отображение \(z(t)\) инъективно.
+\end{definition}
+
+\begin{definition}
+    \textit{Замкнутую кривую \(\gamma\)} будем называть \textit{простой}, если сужение 
+    отображения \(z(t)\) на \([a, b)\) инъективно.
+\end{definition}
+
+\begin{definition}
+    \textit{Кривую \(\gamma\)} будем называть \textit{непрерывно-дифференцируемой}, если функции 
+    \(x, y\) в отображении \(z\) непрерывно-дифференцируемы. Если при этом они одновременно не
+    обращаются в нуль \(\forall t \in [a,b]\), то \textit{кривую} будем называть \textit{гладкой}.
+\end{definition}
+
+\begin{definition}
+    \textit{Направлением кривой} в точке \(z(t)\) будем называть \(\arg{z'(t)}\).
+\end{definition}
+
+\begin{definition}
+    \textit{Составную кривую \(\gamma\)} будем называть \textit{кусочно непрерывно дифференцируемой 
+    (КНД)}, если \(\gamma\) состоит из конечного числа непрерывно-дифференцируемых кривых. 
+    Аналогично вводится определение кусочно-гладкой функции. 
+\end{definition}
+
+\begin{definition}
+    Открытое множество $D \subset \oCo$ будем называть \textit{областью}, если множество \(D 
+    \setminus \{\infty\}\) линейно связно, то есть любые две точки $z_1, z_2 \in D \setminus 
+    \{\infty\}$ можно соединить кусочнозвенной ломаной \(\gamma \subset D \setminus \{\infty\}\).
+\end{definition}
+
+\newpage
+\begin{example}
+\hfill \noindent
+\par
+\begin{minipage}[c]{0.45\textwidth}
+    \centering
+    \begin{tikzpicture}[>=stealth, scale=1.3]
+        \fill[pattern=north west lines, pattern color=black] (0,0) circle (1);
+        \draw[thick] (0,0) circle (1);
+
+        \draw[->, thick] (-1.8, 0) -- (1.8, 0) node[right] {$x$};
+        \draw[->, thick] (0, -1.8) -- (0, 1.8) node[above] {$y$};
+        \node[below left] at (0,0) {$0$};
+
+        \filldraw (-1,-1) circle (1.5pt) node[below left] {$z_1$};
+        \filldraw (1,1) circle (1.5pt) node[above right] {$z_2$};
+
+        \draw[thick] (-1,-1) -- (-1.4, 0.5) -- (0.5, 1.4) -- (1,1);
+    \end{tikzpicture}
+\end{minipage}
+\hfill
+\begin{minipage}[c]{0.5\textwidth}
+    Множество \(D = \{|z| > 1\} \cup \{\infty\}\) является линейно связным, так как любые две его
+    точки можно соединить ломаной. Также оно является открытым, что следует из определения. Значит, 
+    \(D\)~---открыто. Отметим, что здесь и далее заштрихованная часть комплексной плоскости не 
+    является частью множества.
+\end{minipage}
+\end{example}
+
+\begin{definition}
+    Область $D \subset \Co$ будем называть \textit{односвязной}, если любой простой контур из $D$ 
+    можно непрерывно деформировать в точку, оставаясь при этом в \(D\).
+\end{definition}
+
+\begin{example}
+\par\hfill\break\noindent
+\begin{minipage}[c]{0.45\linewidth}
+  \centering
+  \begin{tikzpicture}[scale=0.85]
+    % Штриховка областей СНАРУЖИ полосы (y >= 1 и y <= -1)
+    \pattern[pattern=north east lines, pattern color=gray!70] 
+      (-2.3, 1) rectangle (2.3, 2.0);
+    \pattern[pattern=north east lines, pattern color=gray!70] 
+      (-2.3, -2.0) rectangle (2.3, -1);
+
+    % Оси координат
+    \draw[->, >=stealth, thick] (-2.5, 0) -- (2.5, 0) node[right] {$x$};
+    \draw[->, >=stealth, thick] (0, -2.2) -- (0, 2.2) node[above] {$y$};
+
+    % Пунктирные границы y = 1 и y = -1 (не принадлежат множеству)
+    \draw[thick] (-2.3, 1) -- (2.3, 1) node[pos=0.9, above=-2pt] {\scriptsize $i$};
+    \draw[thick] (-2.3, -1) -- (2.3, -1) node[pos=0.9, below=-2pt] {\scriptsize $-i$};
+
+    % Метки на осях и начало координат
+    \node[below left] at (0,0) {$0$};
+    \filldraw (0, 1) circle (1.2pt);
+    \filldraw (0, -1) circle (1.2pt);
+  \end{tikzpicture}
+\end{minipage}%
+\begin{minipage}[c]{0.52\linewidth}
+  Множество $D_1 = \{z \in \Co \colon |\im{z}| < 1\}$ является односвязным. 
+  Например, можно деформировать к \(x = 0\), а после к нулю.
+\end{minipage}
+
+\vspace{2em}
+
+\noindent
+\begin{minipage}[c]{0.45\linewidth}
+  \centering
+  \begin{tikzpicture}[scale=0.85]
+    % Штриховка ВНУТРИ круга радиуса 1
+    \fill[pattern=north east lines, pattern color=gray!70] 
+      (0,0) circle (1);
+
+    % Оси координат
+    \draw[->, >=stealth, thick] (-2.5, 0) -- (2.5, 0) node[right] {$x$};
+    \draw[->, >=stealth, thick] (0, -2.5) -- (0, 2.5) node[above] {$y$};
+
+    % Пунктирная граница окружности |z| = 1
+    \draw[thick] (0, 0) circle (1);
+
+    % Метки на осях
+    \node[below left] at (0,0) {$0$};
+    \node[below right] at (1,0) {\scriptsize $1$};
+    \node[above left] at (0,1) {\scriptsize $i$};
+
+    \filldraw (1, 0) circle (1.2pt);
+    \filldraw (0, 1) circle (1.2pt);
+  \end{tikzpicture}
+\end{minipage}%
+\begin{minipage}[c]{0.52\linewidth}
+  Множество $D_2 = \{z \in \Co \colon |z| > 1\}$ не является односвязным. Примером кривой, которую
+  невозможно непрерывно деформировать в точку, не выходя из $D_2$ является окружность с центром в
+  нуле и радиусом, равным двум.
+\end{minipage}
+\end{example}
+
+
+\Section{Последовательности и ряды}
+
+\begin{definition}
+    Отображение \(\{z_n\} \colon \N \to \Co\) называется \textit{последовательностью 
+    комплексных чисел}.
+\end{definition}
+
+\begin{definition}
+    \textit{Пределом последовательности комплексных чисел \(\{z_n\}\)} является \(A = \lim\limits_{n 
+    \to \infty} z_n\), если \(\forall \epsilon > 0 \ \exists N \in \N \colon \forall n \ge N \mapsto
+    z_n \in B_\epsilon(A)\). Если \(A \ne \infty\), то последовательность называется 
+    \textit{сходящейся}. В случае сходящейся последовательности условие \(z_n \in B_\epsilon(A)\) 
+    эквивалентно \(|z-A|<\epsilon\). Записи вида \(A = \lim\limits_{n \to \infty} z_n\) и 
+    \(z_n \xrightarrow{n \to \infty} A\) эквивалентны.
+\end{definition}
+
+\begin{statement}\label{7:arithmetic_properties}
+    Если \(\lim\limits_{n \to \infty} z_n = A^*\), \(\lim\limits_{n \to \infty} w_n = B^*\), где
+    \(A^*, B^* \ne \infty\), то последовательности \(z_n + w_n, z_nw_n\) сходятся и их пределы равны
+    \(A^* + B^*, A^*B^*\) соответственно. Если кроме этого выполняется \(B^* \ne 0 \ \& \ w_n \ne 0 
+    \forall n \in \N\), то последовательность \(\dfrac{z_n}{w_n}\) тоже сходится и её предел равен 
+    \(\dfrac{A^*}{B^*}\).
+\end{statement}
+
+\begin{proof}
+    Доказательство данного утверждения аналогично доказательствам из прошлых семестров.
+\end{proof}
+
+\begin{statement}\label{7:complex_to_real}
+    Пусть \(z_n = x_n + iy_n\)~--- последовательность комплексных чисел, где \(x_n, y_n\)~--- 
+    последовательности действительных чисел. Тогда условия \(\lim\limits_{n \to \infty} z_n = A + Bi
+    \) и \(x_n \xrightarrow{n \to \infty} A \ \& \ y_n \xrightarrow{n \to \infty} B\), где \(A, B\)~
+    --- действительные числа, эквивалентны.
+\end{statement}
+
+\begin{proof}
+    Запишем ряд неравенств: \(\max \{|x_n -A|, |y_n - B|\} \le \sqrt{(x_n-A)^2 + (y_n - B)^2} = |z_n
+    - (A+Bi)| \le |x_n - A| + |y_n - B|\).
+
+    В случае первого условия \(\forall \epsilon \ \exists N_2 (\epsilon) = N_1(\epsilon) \colon 
+    \forall n \ge N_2 \mapsto \max \{|x_n -A|, |y_n - B|\} \le |z_n - (A+Bi)| < \epsilon\). В
+    случае второго условия \(\forall \epsilon \ \exists N_1 = \max \{N_{2x}, N_{2y}\} (\epsilon) = 
+    N_1(\epsilon) \colon \forall n \ge N_2 \mapsto|z_n - (A+Bi)| \le |x_n - A| + |y_n - B| <
+    2\epsilon\). Имеем определения данных условий, а значит утверждение доказано.
+\end{proof}
+
+\begin{definition}
+    Сумму вида \(\sum\limits_{n=0}\limits^{\infty} z_n\) будем называть \textit{рядом}. Сумму \(S_n 
+    =\sum\limits_{n=0}\limits^{k} z_n\) будем называть \textit{частной (частичной) суммой ряда}.
+    Если последовательность \(\{S_n\}\) сходится, то ряд называется \textit{сходящимся}. Если ряд 
+    \(\sum\limits_{n=0}\limits^{\infty} |z_n|\) сходится, то ряд 
+    \(\sum\limits_{n=0}\limits^{\infty} z_n\) называется \textit{абсолютно сходящимся}.
+\end{definition}
+
+\begin{note}
+    Из абсолютной сходимости ряда следует его сходимость. Обратное неверно.
+\end{note}
+
+\begin{statement}
+    Пусть \(z_n = x_n + iy_n\)~--- последовательность комплексных чисел, где \(x_n, y_n\)~--- 
+    последовательности действительных чисел. Тогда условия \(\sum\limits_{n=0}\limits^{\infty} z_n =
+    S_1 + S_2i\) и \(\sum\limits_{n=0}\limits^{\infty} x_n = S_1 \ \& \
+    \sum\limits_{n=0}\limits^{\infty} y_n = S_2\), где \(S_1, S_2\)~--- действительные числа, 
+    эквивалентны.
+\end{statement}
+
+\begin{proof}
+    Доказательство следует из определения сходимости ряда и утверждения \ref{7:complex_to_real}.
+\end{proof}
+
+Вообще говоря, мы можем пользоваться некоторыми утверждениями из вещественного анализа, например
+теоремой Больцано-Вейерштрасса или критерием Коши, так как они верны в пространстве \(\R^2\). При
+этом в комплексном анализе отстутствуют операции сравнения, а значит нет аналогов утверждения о
+монотонной ограниченной последовательности или <<теоремы о двух милиционерах>>.
+
+
+\Section{Предел функции в точке. Непрерывность функции}
+
+\begin{definition}
+    Пусть \(z_0, A \in \oCo\), причём \(z_0\)~--- предельная для множества \(E \subset \oCo\). 
+    $A \in \oCo$ называется \textit{пределом функции при \(z\) стремящемся к \(z_0\) по множеству 
+    \(E\)}, если \(\forall \epsilon > 0 \ \exists \delta > 0 \colon \forall z \in (E \cap 
+    \mathring{B}_\delta (z_0)) \mapsto f(z) \in B_\epsilon(A)\) и обозначается 
+    \(\lim\limits_{z \to z_0, \ z \in E} f(z) = A\). Если для некоторого \(\delta_0\) \(\mathring{B}_{\delta_0} 
+    (z_0) \subset E\), то в обозначении можно опустить условие $z \in E$.
+\end{definition}
+
+\begin{note}
+    Арифметические свойства предела функции в комплексном анализе подобны утверждению 
+    \ref{7:arithmetic_properties}. Их доказательства также подобны доказательствам из прошлых
+    семестров.
+\end{note}
+
+\begin{definition}
+    Пусть \(z_0 \in \Co\), причём \(z_0\)~--- предельная для множества \(E \subset \Co\) и 
+    принадлежит ему. Если \(\lim\limits_{z \to z_0, \ z \in E} f(z) = f(z_0)\), то функция \(f\)
+    называется непрерывной в точке \(z_0\) по множеству $E$. Если для некоторого \(\delta_0\) 
+    \(\mathring{B}_{\delta_0} (z_0) \subset E\), то в обозначениях можно опустить условие $z \in E$.
+\end{definition}
+
+\begin{example}
+    Функция 
+    \begin{equation*}
+    f(z) = 
+    \begin{cases} 
+    1/z, & z \neq 0, \infty; \\ 
+    0, & z = \infty; \\
+    \infty, & z = 0 
+    \end{cases}
+    \end{equation*}
+    является непрерывной на всей расширенной комплексной плоскости и является биекцией.
+\end{example}
+
+\begin{note}
+    Арифметические свойства непрерывных функции в комплексном анализе подобны утверждениям из 
+    прошлых семестров. Их доказательства им подобны.
+\end{note}
+
+\begin{statement}
+    Если:
+    \begin{itemize}
+        \item \(f(z)\) определена в \(B_\delta (z_0)\) и непрерывна в \(z_0\);
+        \item \(f(z_0) = w_0 \in \Co\);
+        \item \(g(w)\) определена в \(B_\epsilon (w_0)\) и непрерывна в \(w_0\),
+    \end{itemize}
+    то \(g(f(z))\) определена в \(B_{\delta_1} (z_0)\) и непрерывна в \(z_0\).
+\end{statement}
+
+\begin{example}
+    \(\text{e}^{\cos^2{(\sin{z^3})}}\) непрерывна на всей комплексной плоскости.
+\end{example}
+
+\begin{statement}
+    Пусть \(z_0 = x_0 + iy_0\). Тогда \(f(z) = u(x, y) +iv(x,y)\) непрерывна в \(z_0\) тогда, и
+    только тогда, когда функции \(u(x, y)\) и \(v(x, y)\) непрерывны в \((x_0, y_0)\).
+\end{statement}
+
+\begin{proof}
+    Доказательство вытекает из ряда неравенств:
+    \[
+    \begin{aligned}
+    \max \{u(x,y) - u(x_0, y_0), \, v(x,y) - v(x_0, y_0)\} 
+    &\le |f(z) - f(z_0)| \le\\
+    &\le |u(x,y) - u(x_0, y_0)| + |v(x,y) - v(x_0, y_0)|.
+    \end{aligned}
+    \]
+\end{proof}
+
+\begin{example}
+    \(f(z) = \text{e}^z = \text{e}^x\cos{y} + i\text{e}^x\sin{y}\) непрерывна на всей комплексной
+    плоскости.
+\end{example}
+
+
+\Section{Дифференцирование по комплексной переменной}
+
+\begin{definition}
+    Пусть \(f(z)\) определена в некоторой окрестности точки \(z_0\). Функцию \(f\) будем называть
+    дифференцируемой, если существует \(\lim\limits_{\Delta z \to 0} 
+    \dfrac{f(z_0 + \Delta z) - f(z_0)}{\Delta z} = A \in \Co\). Число \(A = f'(z_0)\) будем наывать
+    производной функции \(f\) в точке \(z_0\). Обозначать будем \(f \in D(z_0)\).
+\end{definition}
+
+\begin{definition}\label{9:alt_dif}
+    Функцию \(f\) будем называть дифференцируемой, если существуют такое число \(A\) 
+    и функция \(\alpha(\Delta z)\), определённая в некоторой окрестности нуля и непрерывная в нём, 
+    причём \(\alpha (0) = 0\), и выполняется: \(f(z_0 + \Delta z) - f(z_0) = A\Delta z + \alpha
+    (\Delta z) |\Delta z|\).
+\end{definition}
+
+\begin{note}
+    Из определения \ref{9:alt_dif} видно, что если функция дифференцируема, то она непрерывна.
+    Обратное неверно.
+\end{note}
+
+\begin{statement}
+    Пусть \(f(z) = u(x, y) + iv(x, y)\) определена в некоторой окрестности точки \(z_0\). Тогда
+    дифференцируемость функции \(f\) в точке \(z_0\) эквивалентна условию Коши-Римана:
+    \begin{equation*}
+    \begin{cases} 
+    u(x, y), \ v(x,y) \in D(x_0, y_0), \\ 
+    u_x (x_0, y_0) = v_y (x_0, y_0), \\
+    u_y (x_0, y_0) = - v_x (x_0, y_0),
+    \end{cases}
+    \end{equation*}
+    где \(f_t\) - обозначение частной производной функции \(f\) (\(u\) или \(v\)) по переменной 
+    \(t\) (\(x\) или \(y\)).
+\end{statement}

@@ -1,4 +1,4 @@
-% !TEX root = main.tex
+%! TEX root = main.tex
 
 \documentclass[a4paper,12pt]{article}
 \usepackage[T2A]{fontenc}
@@ -47,6 +47,7 @@
 \newcommand{\Q}{\mathbb{Q}}
 \newcommand{\R}{\mathbb{R}}
 \providecommand{\Co}{\mathbb{C}}
+\providecommand{\oCo}{\overline{\Co}}
 
 \DeclareMathOperator{\im}{Im}
 \DeclareMathOperator{\re}{Re}
@@ -80,7 +81,7 @@
 \renewcommand{\qedsymbol}{\(\blacksquare\)}
 
 \newtheorem{corollary}{Следствие}[section]
-\newtheorem*{statement}{Утверждение}
+\newtheorem{statement}{Утверждение}[section]
 \newtheorem*{addition}{Дополнение}
 \newtheorem{note}{Замечание}[section]
 \newtheorem*{anote}{Замечание автора}
@@ -132,6 +133,7 @@
 
 \usepackage{tikz}
 \usetikzlibrary{decorations.pathreplacing}
+\usetikzlibrary{patterns}
 
 \newcommand\Section[1]{
     \refstepcounter{section}
