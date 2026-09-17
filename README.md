@@ -16,6 +16,6 @@
 
 ## Благодарности
 
-- [Лекторию ФБМФ](https://t.me/lectory_dbmp) — за пример для подражания и подробнейшие советы;
+- [Лекторию ФБМФ](https://t.me/lectory_dbmp) — за пример для подражания и подробные советы;
 
 - [Клубу Теха Лекций](https://vk.com/mipt_ltc) — за источник вдохновения, а также за [очень полезный курс по LaTeX](https://youtube.com/playlist?list=PL4_hYwCyhAvZv5r0hqXce6kH9HKtU7F0F&si=naG9gcLWJbbBRIcE).
