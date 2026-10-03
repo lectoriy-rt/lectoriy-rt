@@ -1,0 +1,173 @@
+\begin{proof}
+    Докажем первую часть утверждения. Для доказательства того, что из дифференцируемости \(f\) в 
+    точке \(z_0\) следует условие Коши-Римана, воспользуемся определением производной через 
+    \(\hat{\alpha}\). Пусть \(A = B + iC\), где \(B, C \in \R\). Тогда определение перезаписывается
+    в следующее выражение:
+    \begin{align}
+        [u(x + \Delta x, y + \Delta y) &+ iv(x + \Delta x, y + \Delta y)] - [u(x, y) + iv(x, y)] = 
+        \nonumber \\ &= (B + iC)(\Delta x + i\Delta y) + (\beta (\Delta x, \Delta y) + i \gamma 
+        (\Delta x, \Delta y)) \sqrt{(\Delta x)^2 + (\Delta y) ^ 2}. \tag{1}
+    \end{align}
+
+    Отдельно напишем вещественную и комплексные части
+
+    \[u(x + \Delta x, y + \Delta y) - u(x, y) = B \Delta x - C \Delta y + \beta(\Delta x, 
+    \Delta y)\sqrt{(\Delta x)^2 + (\Delta y) ^ 2};\]
+    \[v(x + \Delta x, y + \Delta y) - v(x, y) = C \Delta x + B \Delta y + \gamma(\Delta x, 
+    \Delta y)\sqrt{(\Delta x)^2 + (\Delta y) ^ 2}.\]
+
+    Из многомерного анализа следует, что \(u_x = B, u_y = -C, v_x = C, v_y = B\), а также то что
+    \(u, v\) дифференцируемы в точке \((x, y)\).
+
+    Теперь докажем в обратную сторону. Из условий Коши-Римана следуют записи, сделанные при 
+    доказательстве прошлого пункта при разделении на вещественную и комплексную части. Сложив их
+    получим определение дифференцируемости функции \(f(z)\) в \(z\).
+
+    Доказательство второго пункта утверждения следует из доказательства первого, ведь производная
+    равна \(A = B + iC = u_x + i v_x\).
+\end{proof}
+
+\begin{note}
+    Как и в вещественном анализе, верны теоремы об арифметических свойствах дифференцируемых 
+    функций и о суперпозиции дифференцируемых функций.
+\end{note}
+
+\begin{example}
+    \(e^z\) дифференцируема всюду в \(\Co\). \(|z|^2\) дифференцируема лишь в нуле. 
+\end{example}
+
+\begin{definition}
+    \(f(z)\) регулярна на непустом открытом множестве \(A\), если \(f(z)\) дифференцируема в любой 
+    точке \(A\). \(f(z)\) регулярна на непустом множестве \(E\), если \(f(z)\) регулярна на
+    некотором открытом множестве \(A\), таком что \(E \subset A\).
+\end{definition}
+
+\begin{note}
+    Сумма, произведение и частное регулярных функций~--- регулярны.
+\end{note}
+
+\begin{definition}
+    Целыми функциями будем называть функции регулярные на \(\Co\).
+\end{definition}
+
+\Section{Функциональные последовательности и ряды}
+
+Пусть есть множество \(E \subset \Co\) и на \(E\) заданы \(f_n(z)\). Если каждая \(f_n : E \mapsto 
+\Co\), то последовательность \({f_n}\) будем называть функциональной.
+
+\begin{definition}
+    \({f_n}\) сходится равномерно к некоторой функции \(f\) на \(E\), если \(\forall \epsilon > 0
+    \exists N \in \N \colon \forall n \ge N \ \& \ \forall z \in E \mapsto |f_n(z) - f(z)| < 
+    \epsilon\). Обозначается как \(f_n \mathrel{\mathop{\rightrightarrows}\limits_{E}} f\).
+\end{definition}
+
+\begin{definition}
+    Сумму вида \(S(z) = \sum\limits_{n = 0}^{\infty} f_n\) будем называть функциональным рядом. Ряд 
+    сходится равномерно, если сходятся его частичные суммы.
+\end{definition}
+
+\begin{statement}
+    Пусть \(\forall n \in \N \mapsto f_n(z) \in C(E)\) и \(f_n 
+    \mathrel{\mathop{\rightrightarrows}\limits_{E}} f\). Тогда \(f(z) \in C(E)\).
+\end{statement}
+
+\begin{anote}
+    Здесь и далее я буду использовать обозначения для сокращения записи дифференцируемости функции
+    и её непрерывности. Если функция непрерывна на множестве \(E\), то это будет обозначаться 
+    \(f(z) \in C(E)\). Аналогично, для дифференцируемости будем использовать \(f(z) \in D(E)\).
+    Вероятно, вы уже встречались с подобными обозначениями на семинарах.
+\end{anote}
+
+\begin{statement}
+    \textbf{(Признак сходимости равномерной сходимости функциональных рядов).} Пусть \(\forall n \ge
+     N \ \& \ \forall z \in E \mapsto |f_n(z)| < a_n\) и ряд \(\sum\limits_{n = 0}^{\infty} a_n\)
+     сходится. Тогда функциональный ряд \(f_n\) сходится равномерно на множестве \(E\).
+\end{statement}
+
+
+\Section{Интеграл вдоль кривой}
+
+Пусть кривая \(\gamma\) КНД, а также задана функция \(f(z) = u(x, y) + iv(x, y) \in C(\gamma)\).
+Интегралом первого рода будем называть \(\int\limits_{\gamma} f(z) |dz| = \int\limits_\alpha^\beta
+f(z(t)) |z'(t)|dt\), где \(z(t)\)~--- параметризация кривой \(\gamma\). Название обусловлено подобию
+данного интеграла криволинейному интегралу первого рода из курса кратных интегралов и теории поля.
+Действительно \(\int\limits_\alpha^\beta f(z(t)) |z'(t)|dt = \int\limits_\alpha^\beta [u(x(t), y(t))
++iv(x(t), y(t))] \sqrt{(x'(t))^2 + (y'(t))^2} dt = \int\limits_\alpha^\beta uds + i
+\int\limits_\alpha^\beta vds\). Введём свойства интеграла первого рода.
+
+\begin{properties}
+    \item \(\int\limits_{\gamma} |dz| = l(\gamma)\)~--- длина кривой.
+    \item \(\int\limits_{\gamma} (af + bg) |dz| = a \int\limits_{\gamma} f |dz| + b 
+    \int\limits_{\gamma} g |dz|\)~--- свойство линейности.
+    \item Пусть \(\gamma = \gamma_1 \gamma_2\). Тогда \(\int\limits_{\gamma} f |dz| = 
+    \int\limits_{\gamma_1} f |dz| + \int\limits_{\gamma_2} f |dz|\).
+    \item \(\int\limits_{\gamma} f |dz| = \int\limits_{\gamma^{-1}} f |dz|\)
+\end{properties}
+
+Теперь введём интеграл второго рода \(\int\limits_{\gamma} f(z) dz = \int\limits_\alpha^\beta
+f(z(t)) z'(t)dt\). Введём его свойства.
+
+\begin{properties}
+    \item \(\int\limits_{\gamma} (af + bg) dz = a \int\limits_{\gamma} f dz + b 
+    \int\limits_{\gamma} g dz\)~--- свойство линейности.
+    \item Пусть \(\gamma = \gamma_1 \gamma_2\). Тогда \(\int\limits_{\gamma} f dz = 
+    \int\limits_{\gamma_1} f dz + \int\limits_{\gamma_2} f dz\).
+    \item \(\int\limits_{\gamma} f |dz| = -\int\limits_{\gamma^{-1}} f |dz|\)
+\end{properties}
+
+Выведем оценку для интегралов первого и второго рода функции \(f \in C(\gamma)\) (также можно 
+называть функцию \(f\) непрерывной на своём носителе):
+\[|\int\limits_{\gamma} f(z) dz| \le \int\limits_{\gamma} |f(z)| |dz| \le l(\gamma) \cdot 
+\max\limits_{\gamma}{|f(z)|}\]
+
+\begin{proof}
+    Докажем первое неравенство. Обозначим \(I = \int\limits_{\gamma} f(z) dz\). При \(I = 0\)
+    неравенство верно. При \(I \ne 0\) можно использовать запись \(I = |I|e^{i\theta}\). Отсюда
+    \(|I| = Ie^{-i\theta} = \int\limits_{\gamma} e^{-i\theta} f(z) dz = 
+    \int\limits_{\alpha}^{\beta} e^{-i\theta} f(z(t)) z'(t) dt = \int\limits_{\alpha}^{\beta} 
+    \re{[\dots]} dt + i \int\limits_{\alpha}^{\beta} \im{[\dots]} dt\). Заметим, что интеграл во
+    втором слагаемом обращается в нуль. Так как для любого комплексного числа его действительная 
+    часть меньше или равна его модулю, то продолжая оценку получим: \(\int\limits_{\alpha}^{\beta} 
+    \re{[\dots]} dt + i \int\limits_{\alpha}^{\beta} \im{[\dots]} dt \le 
+    \int\limits_{\alpha}^{\beta} |f(z(t))| \cdot |z'(t)| dt = \int\limits_{\gamma} |f(z)| |dz|\).
+
+    Второе неравенство доказывается тривиально исходя из того, что функция в каждой точке своего
+    носителя меньше или равна максимуму функции на носителе.
+\end{proof}
+
+\begin{statement}
+    Если \(\gamma\)~--- КНД кривая, \(\forall n \ f_n(z) \in C(\gamma)\) и \(f_n \rightrightarrows
+    f\), то \(\int\limits_{\gamma} f_n(z) dz \rightarrow \int\limits_{\gamma} f(z) dz\)
+\end{statement}
+
+\begin{proof}
+    Зафиксируем \(\epsilon > 0\). Из условий теоремы, для него \(\exists N \colon \ \forall n \ge N
+    \rightarrow \max\limits_{\gamma}{|f_n(z) - f(z)| \le \epsilon}\), а из оценки выше следует, что
+    \(|\int\limits_{\gamma} (f_n(z) - f(z)) dz| \le l(\gamma) \cdot
+    \max\limits_{\gamma}{|f_n(z) - f(z)|} \le l(\gamma)\epsilon\).
+\end{proof}
+
+Аналогичное утверждение можно также сформулировать для рядов:
+
+\begin{statement}
+    Если \(\gamma\)~--- КНД кривая, \(\forall n \ f_n(z) \in C(\gamma)\) и 
+    \(\sum\limits_{n=0}^{\infty}f_n \rightrightarrows f\), то \(\int\limits_{\gamma} 
+    \sum\limits_{n=0}^{\infty} f_n(z) dz \rightarrow \int\limits_{\gamma} f(z) dz\)
+\end{statement}
+
+\begin{definition}
+    Пусть задана КНД кривая \(\gamma\) с параметризацией \(z = z(t)\) на \([a, b]\) и регулярное на
+    \(\gamma\) отображение \(w = f(z)\). \textit{Образом} \(\gamma\) будем называть кривую с 
+    параметризацией \(w = f(z(t))\).
+\end{definition}
+
+\begin{statement}
+    Пусть задана КНД кривая \(\gamma\) с параметризацией \(z = z(t)\) на \([a, b]\), регулярное на
+    \(\gamma\) отображение \(w = f(z)\), а также \(F(u) \in C(\Gamma)\), где \(\Gamma = f(\gamma)\).
+    Тогда \(\int\limits_{\Gamma}F(w)dw = \int\limits_{\gamma} F(f(z))\cdot f'(z) dz\).
+\end{statement}
+
+\begin{proof}
+    \(w(t) = f(z(t))\). Расписав правую и левую части в пределах параметризации и воспользовавшись 
+    теоремой о дифференцируемости сложной функции получим тождественные равенства.
+\end{proof}
