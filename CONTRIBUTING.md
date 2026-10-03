@@ -22,7 +22,7 @@
 
 Для Linux необходимо установить следующие пакеты (пример приведён для Ubuntu и Debian, для других дистрибутивов следует узнать имена соответствующих пакетов):
 ```shell
-sudo apt install -y texlive texlive-latex-extra texlive-lang-cyrillic
+sudo apt install -y texlive texlive-latex-extra texlive-lang-cyrillic latexmk
 ```
 
 Если вы работаете на macOS, то, скорее всего, наиболее удобным способом для вас будет установка с помощью [Homebrew](https://brew.sh):
