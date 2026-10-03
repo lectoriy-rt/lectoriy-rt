@@ -1,0 +1,1416 @@
+\setcounter{section}{0}
+\Section{Счетность множества рациональных чисел, несчетность множества
+действительных (вещественных) чисел}
+
+\begin{definition}
+Рациональное число~--- это дробь вида \(\frac{p}{q}\), где \(p \in \Z\),
+\(q \in N\)
+\end{definition}
+
+Аксиомы рациональных чисел:
+
+\begin{properties}
+\item Если \(a = b\) и \(b = c\), то \(a = c\),
+
+Если \(a > b\) и \(b > c\), то \(a > c\).
+
+\item \(a + b = b + a\);
+\item \((a + b) + c = a + (b + c)\);
+\item Существует число~\(0\) такое, что для любого~\(a\) выполняется \(a + 0 = a\)
+\item Для любого числа~\(a\) найдется противоположное число~\(-a\) такое,
+что \(a + (-a) = 0\);
+\item \(a \cdot b = b \cdot a\);
+\item \((a \cdot b) \cdot c = a \cdot (b \cdot c)\);
+\item Существует число 1 такое, что для любого~\(a\) выполняется \(a \cdot 1 = a\);
+\item Для любого~\(a \neq 0\) существует обратное число \(\dfrac{1}{a}\) такое,
+что \(a \cdot \dfrac{1}{a} = 1\);
+\item \((a + b) \cdot c = a \cdot c + b \cdot c\);
+\item Если \(a > b\), то для любого~\(c\) выполняется \(a + c > b + c\);
+\item Если \(a > b\), то для любого~\(c > 0\) выполняется \(a \cdot c > b \cdot c\);
+\item Для любого~\(a > 0\) найдется \(n \in \mathbb{N}\) такое, что \(n > a\).
+\end{properties}
+
+\begin{definition}
+Сечением множества \(\mathbb{Q}\) называется разбиение этого множества
+на 2 непустых множества \(A_*, A^*\), где:
+
+\textbf{(A)} \(A_*\)~--- нет наибольшего, \(A^*\)~--- есть наименьшее;
+
+\textbf{(C)} \(A_*\)~--- нет наибольшего, \(A^*\)~--- нет наименьшего.
+
+\end{definition}
+
+\begin{definition}
+Действительное число --- сечение вида \textbf{(А)} или \textbf{(С)}.
+\end{definition}
+
+\begin{definition}
+\(A\) называется счётным, если можно установить биекцию между \(A\) и \(\N\).
+\end{definition}
+
+\begin{theorem}
+\(\mathbb{Q}\) --- счётно.
+\end{theorem}
+
+\begin{proof}
+Множество положительных несократимых дробей \(p/q\)
+
+\(H = p + q\) --- высота дроби.
+
+\[
+\begin{array}{|c|c|cc|cc|cccc|c}
+\hline
+\text{\(\N\)}  & 1   & 2   & 3   & 4   & 5   & 6   & 7   & 8   & 9   & ... \\
+\hline
+\text{\(p/q\)} & 1/1 & 1/2 & 2/1 & 1/3 & 3/1 & 1/4 & 2/3 & 3/2 & 4/1 & ... \\
+\hline
+\text{\(H\)}   & 2 & \multicolumn{2}{c|}{3} & \multicolumn{2}{c|}{4} &
+    \multicolumn{4}{c|}{5} & ... \\
+\hline
+\end{array}
+\]
+
+\[
+a_1, a_2, \ldots, a_n, \ldots \Leftrightarrow  0,\ a_1,\ -a_1,\ a_2,\ -a_2,\
+\ldots
+\Rightarrow \mathbb{Q}\text{~--- счётно.}
+\]
+\end{proof}
+
+\begin{theorem}
+Если \(A\) счётно, то и подмножество \(B \subset A\) счётно
+(\(B\) не является конечным).
+\end{theorem}
+
+\begin{proof}
+\[
+\{a_1, a_2, a_3, a_4, \ldots, a_n, \ldots\} = A
+\]
+
+\[
+\{a_{n_1}, a_{n_2}, a_{n_3}, a_{n_4}, \ldots, a_{n_k}, \ldots\} = B
+\]
+
+\[
+a_n \leftrightarrow h
+\]
+\end{proof}
+
+\begin{theorem}
+\(\mathbb{R}\) --- несчётно.
+\end{theorem}
+
+\begin{proof}
+Достаточно показать, что интервал \((0, 1)\)~---~несчётён.
+
+Доказываем от противного: пусть все точки \((0, 1)\) пронумерованы
+\(\Rightarrow\) каждую точку можно представить как
+\[
+\alpha_n = 0{,}a_1^n a_2^n a_3^n\ldots a_m^n\ldots
+\]
+
+Рассмотрим точку
+\[
+\gamma = 0{,}c_1 c_2 \ldots c_k \ldots, \qquad c_k \neq a_k^n
+\]
+
+\(\gamma \neq \alpha_n\ \forall n \Rightarrow (0, 1)\) --- несчётен.
+
+Если бы \(\mathbb{R}\) было счётно, то интервал \((0, 1)\) был бы счётным
+--- противоречие \(\Rightarrow \mathbb{R}\)~---~несчётно.
+\end{proof}
+
+\Section{Теорема о существовании точной верхней (нижней) грани множества}
+
+\noindent\textbf{Важные определения:}
+
+\begin{enumerate}
+\item
+\[
+[\alpha_0 = \sup X] \eqdef
+\begin{cases}
+\forall x \in X \to \alpha_0 \ge x,\\
+\forall \alpha' < \alpha_0 \ \exists x' \in X: x' > \alpha'.
+\end{cases}
+\]
+
+\[
+[\alpha_0 = \sup X] \eqdef  
+[\forall x \in X \to \alpha_0 \ge x] \ \&\
+[\forall \varepsilon > 0 \ \exists x_\varepsilon \in X: x_\varepsilon >
+\alpha_0 - \varepsilon].
+\]
+
+\item 
+\[
+[\beta_0 = \inf X] \eqdef
+\begin{cases}
+\forall x \in X \to \beta_0 \le x,\\
+\forall \beta' > \beta_0 \ \exists x' \in X: \beta' > x'.
+\end{cases}
+\]
+
+\[
+[\beta_0 = \inf X] \eqdef
+\begin{cases}
+\forall x \in X \to \beta_0 \le x,\\
+\forall \varepsilon > 0 \ \exists x_\varepsilon \in X: x_\varepsilon < \beta_0
++ \varepsilon.
+\end{cases}
+\]
+
+\end{enumerate}
+
+\begin{theorem} [О существовании точной верхней (нижней) грани]
+\[
+[X \subset \mathbb{R}: \left[X \neq \varnothing \right] \& \left[X
+\text{ огр. сверху}\right]] \Rightarrow
+[\exists \alpha_0 \in \mathbb{R}: \alpha_0 = \sup X].
+\]
+\[
+[X \subset \mathbb{R}: \left[X \neq \varnothing \right] \& \left[X
+\text{ огр. снизу}\right]]
+\Rightarrow
+[\exists \beta_0 \in \mathbb{R}: \beta_0 = \inf X].
+\]
+\end{theorem}
+
+\begin{proof}
+Доказательство приведём для точной верхней грани (для нижней аналогично):
+\begin{enumerate}
+\item \(X\) имеет наибольший элемент \(x_0\);
+\item \(X\) не имеет наибольшего элемента.
+\end{enumerate}
+
+Тогда:
+
+\begin{enumerate}
+\item \(\forall x \in X \ x \le x_0 \Rightarrow \forall \alpha \ge x_0
+\Leftrightarrow x_0\) --- наименьшая из верхних граней;
+\item Сечение \(\mathbb{R}\): \(A^*\) --- мн-во верхних граней,
+\(A_* \neq \varnothing\) так как \(X\) ограничено. \(X \subset A_*\). При этом в
+\(A_*\) нет наибольшего элемента. По теореме Дедекинда: \(\exists \alpha_0 \in
+A^* \Rightarrow \alpha_0 = \sup X\).
+\end{enumerate}
+\end{proof}
+
+\Section{Теорема об отделимости двух множеств действительных чисел}
+
+\begin{theorem}
+Пусть \(A \neq \varnothing\), \(B \neq \varnothing\), \(A, B \subset \mathbb{R}\),
+и для любых \(a \in A\), \(b \in B\) выполнено \(b \ge a\). Тогда:
+\[
+\exists \alpha_0 = \sup A,\qquad \exists \beta_0 = \inf B,\qquad
+\beta_0 \ge \alpha_0.
+\]
+\end{theorem}
+
+\begin{proof}
+Так как \(\beta_0 = \inf B\), то для любого \(b \in B\) число \(b\) является
+верхней гранью множества \(A\) (по определению: \(\forall a \in A\ a \le b\)).
+
+Поскольку \(A \neq \varnothing\) и \(A\) ограничено сверху, по теореме о
+существовании точной верхней грани
+\[
+\exists \alpha_0 = \sup A.
+\]
+Аналогично, \(B \neq \varnothing\) и \(B\) ограничено снизу (например, любым
+\(a \in A\)), поэтому
+\[
+\exists \beta_0 = \inf B.
+\]
+Далее, для любого \(b \in B\) имеем \(b \ge \alpha_0\), так как \(\alpha_0\) ---
+наименьшая верхняя грань \(A\), а каждое \(b\) --- верхняя грань \(A\). Значит,
+\(\alpha_0\) --- нижняя грань \(B\). Следовательно,
+\[
+\beta_0 = \inf B \ge \alpha_0.
+\]
+\end{proof}
+
+\Section{Единственность предела сходящейся последовательности. Ограниченность
+сходящейся последовательности}
+
+
+\begin{definition}
+Последовательность называется сходящейся, если у неё есть конечный предел.
+\end{definition}
+
+\begin{definition}
+\[
+\left[\lim_{n\to\infty} x_n = \alpha\right] \eqdef
+\bigl[\forall \epsilon>0, \exists N = N(\epsilon)\colon \forall n\ge N
+\to |x_n-\alpha|<\epsilon\bigr].
+\]
+\end{definition}
+
+\begin{theorem}[единственность предела]
+Если последовательность \(x_n\) сходится, то она имеет единственный предел.
+\end{theorem}
+
+\begin{proof}
+Пусть существуют два предела \(\alpha\) и \(\beta\). Тогда
+\[
+x_n = \alpha + \alpha_n,\qquad x_n = \beta + \beta_n,
+\]
+где \(\alpha_n,\beta_n\) --- бесконечно малые. Тогда
+\[
+\gamma = \alpha-\beta
+= x_n-\alpha_n - x_n + \beta_n
+= \beta_n-\alpha_n
+= \gamma_n.
+\]
+Так как \(\gamma=\gamma_n\), то \(\gamma=0\), значит \(\alpha=\beta\).
+Противоречие с \(a\ne\beta\). Следовательно, предел единственен.
+\end{proof}
+
+\begin{theorem}[ограниченность сходящейся последовательности]
+Если последовательность \(\{x_n\}\) сходится, то она ограничена.
+\end{theorem}
+
+\begin{proof}
+Пусть \(\exists \alpha\in\mathbb R\) такое, что
+\(\forall n\ x_n=\alpha+\alpha_n\), где
+\(\alpha_n\) --- бесконечно малая. Тогда:
+\[
+|x_n| = |\alpha+\alpha_n| \le |\alpha| + |\alpha_n|.
+\]
+Так как \(\alpha_n\) ограничена, \(\exists C>0:\ |\alpha_n|\le C\).
+Следовательно,
+\[
+|x_n| \le |\alpha| + C,
+\]
+то есть \(\{x_n\}\) ограничена.
+\end{proof}
+
+Обратное неверно: последовательность \((-1)^n\) ограничена, но не сходится.
+
+\Section{Бесконечно малые последовательности и их свойства}
+
+\textbf{Обозначения:} \(\text{б.м.}\) --- бесконечно малая,
+\(\text{б.б.}\) --- бесконечно большая.
+
+\begin{definition}
+\[
+\left[\left\{x_n\right\}~-\text{б.м.}\right] \eqdef
+\left[\forall\epsilon > 0\ \exists N = N(\epsilon) \colon \forall n
+\geq N\colon |x_n| < \epsilon\right]
+\]
+\end{definition}
+
+\textbf{Свойства:}
+
+\begin{enumerate}
+\item Если \(\{x_n\}\) и \(\{y_n\}\) --- б.м., то \(\{z_n = x_n + y_n\}\) --- б.м.
+
+\begin{proof}
+Так как \(x_n, y_n\) --- б.м., то
+\[
+\forall \varepsilon>0\ \exists N_1\in\mathbb{N}:\ \forall n\ge N_1\
+|x_n|<\frac{\varepsilon}{2},
+\]
+\[
+\forall \varepsilon>0\ \exists N_2=N_2(\varepsilon):\ \forall n\ge N_2\
+|y_n|<\frac{\varepsilon}{2}.
+\]
+Положим \(N=\max(N_1,N_2)\). Тогда \(\forall n\ge N\)
+\[
+|z_n|=|x_n+y_n|\le |x_n|+|y_n|<\frac{\varepsilon}{2} +
+\frac{\varepsilon}{2}=\varepsilon.
+\]
+Следовательно, \(z_n\) --- б.м.
+
+\end{proof}
+
+\item Если \(\{x_n\}\) --- б.м., то \(\{x_n\}\) ограничена.
+
+\begin{proof} Возьмём \(\varepsilon=1\). Тогда
+\[
+\exists N=N(1):\ \forall n\ge N\ |x_n|<1.
+\]
+Положим
+\[
+C=\max(|x_1|,|x_2|,\ldots,|x_{N-1}|,1).
+\]
+Тогда \(\forall n\in\mathbb{N}\ |x_n|\le C\). Значит, \(\{x_n\}\) ограничена.
+
+\end{proof}
+
+\item Если \(\{x_n\}\) --- б.м., а \(\{y_n\}\) ограничена, то \(\{z_n=y_n x_n\}\)
+--- б.м.
+
+\begin{proof} Так как \(\{y_n\}\) ограничена, \(\exists C>0:\ \forall
+n \in\mathbb{N}\ |y_n|\le C\). Для любого \(\varepsilon>0\) найдётся
+\(N=N(\varepsilon)\) такое, что \(\forall n\ge N\ |x_n|<\frac{\varepsilon}{C}\).
+Тогда:
+\[
+|z_n|=|x_n|\cdot|y_n|\le C\cdot\frac{\varepsilon}{C}<\varepsilon.
+\]
+Следовательно, \(z_n\) --- б.м.
+
+\end{proof}
+
+\item Если \(\{z_n\}\) --- б.м. и \(z_n=r\) при всех \(n\ge n_0\), то \(r=0\).
+
+\begin{proof} Пусть \(r\ne 0\). Возьмём \(\varepsilon=\frac{|r|}{2}\). Тогда
+\[
+\exists N=N(\varepsilon)\ge n_0:\ \forall n\ge N\ |z_n|<\varepsilon.
+\]
+Но \(z_n=r\), поэтому \(|r|<\frac{|r|}{2}\) --- противоречие. Значит, \(r=0\).
+\end{proof}
+
+\item
+\begin{enumerate}
+\item[(5.1)] \(\displaystyle \frac{1}{\text{б.б.}}=\text{б.м.}\)
+
+Пусть \(\{y_n\}\) --- б.б. и \(y_n\ne 0\) при \(n\ge n_0\). Тогда
+\[
+\forall \varepsilon>0\ \exists N=N(\varepsilon)\ge n_0:\ \forall n\ge N\
+|y_n|>\frac{1}{\varepsilon}.
+\]
+Следовательно,
+\[
+|z_n|=\frac{1}{|y_n|}<\varepsilon,
+\]
+то есть \(z_n=\frac{1}{y_n}\) --- б.м.
+
+\item[(5.2)] \(\displaystyle \frac{1}{\text{б.м.}}=\text{б.б.}\) --- аналогично.
+\end{enumerate}
+
+\item Следствие из пунктов 3 и 5:
+\[
+\frac{x_n}{y_n}=z_n-\text{б.м.},\qquad y_n-\text{б.б.}
+\]
+(то есть частное б.м. и б.б. есть б.м.)
+
+\end{enumerate}
+
+\Section{Арифметические операции со сходящимися последовательностями}
+
+\begin{definition}
+Число \(a\) называется пределом последовательности \(\{x_n\}\), если
+\[
+\lim_{n\to\infty} x_n = \alpha
+\;\overset{\text{def}}{\Longleftrightarrow}\;
+\forall \varepsilon>0\ \exists N=N(\varepsilon)\in\mathbb N\
+\forall n\ge N:\ |x_n-\alpha|<\epsilon.
+\]
+\end{definition}
+
+\begin{theorem}
+Пусть последовательности \(\{x_n\}\) и \(\{y_n\}\) сходятся, причём
+\[
+\lim_{n\to\infty} x_n = \alpha,\qquad
+\lim_{n\to\infty} y_n = \beta.
+\]
+Тогда:
+\begin{enumerate}
+\item \(\displaystyle \lim_{n\to\infty}(x_n\pm y_n)=\alpha\pm\beta\);
+\begin{proof}
+Если \(x_n = \alpha + \alpha_n\) и \(y_n = \beta + \beta_n\), то
+\(z_n = x_n + y_n = (\alpha + \beta) + (\alpha_n + \beta_n)
+\xrightarrow{n \rightarrow \inf} \alpha + \beta\)
+\end{proof}
+
+\item \(\displaystyle \lim_{n\to\infty}(x_n y_n)=\alpha\beta\);
+\begin{proof}
+Если \(x_n = \alpha + \alpha_n\) и \(y_n = \beta + \beta_n\), то:
+\[
+z_n = x_n \cdot y_n = (\alpha \cdot \beta) + (\alpha \cdot \beta_n +
+\beta \cdot \alpha_n +\alpha_n \cdot \beta_n) \xrightarrow{n \rightarrow \inf}
+\alpha + \beta
+\]
+\end{proof}
+
+\item если \(\beta\ne 0\), то
+\[
+\lim_{n\to\infty}\frac{x_n}{y_n}=\frac{\alpha}{\beta}.
+\]
+\end{enumerate}
+\end{theorem}
+
+\begin{proof} Так как \(x_n=\alpha+\alpha_n\) и \(y_n=\beta+\beta_n\), то:
+\[
+\frac{x_n}{y_n}-\frac{\alpha}{\beta}
+=
+\frac{\beta x_n-\alpha y_n}{\beta y_n}
+=
+\frac{\beta(\alpha+\alpha_n)-\alpha(\beta+\beta_n)}{\beta y_n}
+=
+\frac{\beta\alpha_n-\alpha\beta_n}{\beta y_n}
+=
+\frac{1}{y_n}\left(\alpha_n-\frac{\alpha}{\beta}\beta_n\right)
+=
+\frac{1}{y_n}\delta_n,
+\]
+где:
+\[
+\delta_n=\alpha_n-\frac{\alpha}{\beta}\beta_n
+\]
+
+Поскольку \(y_n\to\beta\ne 0\), последовательность \(\frac{1}{y_n}\)
+ограничена при достаточно больших \(n\). Поэтому произведение ограниченной
+последовательности на бесконечно малую \(\delta_n\) есть бесконечно малая.
+Следовательно,
+
+\[
+\frac{x_n}{y_n}-\frac{\alpha}{\beta}\to 0,
+\]
+то есть:
+\[
+\lim_{n\to\infty}\frac{x_n}{y_n}=\frac{\alpha}{\beta}.
+\]
+\end{proof}
+
+\Section{Свойства пределов, связанные с неравенствами}
+
+\begin{enumerate}
+    \item Если \(x_n \to \alpha\) и \(\exists N: \forall n \ge N \implies x_n \ge \beta\), то и \(\alpha \ge \beta\).
+
+\begin{proof}
+\[\varepsilon = \beta - \alpha > 0\].
+\end{proof}
+
+\noindent\textbf{Следствия:}
+
+\begin{enumerate}
+
+\item Если \(\exists N: \forall n \ge N \implies x_n \ge y_n\), то и
+\(
+\lim x_n \ge \lim y_n.
+\)
+
+\begin{proof}
+Рассмотрим \(z_n = x_n - y_n \ge 0\).
+\end{proof}
+
+\item Если \(\forall n \ge N \implies \alpha \le x_n \le \beta\), то
+\( \alpha \le \lim x_n \le \beta. \)
+
+\end{enumerate}
+
+\item \([x_n \to \alpha] \ \&\ [z_n \to \alpha] \ \&\ [\exists N_0: \forall n \ge N_0 \implies x_n \le y_n \le z_n] \implies [y_n \to \alpha]\).
+
+\begin{proof}
+\[
+x_n - \alpha \le y_n - \alpha \le z_n - \alpha
+\implies
+|y_n - \alpha| \le \max(|x_n - \alpha|, |z_n - \alpha|).
+\]
+\[
+\forall \varepsilon > 0 \ \exists n_1: \forall n \ge n_1 \implies |x_n - \alpha| < \varepsilon.
+\]
+\[
+\forall \varepsilon > 0 \ \exists n_2: \forall n \ge n_2 \implies |z_n - \alpha| < \varepsilon.
+\]
+Выберем \(N = \max(N_0, n_1, n_2)\). Тогда для всех \(n \ge N\) выполнено
+\[
+|y_n - \alpha| \le \max(|x_n - \alpha|, |z_n - \alpha|) < \varepsilon.
+\]
+Следовательно, \(y_n \to \alpha\).
+
+\end{proof}
+
+\end{enumerate}
+
+\Section{Теорема о пределе ограниченной монотонной последовательности}
+
+\begin{definition}
+Последовательность называется неубывающей (невозрастающей), если
+\[
+\forall m, n \in \N,\ m > n \mapsto x_m \geq x_n
+\]
+\[
+\forall m, n \in \N,\ m > n \mapsto x_m \leq x_n
+\]
+
+\end{definition}
+
+\begin{theorem}
+Если последовательность \(\{x_n\}\) монотонна (строго монотонна) и ограничена,
+то существует \(\lim x_n\).
+
+При этом если \(\{x_n\}\) возрастает (не убывает), то
+\[
+\lim_{n\to\infty} x_n = \sup x_n,
+\]
+иначе
+\[
+\lim_{n\to\infty} x_n = \inf x_n.
+\]
+\end{theorem}
+
+\begin{proof}
+Пусть \(\{x_n\}\) возрастает и ограничена сверху. Тогда существует
+\[
+\sup x_n = \alpha.
+\]
+По определению точной верхней грани
+\[
+\forall \varepsilon>0\ \exists N=N(\varepsilon):\ x_N > \alpha-\varepsilon.
+\]
+Так как последовательность возрастает, то для всех \(n\ge N\)
+\[
+x_N \le x_n \le \alpha.
+\]
+Следовательно,
+\[
+0 \le \alpha -x_n \le \alpha - x_N < \varepsilon.
+\]
+Значит,
+\[
+|x_n-\alpha|<\varepsilon \quad \text{при } n\ge N,
+\]
+то есть
+\[
+\lim_{n\to\infty} x_n = \alpha = \sup x_n.
+\]
+
+Для других случаев доказательство аналогично.
+\end{proof}
+
+\noindent\textbf{Замечание.} Так как любая сходящаяся последовательность
+ограничена, то монотонная сходящаяся последовательность ограничена.
+
+\Section{Теорема Кантора о вложенных отрезках}
+
+\begin{theorem}[Кантора]
+Пусть дана последовательность вложенных отрезков
+\[
+[a_{n+1}, b_{n+1}] \subset [a_n, b_n] \quad \forall n,
+\]
+причём
+\[
+\lim_{n\to\infty}(b_n-a_n)=0.
+\]
+Тогда существует единственная точка \(\alpha\), принадлежащая всем отрезкам:
+\[
+\exists! \alpha:\quad \alpha \in [a_n,b_n]\ \ \forall n.
+\]
+\end{theorem}
+
+\begin{proof}
+Так как \([a_{n+1},b_{n+1}]\subset [a_n,b_n]\), то
+\[
+a_n \le a_{n+1} \le b_{n+1} \le b_n.
+\]
+Следовательно, \(\{a_n\}\) не убывает и ограничена сверху, например, числом
+\(b_1\), а \(\{b_n\}\) не возрастает и ограничена снизу, например, числом
+\(a_1\). Поэтому существуют пределы
+\[
+\lim_{n\to\infty} a_n = \sup a_n = \alpha,\qquad
+\lim_{n\to\infty} b_n = \inf b_n = \beta.
+\]
+Тогда
+\[
+\lim_{n\to\infty}(b_n-a_n)=\beta-\alpha.
+\]
+По условию этот предел равен нулю, значит,
+\[
+\beta-\alpha=0 \quad\Rightarrow\quad \beta=\alpha.
+\]
+Обозначим общее значение через \(\gamma\). Тогда
+\[
+a_n \le \gamma \le b_n \quad \forall n,
+\]
+то есть \(\gamma\in[a_n,b_n]\) для всех \(n\).
+
+Докажем единственность. Пусть существует другая точка \(\gamma'\), принадлежащая
+всем отрезкам, причём \(\gamma'>\gamma\). Тогда для всех \(n\)
+\[
+\gamma'-\gamma \le b_n-a_n.
+\]
+Но \(b_n-a_n\to 0\), значит, \(b_n-a_n\) — бесконечно малая. Следовательно,
+\(\gamma'-\gamma=0\), то есть \(\gamma'=\gamma\). Противоречие. Значит, общая
+точка единственна.
+\end{proof}
+
+\Section{Подпоследовательности и частичные пределы. Критерий частичного предела}
+
+\begin{definition}
+Пусть дана последовательность \(\{x_n\}\). Последовательность \(\{x_{n_k}\}\)
+называется \emph{подпоследовательностью} последовательности \(\{x_n\}\), если
+\[
+n_1 < n_2 < \ldots < n_k < \ldots
+\]
+— строго возрастающая последовательность натуральных чисел. При этом \(n_k \ge k\).
+\end{definition}
+
+\textbf{Свойства:}
+
+\begin{enumerate}
+    \item
+        \[
+        \left[\exists \lim_{n\to\infty}x_n = \alpha\right] \Rightarrow
+        \left[\forall x_{n_k} \mapsto \lim_{k\to\infty}x_{n_k} = \alpha\right]
+        \]
+    \item
+        \[
+        \left[\forall x_{n_k} \mapsto \lim_{k\to\infty}x_{n_k}
+        \text{~--- сходится}\right] \Rightarrow
+        \left[\forall x_{n_k} \mapsto \lim_{k\to\infty}x_{n_k} = \alpha \right]
+        \]
+    \item
+        \[
+        \left[\left\{x_n\right\}\text{~--- б.б.}\right]\Rightarrow
+        \left[\forall\left\{x_{n_k}\right\}\text{~--- б.б.}\right]
+        \]
+    \item
+        \[
+        \left[\lim_{n\to\infty}x_n = \alpha\right]\Rightarrow
+        \left[\exists\ \text{монот. } x_{n_k}\colon \lim_{k\to\infty}x_{n_k}
+        = \alpha\right]
+        \]
+\end{enumerate}
+
+\begin{definition}
+Число \(\alpha\) называется \emph{частичным пределом} последовательности
+\(\{x_n\}\), если существует подпоследовательность \(\{x_{n_k}\}\), сходящаяся к
+\(\alpha\).
+\end{definition}
+
+\begin{definition}
+    \(\alpha\)~--- предельная точка, если \(\forall U_\epsilon(\alpha)\)
+\end{definition}
+
+\begin{theorem}[критерий частичного предела]
+Число \(a\) является частичным пределом последовательности \(\{x_n\}\) тогда и
+только тогда, когда для любого \(\varepsilon>0\) и любого \(N\in\mathbb N\)
+найдётся \(n>N\) такое, что
+\[
+|x_n - a| < \varepsilon.
+\]
+Иными словами, множество
+\[
+\{n\in\mathbb N: |x_n-a|<\varepsilon\}
+\]
+бесконечно для каждого \(\varepsilon>0\).
+\end{theorem}
+
+\begin{proof}
+\emph{Необходимость.} Пусть \(a\) — частичный предел. Тогда существует
+подпоследовательность \(x_{n_k}\to a\). Значит, для любого \(\varepsilon>0\)
+найдётся \(K\) такое, что при \(k\ge K\) выполнено
+\[
+|x_{n_k}-a|<\varepsilon.
+\]
+Так как \(n_k\to\infty\), для любого \(N\) можно выбрать \(k\) настолько большим,
+что \(n_k>N\). Тогда \(n=n_k>N\) и \(|x_n-a|<\varepsilon\).
+
+\emph{Достаточность.} Пусть условие выполнено. Построим подпоследовательность,
+сходящуюся к \(a\). Возьмём \(\varepsilon=1\) и \(N=0\). Найдётся \(n_1>0\)
+с \(|x_{n_1}-a|<1\). Затем возьмём \(\varepsilon=1/2\) и \(N=n_1\). Найдётся
+\(n_2>n_1\) с \(|x_{n_2}-a|<1/2\). Продолжая, получим
+\[
+n_1<n_2<\ldots
+\]
+и
+\[
+|x_{n_k}-a|<\frac{1}{k}.
+\]
+Тогда \(x_{n_k}\to a\), то есть \(a\) — частичный предел.
+\end{proof}
+
+\Section{Теорема Больцано–Вейерштрасса}
+
+\begin{theorem}[Больцано--Вейерштрасса]
+Из любой ограниченной последовательности можно выделить сходящуюся
+подпоследовательность.
+\end{theorem}
+
+\begin{proof}
+Пусть последовательность \(\{x_n\}\) ограничена:
+\[
+\exists a,b\in\mathbb R:\quad \forall n\in\mathbb N \quad a\le x_n\le b.
+\]
+Рассмотрим отрезок \([a,b]\). Разделим его пополам. По крайней мере в одной из
+половин содержится бесконечно много членов последовательности. Выберем эту
+половину и обозначим её \([a_1,b_1]\). Затем разделим \([a_1,b_1]\) пополам и
+снова выберем ту половину, которая содержит бесконечно много членов
+последовательности; обозначим её \([a_2,b_2]\). Продолжая этот процесс, получим
+последовательность вложенных отрезков
+\[
+[a,b]\supset [a_1,b_1]\supset [a_2,b_2]\supset \ldots \supset [a_n,b_n]\supset
+\ldots,
+\]
+причём
+\[
+b_n-a_n=\frac{b-a}{2^n}\to 0 \quad \text{при } n\to\infty.
+\]
+По теореме о вложенных отрезках существует единственная точка \(c\),
+принадлежащая всем отрезкам:
+\[
+\exists! c:\quad c\in[a_n,b_n]\quad \forall n\in\mathbb N.
+\]
+
+Построим подпоследовательность. В каждом отрезке \([a_n,b_n]\) выберем член
+последовательности \(x_{n_k}\) так, чтобы номера возрастали:
+\[
+\exists x_{n_1}\in[a_1,b_1],
+\]
+\[
+\exists x_{n_2}\in[a_2,b_2],\quad n_2>n_1,
+\]
+\[
+\ldots
+\]
+\[
+\exists x_{n_k}\in[a_k,b_k],\quad n_k>n_{k-1}.
+\]
+Тогда для всех \(k\)
+\[
+a_k\le x_{n_k}\le b_k.
+\]
+Так как \(a_k\to c\) и \(b_k\to c\) (поскольку \(b_k-a_k\to 0\)), по теореме о
+двух милиционерах получаем
+\[
+x_{n_k}\to c.
+\]
+Следовательно, из последовательности \(\{x_n\}\) выделена сходящаяся
+подпоследовательность \(\{x_{n_k}\}\). Теорема доказана.
+\end{proof}
+
+\Section{Теорема о единственном частичном пределе}
+
+\begin{theorem}
+Пусть последовательность \(\{x_n\}\) ограничена и имеет единственный частичный
+предел \(\alpha\). Тогда
+\[
+\lim_{n\to\infty} x_n = \alpha.
+\]
+\end{theorem}
+
+\begin{proof}
+Так как \(\{x_n\}\) ограничена, по теореме Больцано--Вейерштрасса из неё можно
+выделить сходящуюся подпоследовательность:
+\[
+\exists \{x_{n_k}\}:\quad x_{n_k}\to \alpha.
+\]
+Значит, \(\alpha\) действительно является частичным пределом.
+
+Докажем, что вся последовательность сходится к \(\alpha\). Предположим противное:
+\[
+x_n \not\to \alpha.
+\]
+Тогда существует \(\varepsilon>0\) такое, что вне \(\varepsilon\)-окрестности
+точки \(\alpha\), то есть вне интервала
+\[
+(\alpha-\varepsilon,\ \alpha+\varepsilon),
+\]
+находится бесконечно много членов последовательности.
+
+Так как \(\{x_n\}\) ограничена, все эти члены лежат в некотором отрезке
+\([a,b]\). Вне \(\varepsilon\)-окрестности точки \(\alpha\) остаются два
+промежутка:
+\[
+[a,\ \alpha-\varepsilon]
+\qquad\text{и}\qquad
+[\alpha+\varepsilon,\ b].
+\]
+По крайней мере в одном из них содержится бесконечно много членов
+последовательности.
+
+Пусть, например, бесконечно много членов лежит в \([\alpha+\varepsilon,\ b]\).
+Тогда можно выбрать подпоследовательность
+\[
+x_{n_k}\in[\alpha+\varepsilon,\ b].
+\]
+Она ограничена, поэтому по теореме Больцано--Вейерштрасса из неё можно выделить
+сходящуюся подпоследовательность:
+\[
+x_{n_{k_j}}\to \beta.
+\]
+При этом
+\[
+\beta\in[\alpha+\varepsilon,\ b],
+\]
+значит,
+\[
+\beta\neq \alpha.
+\]
+Но тогда \(\beta\) --- ещё один частичный предел последовательности \(\{x_n\}\),
+что противоречит условию единственности частичного предела.
+
+Аналогично рассматривается случай, когда бесконечно много членов лежит в \([a,\
+\alpha-\varepsilon]\).
+
+Полученное противоречие показывает, что предположение \(x_n \not\to \alpha\)
+неверно. Следовательно,
+\[
+\lim_{n\to\infty} x_n = \alpha.
+\]
+\end{proof}
+
+\Section{Критерий Коши сходимости числовой последовательности}
+
+\begin{definition}
+Последовательность \(\{x_n\}\) называется \emph{фундаментальной}
+(или последовательностью Коши), если
+\[
+\forall \varepsilon>0\ \exists N=N(\varepsilon)\in\mathbb N:\ 
+\forall n>N\ \forall p\in\mathbb N
+\quad |x_{n+p}-x_n|<\varepsilon.
+\]
+\end{definition}
+
+\begin{theorem}
+Если \(\{x_n\}\) фундаментальна, то она ограничена.
+\end{theorem}
+
+\begin{proof}
+Возьмём \(\varepsilon=1\). Тогда
+\[
+\exists n\in\mathbb N\ \forall p\in\mathbb N:\ |x_{n+p}-x_n|<1.
+\]
+Следовательно,
+\[
+|x_{n+p}|=|x_{n+p}-x_n+x_n|
+\le |x_{n+p}-x_n|+|x_n|
+<1+|x_n|.
+\]
+Положим
+\[
+C=\max\bigl(|x_1|,|x_2|,\ldots,|x_{n-1}|,\ |x_n|+1\bigr).
+\]
+Тогда для всех \(k\in\mathbb N\) выполнено \(|x_k|\le C\), то есть \(\{x_n\}\)
+ограничена.
+\end{proof}
+
+\begin{theorem}[Критерий Коши]
+Последовательность \(\{x_n\}\) сходится тогда и только тогда, когда она
+фундаментальна:
+\[
+[\{x_n\}\text{ сходится}]
+\iff
+[\{x_n\}\text{ фундаментальна}].
+\]
+\end{theorem}
+
+\begin{proof}
+\emph{Необходимость.} Пусть \(x_n\to \alpha\). Тогда
+\[
+\forall \varepsilon>0\ \exists N=N(\varepsilon):\
+\forall n>N\ |x_n-\alpha|<\frac{\varepsilon}{2}.
+\]
+Для любого \(p\in\mathbb N\) имеем \(n+p>N\), поэтому
+\[
+|x_{n+p}-x_n|
+=
+|x_{n+p}-\alpha-(x_n-\alpha)|
+\le
+|x_{n+p}-\alpha|+|x_n-\alpha|
+<
+\frac{\varepsilon}{2}+\frac{\varepsilon}{2}
+=
+\varepsilon.
+\]
+Значит, \(\{x_n\}\) фундаментальна.
+
+\emph{Достаточность.} Пусть \(\{x_n\}\) фундаментальна. По прошлой теореме она
+ограничена. Тогда по теореме Больцано--Вейерштрасса из неё можно выделить
+сходящуюся подпоследовательность:
+\[
+x_{n_k}\to \alpha.
+\]
+Покажем, что вся последовательность сходится к \(\alpha\).
+Для \(\varepsilon>0\) выберем \(N_1=N_1(\varepsilon)\) так, что
+\[
+\forall n,m\ge N_1:\ |x_n-x_m|<\frac{\varepsilon}{2}.
+\]
+Также выберем \(N_2=N_2(\varepsilon)\) так, что
+\[
+\forall n_k\ge N_2:\ |x_{n_k}-\alpha|<\frac{\varepsilon}{2}.
+\]
+Положим \(N=\max(N_1,N_2)\). Для любого \(n\ge N\) выберем \(k\) настолько
+большим, что \(n_k\ge N\). Тогда
+\[
+|x_n-\alpha|
+\le
+|x_n-x_{n_k}|+|x_{n_k}-\alpha|
+<
+\frac{\varepsilon}{2}+\frac{\varepsilon}{2}
+=
+\varepsilon.
+\]
+Следовательно, \(x_n\to \alpha\).
+\end{proof}
+
+\Section{Определение предела функции в точке по Коши и по Гейне, их
+эквивалентность}
+
+\noindent\textbf{Определение (Гейне).}
+\[
+[\lim_{x\to\alpha} f(x)=\beta]
+\eqdef
+\bigl[\forall \{x_n\}:\ [\{x_n\}\to\alpha]\ \&\ [x_n\ne\alpha\ \forall n]
+\ \Rightarrow\ f(x_n)\to\beta\bigr].
+\]
+
+\noindent Тогда
+\[
+y_n=f(x_n)\xrightarrow[n\to\infty]{}\beta.
+\]
+
+\noindent\textbf{Определение (Коши).}
+\[
+[\lim_{x\to\alpha} f(x)=\beta]
+\eqdef
+\bigl[\forall \varepsilon>0\ \exists \delta=\delta(\varepsilon)>0\
+\forall x\in \dot U_\delta(\alpha)
+\ \Rightarrow\ f(x)\in U_\varepsilon(\beta)\bigr].
+\]
+
+\begin{theorem}
+\[
+[\text{определение Коши}]
+\iff
+[\text{определение Гейне}].
+\]
+\end{theorem}
+
+\begin{proof}
+\noindent 1) Коши \(\Rightarrow\) Гейне.
+
+Пусть \(\lim_{x\to\alpha} f(x)=\beta\) по Коши. Возьмём произвольную
+последовательность \(\{x_n\}\) такую, что
+\[
+x_n\to\alpha,\qquad x_n\ne\alpha\ \forall n.
+\]
+Тогда
+\[
+\exists N=N(\delta)\ \forall n\ge N:\quad
+0<|x_n-\alpha|<\delta
+\ \Rightarrow\
+|f(x_n)-\beta|<\varepsilon.
+\]
+Следовательно, \(f(x_n)\to\beta\), то есть выполнено определение Гейне. ч.т.д.
+
+\medskip
+\noindent 2) Гейне \(\Rightarrow\) Коши. От противного.
+
+Пусть предел по Коши не равен \(\beta\). Тогда
+\[
+[\lim_{x\to\alpha} f(x)\ne\beta]
+\eqdef
+\bigl[\exists \varepsilon_0>0\ \forall \delta>0\
+\exists x\in \dot U_\delta(\alpha):\
+f(x)\notin U_{\varepsilon_0}(\beta)\bigr].
+\]
+Для каждого \(n\in\mathbb N\) положим \(\delta_n=\frac1n\). Тогда
+\[
+\exists x_n:\quad
+0<|x_n-\alpha|<\delta_n
+\ \Rightarrow\
+|f(x_n)-\beta|\ge \varepsilon_0.
+\]
+При этом
+\[
+x_n\ne\alpha\ \forall n,\qquad x_n\to\alpha.
+\]
+Значит, \(\{x_n\}\) --- последовательность Гейне, и по определению Гейне должно
+быть
+\[
+f(x_n)\to\beta.
+\]
+Но это противоречит неравенству \(|f(x_n)-\beta|\ge\varepsilon_0\). Полученное
+противоречие доказывает, что
+\[
+\lim_{x\to\alpha} f(x)=\beta
+\]
+и по Коши.
+\end{proof}
+
+\Section{Критерий Коши существования предела функции}
+
+\begin{theorem}[Критерий Коши]
+Пусть функция \(f\) определена в проколотой окрестности точки \(\alpha\).
+Тогда
+\[
+\bigl[\lim_{x\to \alpha} f(x)=\beta\in\mathbb R\bigr]
+\iff
+\bigl[\forall \varepsilon>0\ \exists \delta=\delta(\varepsilon)>0\
+\forall x',x''\in \dot U_\delta(\alpha):\
+|f(x')-f(x'')|<\varepsilon\bigr].
+\]
+\end{theorem}
+
+\begin{proof}
+\noindent\textbf{Необходимость.}
+Пусть \(\lim_{x\to \alpha} f(x)=\beta\). Тогда
+\[
+\forall \varepsilon>0\ \exists \delta=\delta(\varepsilon)>0\
+\forall x\in \dot U_\delta(\alpha):\
+|f(x)-\beta|<\frac{\varepsilon}{2}.
+\]
+Тогда для любых \(x',x''\in \dot U_\delta(\alpha)\)
+\[
+|f(x')-f(x'')|
+=
+|(f(x')-\beta)-(f(x'')-\beta)|
+\le
+|f(x')-\beta|+|f(x'')-\beta|
+<
+\frac{\varepsilon}{2}+\frac{\varepsilon}{2}
+=
+\varepsilon.
+\]
+
+\medskip
+\noindent\textbf{Достаточность.}
+Пусть условие Коши выполнено. Покажем, что существует предел.
+
+Возьмём произвольную последовательность \(\{x_n\}\) такую, что
+\[
+x_n\to \alpha,\qquad x_n\ne \alpha\ \ \forall n.
+\]
+По условию Коши для любого \(\varepsilon>0\) найдётся
+\(\delta=\delta(\varepsilon)>0\).
+Так как \(x_n\to \alpha\), существует \(N=N(\delta)\) такое, что
+\[
+\forall n\ge N:\quad 0<|x_n-\alpha|<\delta.
+\]
+Тогда для любых \(n,m\ge N\) имеем \(0<|x_n-\alpha|<\delta\) и
+\(0<|x_m-\alpha|<\delta\), следовательно,
+\[
+|f(x_n)-f(x_m)|<\varepsilon.
+\]
+Значит, последовательность \(\{f(x_n)\}\) фундаментальна. По критерию Коши для
+последовательностей она сходится. Обозначим её предел через \(\beta\).
+
+Покажем, что \(\beta\) не зависит от выбора последовательности. Пусть
+\(\{x_n'\}\) и \(\{x_n''\}\) --- две последовательности, сходящиеся к \(\alpha\),
+причём
+\[
+f(x_n')\to \beta',\qquad f(x_n'')\to \beta''.
+\]
+Рассмотрим смешанную последовательность
+\[
+x_1',\,x_1'',\,x_2',\,x_2'',\,\ldots
+\]
+Она также сходится к \(\alpha\), и все её члены отличны от \(\alpha\). По
+доказанному последовательность значений \(f\) на ней сходится. Но её
+подпоследовательности \(f(x_n')\) и \(f(x_n'')\) сходятся соответственно к
+\(\beta'\) и \(\beta''\). Следовательно, \(\beta'=\beta''\). Значит, предел один
+и тот же для всех последовательностей, стремящихся к \(\alpha\).
+
+По определению предела по Гейне
+\[
+\lim_{x\to \alpha} f(x)=\beta.
+\]
+Теорема доказана.
+\end{proof}
+
+\Section{Существование односторонних пределов у монотонных функций}
+
+\begin{theorem}
+Пусть функция \(f(x)\) ограничена на \((a,b)\) и монотонна на \((a,b)\).
+Тогда для любой точки \(x_0\in(a,b)\) существуют односторонние пределы
+\(f(x_0-0)\) и \(f(x_0+0)\), причём:
+\begin{itemize}
+\item если \(f\) неубывающая, то
+\[
+f(x_0-0)\le f(x_0)\le f(x_0+0);
+\]
+\item если \(f\) невозрастающая, то
+\[
+f(x_0-0)\ge f(x_0)\ge f(x_0+0).
+\]
+\end{itemize}
+\end{theorem}
+
+\begin{proof}
+Пусть \(y=f(x)\) --- неубывающая функция. Зафиксируем точку \(x_0\in(a,b)\).
+Для любого \(x_1\in(a,x_0)\) имеем
+\[
+f(x_1)\le f(x_0).
+\]
+Следовательно, функция \(f(x)\) ограничена на \((a,x_0)\), и существует
+\[
+\exists \sup_{(a,x_0)} f(x)=\alpha.
+\]
+При этом
+\[
+\alpha\le f(x_0),
+\]
+то есть для любого \(\varepsilon>0\) найдётся \(x_\varepsilon\in(a,x_0)\) такое,
+что
+\[
+f(x_\varepsilon)>\alpha-\varepsilon.
+\]
+Положим
+\[
+\delta=x_0-x_\varepsilon.
+\]
+Тогда для всех \(x\in(x_0-\delta,x_0)\) выполнено
+\[
+\alpha-\varepsilon<f(x_\varepsilon)\le f(x)\le\alpha,
+\]
+значит,
+\[
+|f(x)-\alpha|<\varepsilon.
+\]
+Следовательно,
+\[
+\lim_{x\to x_0-0} f(x)=\alpha=f(x_0-0).
+\]
+Аналогично доказывается существование правого предела \(f(x_0+0)\).
+Для невозрастающей функции доказательство проводится аналогично.
+\end{proof}
+
+\Section{Непрерывность функции в точке. Непрерывность сложной функции}
+
+\begin{definition}
+Функция \(f\) называется непрерывной в точке \(\alpha\), если
+\[
+[f \text{ непрерывна в т. } \alpha]
+\eqdef
+\bigl[\lim_{x\to\alpha} f(x)=f(\alpha)\bigr].
+\]
+\end{definition}
+
+\begin{theorem}
+Если функции \(f\) и \(g\) непрерывны в точке \(\alpha\), то функции
+\(f+g\), \(fg\), а также \(\dfrac{f}{g}\) (при \(g(\alpha)\ne 0\)) непрерывны
+в точке \(\alpha\).
+\end{theorem}
+
+\begin{theorem}[непрерывность сложной функции]
+Пусть
+\[
+\lim_{x\to\alpha} f(x)=\beta
+\]
+и функция \(g\) непрерывна в точке \(\beta\). Тогда
+\[
+\lim_{x\to\alpha} g(f(x))=g(\beta).
+\]
+\end{theorem}
+
+\begin{proof}
+Возьмём произвольную последовательность \(\{x_n\}\) такую, что
+\[
+x_n\to\alpha,\qquad x_n\ne\alpha.
+\]
+По определению предела по Гейне
+\[
+f(x_n)\to\beta.
+\]
+Так как \(g\) непрерывна в точке \(\beta\), по определению непрерывности
+\[
+g(f(x_n))\to g(\beta).
+\]
+Следовательно, по определению предела по Гейне
+\[
+\lim_{x\to\alpha} g(f(x))=g(\beta).
+\]
+\end{proof}
+
+\begin{corollary}
+Если \(y=f(x)\) непрерывна в точке \(\alpha\), \(z=g(y)\) непрерывна
+в точке \(\beta\), причём \(\beta=f(\alpha)\), то сложная функция
+\(h(x)=g(f(x))\) непрерывна в точке \(\alpha\), и
+\[
+\lim_{x\to\alpha} h(x)
+=
+\lim_{x\to\alpha} g(f(x))
+=
+g(f(\alpha))
+=
+h(\alpha).
+\]
+\end{corollary}
+
+\begin{theorem}[устойчивость знака]
+Если функция \(f\) непрерывна в точке \(\alpha\) и \(f(\alpha)\ne 0\), то
+существует \(\delta>0\) такое, что для всех \(x\in(\alpha-\delta,\alpha+\delta)\)
+выполнено
+\[
+f(x)\cdot f(\alpha)>0.
+\]
+\end{theorem}
+
+\begin{proof}
+Так как \(f(\alpha)\ne 0\), возьмём
+\[
+\varepsilon=\frac{|f(\alpha)|}{2}>0.
+\]
+По непрерывности \(f\) в точке \(\alpha\) найдётся \(\delta>0\) такое, что
+для всех \(x\) с условием \(|x-\alpha|<\delta\) выполнено
+\[
+|f(x)-f(\alpha)|<\varepsilon.
+\]
+Тогда
+\[
+f(x)\in\bigl(f(\alpha)-\varepsilon,\ f(\alpha)+\varepsilon\bigr),
+\]
+причём этот интервал не содержит нуля и целиком лежит по ту же сторону
+от нуля, что и \(f(\alpha)\). Следовательно, \(f(x)\) имеет тот же знак,
+что и \(f(\alpha)\), то есть
+\[
+f(x)\cdot f(\alpha)>0.
+\]
+\end{proof}
+
+\Section{Ограниченность функции, непрерывной на отрезке}
+
+\begin{theorem}[Первая теорема Вейерштрасса]
+Если функция \(f(x)\) непрерывна на отрезке \([a,b]\), то она ограничена на этом
+отрезке:
+\[
+[f(x)\in C[a,b]]\ \Longrightarrow\ [f(x)\text{ ограничена на }[a,b]].
+\]
+\end{theorem}
+
+\begin{proof}
+Предположим противное: пусть \(f(x)\) не ограничена на \([a,b]\). Тогда
+\[
+\forall n\in\mathbb N\ \exists x_n\in[a,b]:\quad |f(x_n)|>n.
+\]
+Последовательность \(\{x_n\}\) ограничена, так как все её члены лежат на отрезке
+\([a,b]\). По теореме Больцано--Вейерштрасса из неё можно выделить сходящуюся
+подпоследовательность:
+\[
+\exists \{x_{n_k}\}:\quad x_{n_k}\to c\in[a,b].
+\]
+Так как \(f\) непрерывна на \([a,b]\), в частности в точке \(c\), то
+\[
+\lim_{k\to\infty} f(x_{n_k})=f(c).
+\]
+Следовательно, последовательность \(\{f(x_{n_k})\}\) сходится, а значит,
+ограничена. Но с другой стороны,
+\[
+|f(x_{n_k})|>n_k\to\infty,
+\]
+то есть \(\{f(x_{n_k})\}\) неограничена. Полученное противоречие показывает, что
+предположение неверно. Значит, \(f(x)\) ограничена на \([a,b]\).
+\end{proof}
+
+\Section{Достижение точной верхней и точной нижней граней функции,
+непрерывной на отрезке}
+\begin{theorem}[Вторая теорема Вейерштрасса]
+Если функция \(f(x)\) непрерывна на отрезке \([a,b]\), то она достигает на этом
+отрезке своей точной верхней и точной нижней граней:
+\[
+[f(x)\in C[a,b]]
+\ \Longrightarrow\
+\bigl[\exists \alpha,\beta\in[a,b]:\
+\sup_{[a,b]} f(x)=f(\alpha),\quad
+\inf_{[a,b]} f(x)=f(\beta)\bigr].
+\]
+\end{theorem}
+
+\begin{proof}
+Обозначим
+\[
+M=\sup_{[a,b]} f(x).
+\]
+Предположим противное: пусть значение \(M\) не достигается, то есть
+\[
+f(x)<M\quad \forall x\in[a,b].
+\]
+Тогда функция
+\[
+g(x)=\frac{1}{M-f(x)}
+\]
+непрерывна на \([a,b]\), так как знаменатель не обращается в нуль. По первой
+теореме Вейерштрасса \(g(x)\) ограничена на \([a,b]\), то есть
+\[
+\exists A>0:\quad g(x)\le A\quad \forall x\in[a,b].
+\]
+Следовательно,
+\[
+\frac{1}{M-f(x)}\le A
+\ \Longrightarrow\
+M-f(x)\ge \frac{1}{A}
+\ \Longrightarrow\
+f(x)\le M-\frac{1}{A}<M.
+\]
+Но это означает, что число \(M-\frac{1}{A}\) является верхней гранью \(f(x)\) на
+\([a,b]\), меньшей чем \(M\), что противоречит определению \(M\) как точной
+верхней грани.
+
+Полученное противоречие показывает, что существует точка \(\alpha\in[a,b]\), в
+которой
+\[
+f(\alpha)=M=\sup_{[a,b]} f(x).
+\]
+
+Аналогично доказывается существование точки \(\beta\in[a,b]\), в которой
+достигается точная нижняя грань:
+\[
+f(\beta)=\inf_{[a,b]} f(x).
+\]
+Теорема доказана.
+\end{proof}
+
+\Section{Теорема о промежуточных значениях непрерывной функции}
+
+
+\begin{theorem}[Больцано--Коши]
+Если функция \(f(x)\) непрерывна на отрезке \([a,b]\) и
+\[
+f(a)\cdot f(b)<0,
+\]
+то существует точка \(c\in(a,b)\) такая, что
+\[
+f(c)=0.
+\]
+\end{theorem}
+
+\begin{proof}
+Пусть для определённости \(f(a)<0\), \(f(b)>0\). Рассмотрим множество
+\[
+X=\{x\in[a,b]\mid f(x)<0\}.
+\]
+Оно непусто, так как \(a\in X\), и ограничено сверху, поэтому существует
+\[
+c=\sup X.
+\]
+Покажем, что \(f(c)=0\) и \(c\in(a,b)\).
+
+Так как \(f(a)<0\) и функция \(f\) непрерывна в точке \(a\), существует
+\(\delta_1>0\) такое, что для всех \(x\in(a,a+\delta_1)\) выполнено
+\(f(x)<0\). Значит, \(c>a\).
+
+Аналогично, так как \(f(b)>0\), существует \(\delta_2>0\) такое, что для всех
+\(x\in(b-\delta_2,b)\) выполнено \(f(x)>0\). Значит, \(c<b\).
+
+Следовательно, \(c\in(a,b)\).
+
+Предположим, что \(f(c)\ne 0\). Тогда либо \(f(c)<0\), либо \(f(c)>0\).
+
+Если \(f(c)<0\), то по непрерывности \(f\) в точке \(c\) найдётся окрестность
+\((c-\delta,c+\delta)\), в которой \(f(x)<0\). Тогда точки, большие \(c\),
+принадлежали бы множеству \(X\), что противоречит тому, что
+\(c=\sup X\).
+
+Если \(f(c)>0\), то найдётся окрестность \((c-\delta,c+\delta)\), в которой
+\(f(x)>0\). Тогда все точки, достаточно близкие к \(c\) слева, не принадлежали
+бы \(X\), что противоречит определению \(c\) как точной верхней грани.
+
+Полученное противоречие показывает, что \(f(c)=0\).
+\end{proof}
+
+\begin{theorem}[О промежуточных значениях]
+Пусть функция \(y=f(x)\) непрерывна на отрезке \([a,b]\), и пусть
+\[
+\alpha=f(a),\qquad \beta=f(b).
+\]
+Тогда для любого числа \(\gamma\), лежащего между \(\alpha\) и \(\beta\)
+(то есть \(\gamma\in[\alpha,\beta]\)), найдётся точка \(c\in(a,b)\) такая, что
+\[
+f(c)=\gamma.
+\]
+\end{theorem}
+
+\begin{proof}
+Рассматриваем вспомогательную функцию
+\[
+g(x)=f(x)-\gamma.
+\]
+Она непрерывна на \([a,b]\), а на концах отрезка принимает значения разных знаков:
+\[
+g(a)=f(a)-\gamma=\alpha-\gamma,\qquad
+g(b)=f(b)-\gamma=\beta-\gamma.
+\]
+По теореме Больцано--Коши о корне непрерывной функции существует точка
+\(c\in(a,b)\), в которой \(g(c)=0\), то есть \(f(c)=\gamma\).
+\end{proof}
