@@ -91,10 +91,15 @@ a_1, a_2, \ldots, a_n, \ldots \Leftrightarrow  0,\ a_1,\ -a_1,\ a_2,\ -a_2,\
 \{a_{n_1}, a_{n_2}, a_{n_3}, a_{n_4}, \ldots, a_{n_k}, \ldots\} = B
 \]
 
-\[
-a_n \leftrightarrow h
-\]
+Для каждого элемента из \(B\) можно взаимно однозначно определить элемент из
+\(\N\)
 \end{proof}
+
+\begin{statement}
+Множество действительных чисел \(\R\) находится в биективном соответствии с
+множеством бесконечных десятичных дробей, не оканчивающихся периодом из одних
+девяток.
+\end{statement}
 
 \begin{theorem}
 \(\mathbb{R}\) --- несчётно.
@@ -111,7 +116,7 @@ a_n \leftrightarrow h
 
 Рассмотрим точку
 \[
-\gamma = 0{,}c_1 c_2 \ldots c_k \ldots, \qquad c_k \neq a_k^n
+\gamma = 0{,}c_1 c_2 \ldots c_k \ldots, \qquad c_k \neq a_k^n, 0, 9
 \]
 
 \(\gamma \neq \alpha_n\ \forall n \Rightarrow (0, 1)\) --- несчётен.
@@ -467,7 +472,9 @@ z_n = x_n \cdot y_n = (\alpha \cdot \beta) + (\alpha \cdot \beta_n +
     \item Если \(x_n \to \alpha\) и \(\exists N: \forall n \ge N \implies x_n \ge \beta\), то и \(\alpha \ge \beta\).
 
 \begin{proof}
-\[\varepsilon = \beta - \alpha > 0\].
+    Рассмотрим \(\epsilon_n = x_n - \beta \geq 0 \ \forall n \in \N\). Тогда при
+    \(n\to\infty\)
+\[\varepsilon = \alpha - \beta > 0\].
 \end{proof}
 
 \noindent\textbf{Следствия:}
@@ -670,6 +677,7 @@ n_1 < n_2 < \ldots < n_k < \ldots
 
 \begin{definition}
     \(\alpha\)~--- предельная точка, если \(\forall U_\epsilon(\alpha)\)
+    содержит бесконечно много точек.
 \end{definition}
 
 \begin{theorem}[критерий частичного предела]
