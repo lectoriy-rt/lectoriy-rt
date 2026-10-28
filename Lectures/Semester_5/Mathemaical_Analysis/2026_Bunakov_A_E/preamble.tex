@@ -25,7 +25,7 @@
 \renewcommand{\theequation}{\thesection.\arabic{equation}}
 
 % Отображать номера только тех формул, на которые есть ссылка
-\mathtoolsset{showonlyrefs=true}
+%\mathtoolsset{showonlyrefs=true}
 
 % Более привычные греческие буквы
 \renewcommand{\epsilon}{\varepsilon}
@@ -91,6 +91,7 @@
 \newtheorem*{reminder}{Напоминание}
 \newtheorem{example}{Пример}[section]
 \newtheorem*{examples}{Примеры}
+\numberwithin{equation}{section}
 
 % Команда для переноса во встраиваемых в строку формулах. Взята из книги «Набор и вёрстка в системе
 % LaTeX» С.М. Львовского.
