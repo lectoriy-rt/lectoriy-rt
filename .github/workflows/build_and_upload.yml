@@ -16,7 +16,7 @@ jobs:
       - name: Install TexLive
         run: |
           sudo apt update
-          sudo apt install -y texlive texlive-latex-extra texlive-lang-cyrillic cm-super
+          sudo apt install -y texlive texlive-latex-extra texlive-lang-cyrillic
       - name: Compile and upload changed files
         run: |
           for FILE in $(find * -name 'main.tex' ! -path 'Template/*' ! -path 'Samples/*'); do
