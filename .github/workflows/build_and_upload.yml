@@ -7,7 +7,6 @@ on:
       - "Lectures/**"
       - "Seminars/**"
       - "Exams/**"
-      - "Cheat_Sheets/**"
 jobs:
   main:
     runs-on: ubuntu-latest
