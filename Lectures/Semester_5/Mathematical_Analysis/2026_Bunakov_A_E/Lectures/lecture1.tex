@@ -22,10 +22,10 @@
 \end{minipage}%
 \hfill
 \begin{minipage}[c]{0.7\textwidth}
-Рассмотрим функцию \(\th{x} \in C^{\infty} (\R)\). Известно, что её можно представить в виде 
-\(\th{x} = \sum_{n = 0}^{\infty} a_n x^n\). Если поставить задачу нахождения радиуса сходимости 
-данного ряда, то решить её методами, известными нам из прошлых семестров, невозможно. Вообще 
-говоря, радиус сходимости \(R_{\text{сх}} = \dfrac{\pi}{2}\). Чтобы его найти, нужно выйти в 
+Рассмотрим функцию \(\th{x} \in C^{\infty} (\R)\). Известно, что её можно представить в виде
+\(\th{x} = \sum_{n = 0}^{\infty} a_n x^n\). Если поставить задачу нахождения радиуса сходимости
+данного ряда, то решить её методами, известными нам из прошлых семестров, невозможно. Вообще
+говоря, радиус сходимости \(R_{\text{сх}} = \dfrac{\pi}{2}\). Чтобы его найти, нужно выйти в
 комплексную плоскость.
 \end{minipage}
 
@@ -36,13 +36,13 @@
 Введём основные операции над парами чисел.
 
 \begin{enumerate}
-\item \label{1:add_sub_pair_num} \textbf{Сложение} и \textbf{разность} двух пар чисел: \(z_1 \pm z_2 
+\item \label{1:add_sub_pair_num} \textbf{Сложение} и \textbf{разность} двух пар чисел: \(z_1 \pm z_2
     = (x_1 \pm x_2, y_1 \pm y_2)\);
-\item \label{1:criterion_equality} \textbf{Проверка равенства} двух пар чисел: \(\left[z_1 = 
+\item \label{1:criterion_equality} \textbf{Проверка равенства} двух пар чисел: \(\left[z_1 =
     z_2\right] \iff \{\left[x_1 = x_2\right] \& \left[y_1 = y_2\right]\}\);
-\item \label{1:abs_pair_num} \textbf{Модуль} пары чисел: \(|z| = \left\|(x, y)\right\| = \sqrt{x^2 + 
+\item \label{1:abs_pair_num} \textbf{Модуль} пары чисел: \(|z| = \left\|(x, y)\right\| = \sqrt{x^2 +
     y^2}\);
-\item \label{1:mult_pair_num} \textbf{Произведение} пар чисел: \(z_1 \cdot z_2 = (x_1, y_1) \cdot 
+\item \label{1:mult_pair_num} \textbf{Произведение} пар чисел: \(z_1 \cdot z_2 = (x_1, y_1) \cdot
     (x_2, y_2) = (x_1 x_2 - y_1 y_2, \, x_1 y_2 + x_2 y_1)\).\ \textit{Далее знак произведения может
     опускаться}.
 \end{enumerate}
@@ -54,13 +54,13 @@
 \item \(z_1 z_2 = z_2 z_1\);
 \item \(z \cdot (1, 0) = z\);
 \item \(z_1 (z_2 + z_3) = z_1 z_2 + z_1 z_3\);
-\item \(\forall z_2, \, \forall z_1 \neq (0, 0) \quad \exists! z_3 \colon z_3 z_1 = z_2\). При этом 
+\item \(\forall z_2, \, \forall z_1 \neq (0, 0) \quad \exists! z_3 \colon z_3 z_1 = z_2\). При этом
     \(z_3 = \frac{z_2}{z_1}\);
 \item $||z_2| - |z_1|| \le |z_1 \pm z_2| \le |z_1| + |z_2|$.
 \end{properties}
 
 \begin{proof}
-Свойства 1-4 доказываются подстановкой \(z = (x, y)\). Свойство 6 доказывается аналогично 
+Свойства 1-4 доказываются подстановкой \(z = (x, y)\). Свойство 6 доказывается аналогично
 неравенству треугольника из прошлых семестров. Докажем свойство 5:
 
 \((x_1, y_1) (x_3, y_3) = (x_2, y_2) \iff (x_1 x_3 - y_1 y_3, x_1 y_3 + x_3 y_1) = (x_2, y_2)\). Из
@@ -212,7 +212,7 @@ i\sin{\phi_1})\) и \(z_2 = r_2(\cos{\phi_2} + i\sin{\phi_2})\) выглядит
 Функции комплексного переменного будем обозначать следующим образом: \(w = f(z); \, w, z\in\Co\).
 Введём две основные элементарные функции:
 \begin{enumerate}
-\item Многочлены \(P(z) = a_n z^n + \dots + a_1 z + a_0, \ a_i \in \Co, \, \forall i = 
+\item Многочлены \(P(z) = a_n z^n + \dots + a_1 z + a_0, \ a_i \in \Co, \, \forall i =
     \overline{0,n}\);
 \item Экспонента \(f(z) = e^z = e^x(\cos{y} + i\sin{y})\).
 \end{enumerate}
@@ -252,8 +252,8 @@ i\sin{\phi_1})\) и \(z_2 = r_2(\cos{\phi_2} + i\sin{\phi_2})\) выглядит
 \end{proof}
 
 \begin{corollary}
-Из свойства \ref{2:exp_mult} следует \((e^z)^n = e^{nz} \forall n \in \N\). Если использовать, что 
-\(\forall z \neq 0 \rightarrow (z^{-1})^n = (z^n)^{-1}, \  \forall n \in \N\), то можно получить, 
+Из свойства \ref{2:exp_mult} следует \((e^z)^n = e^{nz} \forall n \in \N\). Если использовать, что
+\(\forall z \neq 0 \rightarrow (z^{-1})^n = (z^n)^{-1}, \  \forall n \in \N\), то можно получить,
 что \((e^z)^n = e^{nz} \forall n \in \Z\).
 \end{corollary}
 
