@@ -49,7 +49,7 @@
     Пусть \(f(z) = u(x, y) + i v(x, y)\). Тогда \(\int\limits_{\partial G} f dz =
     \int\limits_{\partial G} (udx + vdy) + i \int\limits_{\partial G} (vdx + udy) = I_1 + iI_2\).
     По теореме  \ref{17:ma_2} для области \(G\), \(P=u\), \(Q = -v\) выполняется \(I_1 =
-    \int\limits_{\partial G} (udx + vdy) = \iint\limits_G (-v_x -u_y)dxdy \equiv 0\) (здесь учтено
+    \int\limits_{\partial G} (udx + vdy) \hm= \iint\limits_G (-v_x -u_y)dxdy \equiv 0\) (здесь учтено
     \(u_y = -v_x\) из утверждения \ref{9:Koshi_Riman}). Аналогично с \(I_2\). Таким образом
     \(\int\limits_{\partial G} f dz = 0 + i \cdot 0 = 0\).
 \end{proof}
@@ -93,7 +93,7 @@
 
 \begin{corollary}
     Если \(f(z)\) регулярна в круге \(K = {z \in \Co \colon |z-z_0| < R}\), то
-    \(f(z) = \sum\limits_{n = 0}^\infty \dfrac{f^{(k)}(z_0)}{k!} (z-z_0)^n\).
+    \(f(z) \hm= \sum\limits_{n = 0}^\infty \dfrac{f^{(k)}(z_0)}{k!} (z-z_0)^n\).
 \end{corollary}
 
 \begin{proof}
@@ -129,7 +129,7 @@
 \end{statement}
 
 \begin{proof}
-    Для доказательства воспользуемся дополнением к теореме \ref{17:ma}: для \(\omega(x, y) =
+    Для доказательства воспользуемся дополнением к теореме \ref{17:ma}: для \(\omega(x, y) \hm=
     \int\limits_{(x_0, y_0)}^{(x, y)} Pdx + Qdy\) справедливо \(P = \dfrac{\partial \omega}{\partial
     x}\) и \(Q = \dfrac{\partial \omega}{\partial y}\). Тогда \(v(x, y) =
     \int\limits_{(x_0, y_0)}^{(x, y)} -u_ydx + u_xdy\). Восстановить \(v\) удаётся с точностью до

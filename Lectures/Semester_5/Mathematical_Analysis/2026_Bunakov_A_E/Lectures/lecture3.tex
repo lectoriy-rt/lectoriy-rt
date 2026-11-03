@@ -56,7 +56,7 @@
 \Co\), то последовательность \({f_n}\) будем называть функциональной.
 
 \begin{definition}
-    \({f_n}\) сходится равномерно к некоторой функции \(f\) на \(E\), если \(\forall \epsilon > 0
+    \({f_n}\) сходится равномерно к некоторой функции \(f\) на \(E\), если \(\forall \epsilon \hm> 0
     \exists N \in \N \colon \forall n \ge N \ \& \ \forall z \in E \mapsto |f_n(z) - f(z)| <
     \epsilon\). Обозначается как \(f_n \mathrel{\mathop{\rightrightarrows}\limits_{E}} f\).
 \end{definition}
@@ -128,7 +128,7 @@ f(z(t)) z'(t)dt\). Введём его свойства.
     \re{[\dots]} dt + i \int\limits_{\alpha}^{\beta} \im{[\dots]} dt\). Заметим, что интеграл во
     втором слагаемом обращается в нуль. Так как для любого комплексного числа его действительная
     часть меньше или равна его модулю, то продолжая оценку получим: \(\int\limits_{\alpha}^{\beta}
-    \re{[\dots]} dt + i \int\limits_{\alpha}^{\beta} \im{[\dots]} dt \le
+    \re{[\dots]} dt + i \int\limits_{\alpha}^{\beta} \im{[\dots]} dt \hm\le
     \int\limits_{\alpha}^{\beta} |f(z(t))| \cdot |z'(t)| dt = \int\limits_{\gamma} |f(z)| |dz|\).
 
     Второе неравенство доказывается тривиально исходя из того, что функция в каждой точке своего
@@ -137,13 +137,13 @@ f(z(t)) z'(t)dt\). Введём его свойства.
 
 \begin{statement}
     Если \(\gamma\)~--- КНД кривая, \(\forall n \ f_n(z) \in C(\gamma)\) и \(f_n \rightrightarrows
-    f\), то \(\int\limits_{\gamma} f_n(z) dz \rightarrow \int\limits_{\gamma} f(z) dz\)
+    f\), то \(\int\limits_{\gamma} f_n(z) dz \hm\rightarrow \int\limits_{\gamma} f(z) dz\)
 \end{statement}
 
 \begin{proof}
     Зафиксируем \(\epsilon > 0\). Из условий теоремы, для него \(\exists N \colon \ \forall n \ge N
-    \rightarrow \max\limits_{\gamma}{|f_n(z) - f(z)| \le \epsilon}\), а из оценки выше следует, что
-    \(|\int\limits_{\gamma} (f_n(z) - f(z)) dz| \le l(\gamma) \cdot
+    \hm\rightarrow \max\limits_{\gamma}{|f_n(z) - f(z)| \le \epsilon}\), а из оценки выше следует,
+    что \(|\int\limits_{\gamma} (f_n(z) - f(z)) dz| \le l(\gamma) \hm \cdot
     \max\limits_{\gamma}{|f_n(z) - f(z)|} \le l(\gamma)\epsilon\).
 \end{proof}
 

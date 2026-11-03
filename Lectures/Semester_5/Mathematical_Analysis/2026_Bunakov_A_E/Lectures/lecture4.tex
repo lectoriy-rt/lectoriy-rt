@@ -80,7 +80,7 @@ $K_\varepsilon(a)$ с центром в точке $a$:
 \begin{statement}
     Пусть \(f(z)\) имеет первообразную \(F_1(z)\). Тогда \(\forall C \in \Co \rightarrow F_1 + C\)
     ~--- первообразная \(f(z)\) и если \(F_2\) также является первообразной \(f(z)\), то верно
-    \(F_2(z) - F_1(z) = \text{const}\) в области \(G\).
+    \(F_2(z) - F_1(z) \hm= \text{const}\) в области \(G\).
 \end{statement}
 
 \begin{proof}
@@ -110,8 +110,8 @@ $K_\varepsilon(a)$ с центром в точке $a$:
 \begin{proof}
     \begin{enumerate}[wide=5pt, label=\arabic*., itemsep=0ex]
         \item \(\Phi(t) = F(z(t))\), где \(F\)~--- первообразная \(f\); \(z = z(t)\), \(t \in
-        [\alpha, \beta]\)~--- параметризация \(\gamma\). \(\Phi'(t) = F'(z(t))z'(t) = f(z(t))
-        z'(t)\). Пусть \(z_0 = z(\alpha), \, z_{00} = z(\beta)\), тогда \(F(z_{00}) - F(z_0) =
+        [\alpha, \beta]\)~--- параметризация~\(\gamma\). \(\Phi'(t) = F'(z(t))z'(t) = f(z(t))
+        z'(t)\). Пусть \(z_0 = z(\alpha), \, z_{00} = z(\beta)\), тогда \(F(z_{00}) - F(z_0) \hm=
         F(z(\beta)) - F(z(\alpha)) = \Phi(\beta) - \Phi(\alpha) = \int\limits_\alpha^\beta \Phi'(t)
         dt = \int\limits_\alpha^\beta f(z(t))z'(t)dt = \int\limits_\gamma f(z)dz\). Итак, если
         непрерывная \(f\) имеет первообразную, то справедлива формула Ньютона-Лейбница:
@@ -130,9 +130,9 @@ $K_\varepsilon(a)$ с центром в точке $a$:
         \Delta z \in B_\delta (0) \rightarrow |\rho(z+\Delta z) - \rho(z)| < \epsilon\). Теперь
         зафиксируем \(\Delta z \in \mathring{B}_\delta (0)\). Тогда \(\left|\dfrac{F(z+\Delta z -
         F(z))}{\Delta z} - f(z)\right| = \left|\dfrac{1}{\Delta z}\left(\int\limits_{z_0}^{z+\Delta
-        z} f(z)dz - \int\limits_{z_0}^{z}\right) - f(z)\right| = \left|\dfrac{1}{\Delta z}\left(\int
-        \limits_{z}^{z+\Delta z} (f(w) - f(z))dw\right)\right| \le \epsilon\). В силу произвольности
-        \(\epsilon\) получаем определение того, что \(f(z)\) производная \(F(z)\).
+        z} f(z)dz - \int\limits_{z_0}^{z}\right) - f(z)\right| \hm= \left|\dfrac{1}{\Delta z}\left(
+        \int\limits_{z}^{z+\Delta z} (f(w) - f(z))dw\right)\right| \le \epsilon\). В силу
+        произвольности \(\epsilon\) получаем определение того, что \(f(z)\) производная \(F(z)\).
     \end{enumerate}
 \end{proof}
 

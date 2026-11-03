@@ -27,7 +27,7 @@ _R(z_0)\) содержит конечное (ненулевое) число сл
 \(\mathring{B}_R(z_0)\) имеем \(|g(z)| < 1\), а значит по утверждениям
 \ref{23:principal_part_of_bounded_reg_func} и \ref{23:sufficient_cond_of_removable_point} \(z_0\)
 ~--- УОТ \(g(z)\), а значит главная часть разложения \(g(z)\) отсутствует, то есть \(g(z) =
-\sum\limits_{n = 0}^{+\infty} c_n (z-z_0)^n\) в \(\mathring{B}_R(z_0)\). Но по теореме Абеля ряд в
+\sum\limits_{n = 0}^{+\infty} c_n (z\hm-z_0)^n\) в \(\mathring{B}_R(z_0)\). Но по теореме Абеля ряд в
 правой части выражения сходится и в полной окрестности \(B_R(z_0)\) к некоторой регулярной функции
 \(\hat{g}(z)\colon \, \hat{g}(z) \equiv g(z)\) в \(\mathring{B}_R(z_0)\). Имеем
 \(\lim\limits_{z \to z_0} \hat{g}(z) = \lim\limits_{z \to z_0} g(z) = 0\), то есть \(c_0 = 0\).
@@ -35,7 +35,7 @@ _R(z_0)\) содержит конечное (ненулевое) число сл
 \(n\). Итак \(\exists m \in \N\), такое что в \(B_R(z_0)\) \(\hat{g}(z) = (z-z_0)^m\cdot[c_m +
 c_{m+1} (z - z_0) + \dots]\). Ряд в квадратных скобках также сходится в \(B_R(z_0)\) и его сумма~---
 регулярная функция \(h(z)\) в \(B_R(z_0)\). \(h(z_0) = c_m \ne 0\), а значит \(w = \dfrac{1}{h(z)}\)
-~--- регулярная в \(B_R(z_0)\). \(f(z) = \dfrac{w(z)}{(z-z_0)^m} = \dfrac{a_0 + a_1 (z - z_0) +
+~--- регулярная в \(B_R(z_0)\). \(f(z) = \dfrac{w(z)}{(z-z_0)^m} \hm= \dfrac{a_0 + a_1 (z - z_0) +
 \dots}{(z-z_0)^n} = \dfrac{a_0}{(z-z_0)^m} + \dots + a_m + \dots\).
 \end{proof}
 
@@ -82,7 +82,7 @@ c_{m+1} (z - z_0) + \dots]\). Ряд в квадратных скобках та
 
 \begin{proof}
 \textit{Пусть \(A \ne \infty\).} \textbf{От противного:} пусть такой \(\{z_n\}\) не существует для
-этого \(A\). Пусть \(f\)~--- регулярная в \(\mathring{B}_R(z_0)\). Сформулируем некоторое
+этого \(A\). Пусть~\(f\)~--- регулярная в \(\mathring{B}_R(z_0)\). Сформулируем некоторое
 утверждение:
 
 \begin{equation}
@@ -138,8 +138,8 @@ c_{m+1} (z - z_0) + \dots]\). Ряд в квадратных скобках та
 
 \begin{proof}
 В \(\mathring{B}_R(z_0)\) имеем разложение \(f(z) = \sum\limits_{n = - \infty}^{+ \infty} c_n
-(z - z_0)^n\). Так как на окружности \(|z - z_0| = \rho\) ряд сходится равноерно, то интегрируя
-почленно имеем следующее: \(\int\limits_{|z - z_0| = \rho} f(z) \, dz = \sum\limits_{n = - \infty}^
+(z - z_0)^n\). Так как на окружности \(|z - z_0| \hm= \rho\) ряд сходится равноерно, то интегрируя
+почленно имеем следующее: \(\int\limits_{|z - z_0| = \rho} f(z) \, dz \hm= \sum\limits_{n = - \infty}^
 {+ \infty} c_n \int\limits_{|z - z_0| = \rho} (z - z_0)^n \, dz = c_{-1} \cdot 2 \pi i =
 2 \pi i \res\limits_{z_0} f(z)\).
 \end{proof}
@@ -185,7 +185,7 @@ c_{m+1} (z - z_0) + \dots]\). Ряд в квадратных скобках та
 полной окрестности. Его сумма \(g(z)\) регулярна в \(B_R(z_0)\). Тогда
 \(f(z)(z - z_0)^m \equiv g(z)\) на \(\mathring{B}_R(z_0)\). Дифференцируя это выражение \((m - 1)\)
 раз в \(\mathring{B}_R(z_0)\) имеем, что \([(z - z_0)^m f(z)]^{(m - 1)} \equiv c_{-1} (m-1)! + m!
-c_0 (z - z_0) + \dots\). Тогда \(\lim\limits_{z \to z_0} [(z - z_0)^m f(z)]^{(m - 1)} = c_{-1}
+c_0 (z - z_0) + \dots\). Тогда \(\lim\limits_{z \to z_0} [(z - z_0)^m f(z)]^{(m - 1)} \hm= c_{-1}
 (m-1)!\)
 \end{proof}
 
@@ -274,8 +274,8 @@ c_0 (z - z_0) + \dots\). Тогда \(\lim\limits_{z \to z_0} [(z - z_0)^m f(z)]
     \overline{B_{R_1}(z_1)} \subset G\) и попарно не пересекались. Рассмотрим область \(D = G
     \setminus (\bigcup\limits_{k = 1}^n \overline{B_{R_k}(z_k)})\). По интегральной теореме Коши для
     ограниченной ОСПГ (\ref{17:int_koshi_ogr_ospg}) \(0 = \int\limits_{\partial D} f(z) \, dz =
-    \int\limits_{\partial G} f(z) \, dz = \sum\limits_{k = 1}^n \int\limits_{|z - z_k| = R_k} f(z)
-    \, dz = 2 \pi i \sum\limits_{k = 1}^n \res\limits_{z_0} f(z)\). Тогда выполняется
+    \int\limits_{\partial G} f(z) \, dz \hm= \sum\limits_{k = 1}^n \int\limits_{|z - z_k| = R_k}
+    f(z) \, dz = 2 \pi i \sum\limits_{k = 1}^n \res\limits_{z_0} f(z)\). Тогда выполняется
     \eqref{24_eq:th_koshi_residue}.
 \end{minipage}
 \end{enumerate}

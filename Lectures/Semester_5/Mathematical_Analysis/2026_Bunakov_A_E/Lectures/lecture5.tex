@@ -1,6 +1,6 @@
 \begin{proof}
     Обозначим за \(d = \min\limits_\gamma |\zeta - z_0| > 0\). Зафиксируем \(z \in B_R(z_0)\). Тогда
-    \(\forall \zeta \in \gamma \colon \dfrac{1}{\zeta - z} = \dfrac{1}{(s-z_0) - (z-z_0)} =
+    \(\forall \zeta \in \gamma \colon \dfrac{1}{\zeta - z} \hm= \dfrac{1}{(s-z_0) - (z-z_0)} =
     \dfrac{1}{(s-z_0)(1- \dfrac{z-z_0}{\zeta-z_0})} = \sum\limits_{n=0}^\infty \dfrac{(z-z_0)^n}
     {(\zeta - z_0)^{n+1}}\). Домножим обе части выражение на \(\dfrac{f(\zeta)}{2\pi i}\). Тогда
     получим \(\dfrac{1}{2\pi i} \dfrac{1}{\zeta - z} = \dfrac{1}{2 \pi i}
@@ -77,11 +77,11 @@ d\}\)
 \hfill
 \begin{minipage}[c]{0.70\textwidth}
     \(\int\limits_{\partial\Pi} fdz = \sum_{k=1}^{4} \int\limits_{\partial D_k} fdz.\)
-    По неравенству треугольника \(M \le \sum_{k=1}^{4} \left|\int\limits_{\partial D_k} fdz\right|\)
-    А значит \(\exists k : \left| \int\limits_{\partial D_k} f\,dz \right| \ge \frac{M}{4}.\)
-    Обозначим такой прямоугольник за \(\Pi_1\). Исходный же прямоугольник обозначим за \(\Pi_0\).
-    Аналогично деля прямоугольник \(\Pi_1\), найдём прямоугольник \(\Pi_2\) для которого выполняется
-    \( \left| \int\limits_{\partial \Pi_2} f\,dz \right| \ge \frac{M}{4^2}\).
+    По неравенству треугольника \(M \hm\le \sum_{k=1}^{4} \left|\int\limits_{\partial D_k} fdz
+    \right|\) А значит \(\exists k : \left| \int\limits_{\partial D_k} f\,dz \right| \ge
+    \frac{M}{4}.\) Обозначим такой прямоугольник за \(\Pi_1\). Исходный же прямоугольник обозначим
+    за \(\Pi_0\). Аналогично деля прямоугольник \(\Pi_1\), найдём прямоугольник \(\Pi_2\) для
+    которого выполняется \( \left| \int\limits_{\partial \Pi_2} f\,dz \right| \ge \frac{M}{4^2}\).
 \end{minipage}
     Построим последовательность \(\Pi_1, \Pi_2, \dots \Pi_n, \dots \colon \, \left|
     \int\limits_{\partial \Pi_n} f\,dz \right| \ge \frac{M}{4^n}\). По теореме о последовательности
@@ -166,12 +166,12 @@ d\}\)
 \(D_5\)~--- квадрат со стороной \(\delta\) и центром в \(z_0\). \(\int\limits_{\partial\Pi}
 \dfrac{f(z)}{z-z_0} dz = \sum\limits_{k=1}^9 \int\limits_{\partial \Pi_k} \dfrac{f(z)}{z-z_0} dz\).
 Из леммы Гурса (утверждение \ref{15:gurs}) следует, что для всех \(k\), кроме \(k = 5\), выполняется
-\(\int\limits_{\partial \Pi_k} \dfrac{f(z)}{z-z_0} dz = 0\). А значит \(\int\limits_{\partial\Pi}
+\(\int\limits_{\partial \Pi_k} \dfrac{f(z)}{z-z_0} dz \hm= 0\). А значит \(\int\limits_{\partial\Pi}
 \dfrac{f(z)}{z-z_0} dz = \int\limits_{\partial \Pi_5} \dfrac{f(z)}{z-z_0} dz\). Проведём оценку:
-\(\left|\dfrac{1}{2 \pi i} \int\limits_{\partial\Pi} \dfrac{f(z)}{z-z_0} dz - f(z_0)\right| =
+\(\left|\dfrac{1}{2 \pi i} \int\limits_{\partial\Pi} \dfrac{f(z)}{z-z_0} dz - f(z_0)\right| \hm=
 \left|\dfrac{1}{2 \pi i} \int\limits_{\partial\Pi_5} \dfrac{f(z)}{z-z_0} dz - f(z_0)\right| =
 \left|\dfrac{1}{2 \pi i} (\int\limits_{\partial\Pi_5} \dfrac{f(z)}{z-z_0} dz - f(z_0)
-\int\limits_{\partial\Pi_5} \dfrac{dz}{z-z_0})\right| = \left|\dfrac{1}{2 \pi i}
+\int\limits_{\partial\Pi_5} \dfrac{dz}{z-z_0})\right| \hm= \left|\dfrac{1}{2 \pi i}
 \int\limits_{\partial\Pi_5} \dfrac{f(z)- f(z_0)}{z-z_0} dz\right| \le \dfrac{1}{2 \pi}
 \max\limits_{\partial D_5} \dfrac{f(z) - f(z_0)}{z-z_0}l(\partial D_5) \le \dfrac{1}{2 \pi}
 \dfrac{\epsilon}{\frac{\delta}{2}}4\delta = \dfrac{4}{\pi} \epsilon\). В силу произвольности

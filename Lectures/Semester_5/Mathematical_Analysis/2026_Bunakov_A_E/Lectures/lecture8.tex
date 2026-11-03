@@ -24,14 +24,14 @@
 \begin{statement}
     Пусть \(f(z)\) регулярна в \(K\colon \, 0 \le R_1 < |z-z_0|< R_2 \le +\infty\). Тогда в \(K\)
     существует и единственно разложение в ряд Лорана \(f(z) = \sum\limits_{n = -\infty}^{-1} c_n
-    (z-z_0)^n + \sum\limits_{n=0}^{\infty} c_n (z-z_0)^n\) и \[c_n = \dfrac{1}{2 \pi i}
+    (z-z_0)^n + \sum\limits_{n=0}^{\infty} c_n (z\hm-z_0)^n\) и \[c_n = \dfrac{1}{2 \pi i}
     \int\limits_{|z - z_0| = \rho \in (R_1, R_2)} \dfrac{f(\zeta) d\zeta}{(\zeta - z_0) ^ {n+1}}, \,
     n \in \Z \tag{3}\].
 \end{statement}
 
 \begin{proof}
     Пусть \(z \in K\) фиксировано. Выберем и зафиксируем \(r_1, r_2\) такие, что \(R_1 < r_1 <
-    |z-z_0| < r_2 < R_2\).
+    |z-z_0| \hm< r_2 < R_2\).
 
     \noindent
     \begin{minipage}[c]{0.3\textwidth}
@@ -70,7 +70,7 @@
     \end{minipage}%
     \hfill % Равномерный отступ между левым и правым блоком
     \begin{minipage}[c]{0.67\textwidth}
-        По интегральной теореме Коши для \(f(z)\) в ОСПГ \(D = \{|z-z_0| \in (r_1, r_2)\}\) имеем:
+        По интегральной теореме Коши для \(f(z)\) в ОСПГ \(D = \{|z\hm-z_0| \in (r_1, r_2)\}\) имеем:
         \[
         f(z) = \dfrac{1}{2 \pi i} \int\limits_{|z-z_0| = r_2} \dfrac{f(\zeta) d\zeta}{\zeta - z_0} -
         \dfrac{1}{2 \pi i} \int\limits_{|z-z_0| = r_1} \dfrac{f(\zeta) d\zeta}{\zeta - z_0} = N_1 +
@@ -123,7 +123,7 @@
     Докажем единственность разложения в ряд Лорана. Зафиксируем \(\rho \in (R_1, R_2)\). Тогда
     \(\int\limits_{|z-z_0| = \rho} \dfrac{dz}{z-z_0} = 2 \pi i\). Пусть в кольце есть 2 разложения
     \(\sum\limits_{n = -\infty}^{+\infty} c_n (z-z_0)^n \equiv \sum\limits_{n = -\infty}^{+\infty}
-    d_n (z-z_0)^n\). Зафиксируем \(m \in \Z\). Тогда \(\sum\limits_{n = -\infty}^{+\infty} c_n
+    d_n (z\hm-z_0)^n\). Зафиксируем \(m \in \Z\). Тогда \(\sum\limits_{n = -\infty}^{+\infty} c_n
     (z-z_0)^{m+n} \equiv \sum\limits_{n = -\infty}^{+\infty} d_n (z-z_0)^{m+n}\). Интегрируя по
     окружности \(|z-z_0| = \rho\) получаем \(\sum\limits_{n = -\infty}^{+\infty} c_n
     \int\limits_{|z-z_0| = \rho} (z-z_0)^{m+n} dz \equiv \sum\limits_{n = -\infty}^{+\infty} d_n
@@ -151,8 +151,8 @@
 \end{definition}
 
 Тип ИОТ будем определять по пределу функции \(f(z)\) при \(z \rightarrow z_0\). Если \(\exists
-\lim\limits_{z \rightarrow z_0} f(z) = A \in \Co\), то \(z_0\) называется устранимой особой точкой
-(УОТ). Если \(\exists \lim\limits_{z \rightarrow z_0} f(z) = \infty\), то \(z_0\) называется
+\lim\limits_{z \rightarrow z_0} f(z) \hm= A \in \Co\), то \(z_0\) называется устранимой особой
+точкой (УОТ). Если \(\exists \lim\limits_{z \rightarrow z_0} f(z) = \infty\), то \(z_0\) называется
 полюсом. Если предела не существует, то \(z_0\) называется существенной особой точкой (СОТ).
 
 \begin{statement} \label{23:ISP_of_1/z}
