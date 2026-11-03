@@ -54,7 +54,7 @@
     % Левый круг: центр z0, радиус R
     \draw[thick] (0,0) circle (1.5);
     \filldraw (0,0) circle (1.5pt) node[below=4pt] {$z_0$};
-    \draw[thick, ->] (0,0) -- (45:1.5) node[midway, right=1pt] {$R$};
+    \draw[thick, ->] (0,0) -- (45:1.5) node[pos=0.75, below=5pt] {$R$};
 
     % Кривая от z0 к z*
     \draw[thick] (0,0) to[out=-20, in=190] (4, -0.4) to[out=10, in=180] (9,0);
@@ -63,7 +63,7 @@
     \begin{scope}[shift={(9,0)}]
         \draw[thick] (0,0) circle (1.8);
         \filldraw (0,0) circle (1.5pt) node[below=6pt] {$z^*$};
-        \draw[thick, ->] (0,0) -- (50:1.8) node[midway, left=2pt] {$R^*$};
+        \draw[thick, ->] (0,0) -- (50:1.8) node[pos=0.25, above=5pt] {$R^*$};
     \end{scope}
 
     % Кривая от z* к z1
@@ -73,7 +73,7 @@
     \begin{scope}[shift={(13.5, 0.1)}]
         \draw[thick] (0,0) circle (1.0);
         \filldraw (0,0) circle (1.5pt) node[below=4pt] {$z_1$};
-        \draw[thick, ->] (0,0) -- (45:1.0) node[midway, right=1pt] {$R_1$};
+        \draw[thick, ->] (0,0) -- (45:1.0) node[pos=0.85, below=5pt] {$R_1$};
     \end{scope}
     \end{tikzpicture}
 
