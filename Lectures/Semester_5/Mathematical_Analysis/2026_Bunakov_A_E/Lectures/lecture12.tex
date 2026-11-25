@@ -1,0 +1,171 @@
+Теперь можно рассмотреть второе доказательство основной теоремы алгебры:
+
+\begin{proof}
+Пусть \(P(z)\)~--- многочлен \(n \ge 1\). Тогда он имеет хотя бы один корень в \(\Co\).
+Доказательство этого факта будем вести от противного: если корней нет, то \(f(z) = 
+\dfrac{1}{P(z)}\)~--- целая функция в \(\Co\), при этом \(f(z) \sim \dfrac{1}{z^n}\). \(\lim\limits_
+{z \to \infty} f(z) = 0\), тогда \(\exists R_0\colon |f(z)| \le 1 \, \forall z \in \mathring{B}_
+R(\infty)\). Но тогда из теоремы Лиувилля следует, что \(f(z) \equiv \mathrm{const}\), тогда и
+\(P(z) \equiv \mathrm{const}\), но \(P(z)\)~--- многочлен \(n \ge 1\). Получили противоречие.
+
+Тогда поочерёдным поиском корней \(z_k\) и делением многочлена на \((z - z_k)\) можно найти \(n\) 
+корней исходного многочлена \(P(z)\).
+\end{proof}
+
+
+\Section{Теорема об обратной функции}
+
+\begin{theorem} \label{29:ma}
+\textbf{(МА).} Пусть \(u = u(x, y)\), \(v = v(x, y) \in C^1(G)\), где \(G \subset \R^2\)~---
+область. Пусть \((x_0, y_0) \in G\) и \(\left. \begin{vmatrix} u_x & u_y \\ v_x & v_y \end{vmatrix} 
+\right|_{(x_0, y_0)} \neq 0\). Обозначим \(u_0 = u(x_0, y_0)\), \(v_0 = v(x_0, y_0)\). Тогда
+существуют \(B_\delta (x_0, y_0)\) и \(B_\epsilon (u_0, v_0)\), такие что:
+\begin{enumerate}[wide=20pt, itemsep=0ex]
+\item \(\begin{vmatrix} u_x & u_y \\ v_x & v_y \end{vmatrix} \ne 0\) в \(B_\delta (x_0, y_0)\); 
+\item \(\forall (\tilde{u}, \tilde{v}) \in B_\epsilon (u_0, v_0)\) система \(\begin{cases} u(x, y) =
+    \tilde{u}, \\ v(x, y) = \tilde{v} \end{cases}\) имеет в \(B_\delta (x_0, y_0)\) единственное
+    решение, то есть в \(B_\epsilon (u_0, v_0)\) задана векторная функция \(x = x(u, v), y = y(u, v)
+    \);
+\item \(x(u, v), y(u, v) \in C^1(B_\epsilon(u_0, v_0))\).
+\end{enumerate}
+\end{theorem}
+
+\begin{statement}
+\textbf{(Теорема об обратной функции, локальный вариант).} Пусть:
+\begin{enumerate}[wide=20pt, itemsep=0ex]
+\item \(G\)~--- область в \(\Co\);
+\item \(f(z)\) регулярна в \(G\);
+\item \(z_0 \in G\colon f'(z_0) \ne 0\), также обозначим \(w_0 = f(z_0)\).
+\end{enumerate}
+Тогда существуют \(B_\delta(z_0)\) и \(B_\epsilon(w_0)\), такие что:
+\begin{enumerate}[wide=20pt, itemsep=0ex]
+\item \(f'(z_0) \ne 0\) в \(B_\delta (z_0)\);
+\item \(\forall \hat{w} \in B_\epsilon(w_0)\) уравнение \(f(z) = \hat{w}\) имеет единственное
+    решение в \(B_\delta(z_0)\), тем самым в \(B_\delta(w_0)\) задана функция \(z = z(w)\) обратная
+    к \(f(z)\), то есть \(f(g(w)) \equiv w\) в \(B_\epsilon(w_0)\)
+\item Эта \(g(w)\) регулярна в \(B_\epsilon(w_0)\), при этом \(g'(w) = \dfrac{1}{f'(g(w))}\).
+\end{enumerate}
+\end{statement}
+
+\begin{proof}
+По условию \(f(z) \in D^\infty(G)\). Пусть \(f(z) = u(x, y) + iv(x, y)\), где \(u, v \in 
+C^\infty(G)\), \(z_0 = x_0 + iy_0\), \(w_0 = u_0 + iv_0\). При этом согласно утверждению 
+\ref{9:Koshi_Riman} получим, что \(\begin{vmatrix} u_x & u_y \\ v_x & v_y \end{vmatrix} = u_x^2 + 
+v_x^2 = |f'(z)|^2 \ne 0\) при подстановке в \(z_0\). Тогда по теореме \ref{29:ma} существуют
+функции \(x = x(u, v), y = y(u, v)\) в \(B_\epsilon(w_0)\), обратные к \(u(x, y), v(x,y)\). Тогда
+имеем как минимум непрерывную функцию \(g(w) = x(u, v) + iy(u, v)\). Пусть \(\hat{w} \in 
+B_\epsilon(w_0)\). Докажем существование \(g'(\hat{w})\). Рассмотрим последовательность Гейне
+\(w_n\) (\(w_n \to \hat{w}, w_n \ne \hat{w}\)). Пусть \(\hat{z} = g(\hat{w})\), \(z_n = g(w_n)\).
+В силу непрерывности \(g(w)\) \(z_n \to \hat{z}\), а в силу взаимной однозначности области значений
+\(g(w)\) и \(B_\epsilon(w_0)\) имеем: \(\lim\limits_{n \to \infty} \dfrac{g(w_n) - g(\hat{w})}{w_n -
+\hat{w}} = \lim\limits_{n \to \infty} \dfrac{z_n - \hat{z}}{w_n - \hat{w}} = \dfrac{1}{\lim\limits_
+{n \to \infty} \frac{w_n - \hat{w}}{z_n - \hat{z}}} = \dfrac{1}{\lim\limits_
+{n \to \infty} \frac{f(z_n) - f(\hat{z})}{z_n - \hat{z}}} = \dfrac{1}{f'(\hat{z})} = \dfrac{1}
+{f'(g(\hat{w}))}\).
+\end{proof}
+
+
+\Section{Теорема о локальной структуре отображения}
+
+\begin{statement}
+\textbf{(Теорема о локальной структуре отображения).} Пусть:
+\begin{enumerate}[wide=20pt, itemsep=0ex]
+\item \(f(z)\) регулярна в области \(G \subset \Co\), \(z_0 \in G\), \(w_0 = f(z_0)\);
+\item \(\exists n \ge 2\colon f^{(k)}(z_0) = 0,\, \forall k \in \overline{1, n-1}, f^{(n)}(z_0) \ne
+0\).
+\end{enumerate}
+Тогда \(\exists B_\delta(z_0), B_\epsilon(w_0)\) такие, что для любого \(\hat{w} \in \mathring{B}_
+\epsilon(w_0)\) уравнение \(f(z) = \hat{w}\) имеет в \(B_\delta(z_0)\) ровно \(n\) простых корней.
+\end{statement}
+
+\begin{proof}
+\begin{enumerate}[wide=20pt, itemsep=0ex]
+\item Рассмотрим случай \(w_0 = 0\). Тогда \(z_0\)~--- нуль порядка \(n\) для \(f(z)\) и нуль
+    порядка \(n-1\) для \(f'(z)\). Нули конечного порядка изолированы, а значит \(\exists 
+    \overline{B_\delta(z_0)} \subset G\) в которой \(f(z), f'(z) \ne 0\) за исключением \(z = z_0\).
+    Обозначим \(\epsilon = \min\limits_{|z - z_0| = \delta} |f(z)| > 0\). Покажем, что заключение
+    теоремы выполняется для выбранных \(\delta, \epsilon\).
+
+    Зафиксируем \(\hat{w} \in B_\epsilon (0)\). Рассмотрим в \(\overline{B_\delta (z_0)}\) функцию
+    \(f(z) - \hat{w}\). Применим теорему Руше, полагая \(g(z) = - \hat{w}\). Тогда для любого
+    \(\hat{z}\colon |\hat{z} - z_0| = \delta\) выполняется: \(|g(\hat{z}| = -|\hat{w}| < \epsilon =
+    \min\limits_{|z - z_0| = \delta} |f(z)| < f(\hat{z}))\). По теореме Руше \(h(z) = f(z) - 
+    \hat{w}\) имеет как и \(f(z)\) \(n\) нулей в \(B_\delta(z_0)\) с учётом их кратности. Пусть
+    \(h(z)\) имеет нули \(z_1, \dots, z_m\) порядков \(n_1, \dots, n_m\) соответственно. Тогда 
+    \(h(z_k) = 0\), но \(h'(z_k) = f'(z_k) \ne 0\) в силу выбора \(\delta\). Тогда \(z_k\)~---
+    простые нули \(h(z)\), то есть уравнение \(f(z) - \hat{w} = 0\) имеет в \(B_\delta(z_0)\) ровно
+    \(n\) простых корней.
+\item Случай \(w_0 \ne 0\) будет рассмотрен на следующей лекции (13 лекция, 30.11).
+\end{enumerate}
+\end{proof}
+
+\begin{note}
+В теореме об обратной функции и теореме о локальной структуре отображения числа \(\delta\) и
+\(\epsilon\) могут быть взяты меньше любого \(a < 0\).
+\end{note}
+
+\begin{statement}
+\textbf{(Принцип сохранения области).} Пусть \(f(z) \ne \mathrm{const}\) регулярна в области \(D\).
+Тогда \(G = f(D)\)~--- область.
+\end{statement}
+
+\begin{proof}
+\begin{enumerate}[wide=20pt, label=\Roman*., itemsep=0ex]
+\item Докажем открытость. Пусть \(w_0 \in G\). Тогда \(\exists z_0 \in D\colon f(z_0) = w_0\).
+    \begin{enumerate}[wide=20pt, itemsep=0ex]
+    \item Пусть \(f'(z_0) \ne 0\). Тогда \(\exists B_\delta(z_0) \in D, B_\epsilon(w_0) \in G\)
+        такие, что для любого \(w \in B_\epsilon(w_0)\) сущесвтует и единственен \(z \in
+        B_\delta(z_0)\) при котором \(f(z) = w\). Тогда \(B_\epsilon(w_0) \subset f(B_\delta(z_0))
+        \subset f(D) = G\).
+    \item Пусть \(\exists n \ge 2\colon f^{(k)}(z_0) = 0,\, \forall k \in \overline{1, n-1}, 
+        f^{(n)}(z_0) \ne 0\). По теореме о локальной структуре отображения \(\exists B_\delta(z_0),
+        B_\epsilon(w_0)\) такие, что для любого \(\hat{w} \in \mathring{B}_\epsilon(w_0)\)
+        существует \(n\) решений уравнения \(f(z) = \hat{w}\) в \(B_\delta(z_0)\). Для \(w_0\) в
+        \(B_\delta(z_0)\) сущетсвует по крайней мере одно решение \(z_0\) уравнения \(f(z) = w_0\),
+        то есть \(B_\epsilon(w_0) \subset f(B_\delta(z_0)) \subset f(D) = G\).
+    \item Пусть \(\forall n \in \N\) \(f^{(n)}(z) = 0\). Тогда \(f(z) \equiv f(z_0)\) в 
+        \(B_\delta(z_0)\) и по теореме единственности получаем, что \(f(z) \equiv \mathrm{const}\)
+        на всей \(D\).
+    \end{enumerate}
+\item Докажем линейную связность. Пусть \(w_1, w_2 \in G\). Тогда \(\exists z_1, z_2 \in D \colon
+    f(z_1) = w_1, f(z_2) = w_2\). В силу связности \(D\) существует ломаная \(\gamma \subset D\),
+    соединяющая \(z_1\) и \(z_2\). Обозначим \(\Gamma = f(\gamma)\). \(\Gamma\)~--- непрерывная (на
+    самом деле даже КНД) кривая, соединяющая \(w_1, w_2\), лежащая в \(f(D)\). Для любого \(w \in
+    \Gamma \exists B(w) \in G\), то есть существует конечное покрытие компакта \(\Gamma\). Тогда
+    по лемме Гейне-Борреля выберем конечное подпокрытие из окружностей с центрами \(w^1, \dots, 
+    w^n\). Соединив звеньями ломаной точки \(w_1, w^1, \dots, w^n, w_2\) в указанном порядке,
+    завершаем доказательство.
+\end{enumerate}
+\end{proof}
+
+\begin{definition}
+Отображение \(f(z)\) называется однолистным на множестве \(E\), если из \(z_1 \ne z_2\), где 
+\(z_1, z_2 \in E\), следует, что \(f(z_1) \ne f(z_2)\).
+\end{definition}
+
+\begin{example}
+\(f(z) = e^z\) однолистна в \(\{|z|<3\}\), но не однолистна в \(\{|z| < 4\}\).
+\end{example}
+
+\begin{statement}
+\textbf{(Теорема об обратной функции, глобальный вариант).} Пусть \(f(z)\) регулярна и однолистна в
+области \(D\). Тогда:
+\begin{enumerate}[wide=20pt, itemsep=0ex]
+\item \(G = f(D)\)~--- область;
+\item \(f'(z) \ne 0 \) для любого \(z \in D\);
+\item Обратная функция \(z = g(w)\) регулярна в \(G\) и \(g'(w) = \dfrac{1}{f'(g(w))}\)
+\end{enumerate}
+\end{statement}
+
+\begin{proof}
+\begin{enumerate}[wide=20pt, itemsep=0ex]
+\item Вытекает из принципа сохранения области, так как \(f(z) \ne \mathrm{const}\) в следствие
+    однолистности.
+\item От противного: пусть \(\exists z_0 \in D\colon f'(z_0) = 0\). Тогда \(\exists n \ge 2\colon 
+    f^{(k)}(z_0) = 0,\, \forall k \in \overline{1, n-1}, f^{(n)}(z_0) \ne 0\). По теореме о
+    локальной структуре отображения \(\exists B_\epsilon(w_0)\subset f(D)\colon w_0 = f(z_0)\) и \(\exists 
+    B_\delta(z_0) \subset D\colon \forall w \in \mathring{B}_\epsilon(w_0)\) уравнение \(f(z) = w\)
+    имеет \(n \ge 1\) решений. Получаем противоречие однолистности.
+\item Доказательнство пункта будет изложено на следующей лекции (13 лекция 30.11).
+\end{enumerate}
+\end{proof}
